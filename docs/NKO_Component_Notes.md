@@ -1,12 +1,13 @@
 # Antenna and Component Notes
 
-# Balun and UnUn Comparative Sections
-
 ---
 
 ## 4:1 Current Balun
 
-- _Definition_ A current balun (Guanella) enforces equal and opposite currents on its output terminals  
+- _Definition_ 
+  - _4:1_ is the ratio of transformation; 50 ohms to 200 ohms usually (for the purposes of this project)
+  - _Connects_ a balanced to an unbalanced system
+  - _Enforces_ equal and opposite currents on its output terminals  
 - _Function_ Transforms impedance while attempting to maintain current balance  
 - _Topology_ Transmission line or bifilar windings on ferrite cores (toroids)
 - _Balance_ Forces current symmetry between antenna legs  
