@@ -12,13 +12,16 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 **License:** CC BY 4.0 for docs/design (`LICENSE`); Apache-2.0 for code (`LICENSE-CODE`)  
 **Brand policy:** See `TRADEMARKS.md`
 
-## Overview
+## NKO Overview
 New Kallista OCF - NKO - is a modification and improvement of an OCF antenna that uses a different feedpoint matching device, a vertical radiating coax section, then a strong 1:1 balun. From the 1:1 balun, coax as usual connects to the radio (transceiver).
 
 The NKO antenna is a hybrid HF wire antenna system in which the feedline is an intentional and functional part of the radiating structure.
 
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
+
+For information on Baluns, UnUns, OCF and New Carolina Windom, and the NKO antenna, see below;
+(Component and Antenna Notes)[docs/NKO_Component_Notes.md]
 
 ---
 
@@ -69,7 +72,13 @@ The result is a hybrid antenna with both horizontal and vertical radiation compo
 ---
 
 ## Performance - from field testers
-Field testing since December 2025 has shown:
+_Quotes From Users_
+- "Hear more stations better"
+- "The difference between listenng through a door and being in the room"
+- "Sounds more punchy"
+- "A year ago I would have said an antenna cannot make a different to intelligibility other than through signal strength"
+
+_Field testing since December 2025 has shown_
 - Improved signal strength in most cases
 - Improved audio intelligibility compared to EFHW and loop antennas
 - Enhanced high-frequency speech components (e.g. fricatives ~2–3 kHz)
@@ -98,6 +107,7 @@ These observations are consistent across multiple stations and configurations.
 
 ## Keywords
 - NKO antenna
+- New Kallista OCF Antenna
 - Controlled feedline radiation
 - Hybrid radiator
 - Common-mode current utilisation
