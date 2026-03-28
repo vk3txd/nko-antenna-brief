@@ -124,4 +124,5 @@ Further detailed analysis, measurements, and optimisation will be released separ
 
 ## Author
 Richard Holmes  VK3TXD
-Initial public release: 29 March 2026
+Revisions
+- 28 March 2026 Initial public release
