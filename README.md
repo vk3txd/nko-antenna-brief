@@ -17,6 +17,9 @@ New Kallista OCF - NKO - is a modification and improvement of an OCF antenna tha
 
 The NKO antenna is a hybrid HF wire antenna system in which the feedline is an intentional and functional part of the radiating structure.
 
+<!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
+<img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
+
 ---
 
 ## Key Concept
