@@ -32,7 +32,7 @@ NKO is a new antenna that challenges many existing and pre-conceived ideas about
 
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
-I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
+NEC Models. I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
 
 ---
 
@@ -56,6 +56,7 @@ This results in a **three-conductor radiating system** rather than a simple two-
 - Not accidental feedline radiation (as seen in poorly choked systems)
 - Feedline radiation is **intentional and controlled**
 - The 1:1 current balun provides high choking to prevent feedline current extending beyond the defined radiating section
+- Breaks conventions about feed point impedance matching and common mode current on coax feedling
 
 The result is a hybrid antenna with both horizontal and vertical radiation components.
 
@@ -77,14 +78,16 @@ _Quotes From Users_
 - "Sounds more punchy"
 - "A year ago I would have said an antenna cannot make a difference to intelligibility other than through signal strength"
 
+_Note. The above comments were from stations using a coax A/B switch and comparing to other antennas in real time._
+
 _Field testing since December 2025 has shown_
-- Comparable or improved signal strength in many cases
+- Comparable or improved signal strength in most cases
 - Improved audio intelligibility compared to EFHW and loop antennas
 - Enhanced high-frequency speech components (e.g. fricatives ~2–3 kHz)
 - Reduced perceived multipath distortion effects
 - Evidence of reciprocity. Signal reports from Rx and Tx improvements align
 
-These observations are consistent across multiple stations and configurations.
+_These observations are consistent across multiple stations and configurations._
 
 ---
 
