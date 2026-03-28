@@ -21,7 +21,8 @@ The NKO antenna is a hybrid HF wire antenna system in which the feedline is an i
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
 
 For information on Baluns, UnUns, OCF and New Carolina Windom, and the NKO antenna, see below;
-(Component and Antenna Notes)[docs/NKO_Component_Notes.md]
+
+[Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
 ---
 
