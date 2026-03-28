@@ -13,29 +13,33 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 **Brand policy:** See `TRADEMARKS.md`
 
 ## NKO Overview
-New Kallista OCF - NKO - is a modification and improvement of an OCF antenna that uses a different feedpoint matching device, a vertical radiating coax section, then a strong 1:1 balun. From the 1:1 balun, coax as usual connects to the radio (transceiver).
+New Kallista OCF (NKO) is a hybrid HF wire antenna system in which the feedline is an intentional part of the radiating structure.
 
-The NKO antenna is a hybrid HF wire antenna system in which the feedline is an intentional and functional part of the radiating structure.
+It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the radiating system.
 
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
 
-For information on Baluns, UnUns, OCF and New Carolina Windom, and the NKO antenna, see below;
+For detailed information on baluns, ununs, OCF, NCW, and NKO, see:
 
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
+
+For a glossary of terms used here that are relevant to this antenna and repository see:
+
+[NKO Glossary Of Terms](docs/NKO_Glossary.md)
 
 ---
 
 ## NKO Key Concepts
 The antenna consists of:
 - A long wire element and a shorter wire element
-- A tuned length of coaxial feedline connected via a 4:1 autotransformer (UnUn)
-- A good 1:1 current balun is used at the bottom of the coax feedline.
+- A defined length of coaxial feedline forming a vertical radiating section
+- A 1:1 current balun with high choking impedance is used at the bottom of the coax feedline
 
 In the NKO configuration:
 - The coax shield is electrically bonded to the short arm
-- The feedline carries in-phase current and contributes to radiation
-- The 1:1 balun effectively controls common mode current back to the transceiver
+- The feedline carries current that is in-phase with the short arm and contributes to radiation
+- A 1:1 current balun defines the boundary of the radiating feedline section
 
 This results in a **three-conductor radiating system** rather than a simple two-wire dipole.
 
@@ -45,7 +49,7 @@ This results in a **three-conductor radiating system** rather than a simple two-
 - Not a conventional OCF dipole
 - Not accidental feedline radiation (as seen in poorly choked systems)
 - Feedline radiation is **intentional and controlled**
-- The 1:1 current balun is specified to have high choking so common mode current is not problematic
+- The 1:1 current balun provides high choking to prevent feedline current extending beyond the defined radiating section
 
 The result is a hybrid antenna with both horizontal and vertical radiation components.
 
@@ -63,12 +67,12 @@ The result is a hybrid antenna with both horizontal and vertical radiation compo
 ## Performance - from field testers
 _Quotes From Users_
 - "Hear more stations better"
-- "The difference between listenng through a door and being in the room"
+- "The difference between listening through a door and being in the room"
 - "Sounds more punchy"
-- "A year ago I would have said an antenna cannot make a different to intelligibility other than through signal strength"
+- "A year ago I would have said an antenna cannot make a difference to intelligibility other than through signal strength"
 
 _Field testing since December 2025 has shown_
-- Improved signal strength in most cases
+- Comparable or improved signal strength in many cases
 - Improved audio intelligibility compared to EFHW and loop antennas
 - Enhanced high-frequency speech components (e.g. fricatives ~2–3 kHz)
 - Reduced perceived multipath distortion effects
@@ -82,6 +86,7 @@ These observations are consistent across multiple stations and configurations.
 
 ## NKO Antenna — Core Definition
 - _Classification_ The NKO antenna is a hybrid radiating system, not a conventional dipole
+- _System Model_ The antenna must be analysed as a coupled multi-conductor system rather than an isolated dipole
 - _System Nature_ The antenna and feedline form a single coupled radiating structure
 - _Core Principle_ The feedline is an intentional radiating conductor, not a parasitic effect
 - _Radiating Structure_ The vertical section of the feedline forms a defined radiating element as part of the system
