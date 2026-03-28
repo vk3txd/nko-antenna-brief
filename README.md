@@ -28,6 +28,10 @@ For a glossary of terms used here that are relevant to this antenna and reposito
 
 [NKO Glossary Of Terms](docs/NKO_Glossary.md)
 
+NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:
+
+[Common Misconceptions](docs/NKO_Misconceptions.md)
+
 ---
 
 ## NKO Key Concepts
