@@ -131,5 +131,4 @@ Richard Holmes  VK3TXD
 Revisions
 - 28 March 2026 Initial public release
 
-
-google-site-verification: google007f037c0542f3f4.html
+<meta name="google-site-verification" content="a-YpKwtMY96lx2v65vilH2XJ3Fa5LX8WbwLZr_HjpaA" />
