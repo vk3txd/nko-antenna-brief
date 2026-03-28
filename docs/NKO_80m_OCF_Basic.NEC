@@ -1,0 +1,43 @@
+CM NKO = New Kallista OCF
+CM This is the 80m version.
+CM The goal of this antenna is to use a vertical radiating section of coax to
+CM alter the elevation and azimuth radiation patterns.
+CM It is assumed a 4:1 UnUn, shield to short arm is used at the feed point.
+CM And a capable 1:1 used at the bottom of the vertical coax element.
+CM All the antenna elements are setup as variables that can be
+CM configured quickly for different scenarios.
+CM 
+CM Some vertical lenghts can impact resonances on the upper bands,
+CM but have a stong impact on the lower bands - and vice versa.
+CM In modelling analysis, look at both Vertical and Horizontal patterns.
+CM Also sweep the bands you are interested in to see the effects of 
+CM different lengths on SWR.
+CM Note well - the vertical coax section is coming off the long arm
+CM of the OCF and hanging down vertically.
+CM The vertical coax lengths :-
+CM * 6.7m works well on 40m, but damages pattern on 20m
+CM * 6.0m makes 20m pattern less low angle. Not great.
+CM * 4.7m is so far considered a best all round performer, .
+CM * 3.5m is the most tame version
+CM 
+CM 
+CM 
+CE
+SY Freq = 14.2
+SY Apex = 10
+SY LongArm = 27
+SY ShortArm = 13.5
+SY EndLongToGnd = 5	'Far end of arm to gnd.
+SY EndShortToGnd = 5	'Far end of arm to gnd
+SY LongDrop = Apex - EndLongToGnd
+SY ShortDrop = Apex - EndShortToGnd
+SY VertCoax = 4.7	'Vertical radiating coax length
+GW	1	29	0	0	Apex	sqr((LongArm*LongArm) - (LongDrop*LongDrop))	0	EndLongToGnd	#12
+GW	2	14	0	0	Apex	-sqr((ShortArm*ShortArm) - (ShortDrop*ShortDrop))	0	EndShortToGnd	#12
+GW	3	VertCoax * 3	0	0	Apex	0	0	Apex-VertCoax	#12
+GE	1
+GN	2	0	0	0	15	0.01
+EK
+EX	0	1	1	0	1.0	0	0
+FR	0	0	0	0	Freq	0
+EN

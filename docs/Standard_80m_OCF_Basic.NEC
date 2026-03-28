@@ -1,0 +1,25 @@
+CM Standard 80m OCF
+CM It is assumed a 4:1 Guanella 2 core balun is used at the point.
+CM All the antenna elements are setup as variables that can be
+CM configured quickly for different scenarios.
+CM 
+CM 
+CM 
+CM 
+CE
+SY Freq = 7.1
+SY Apex = 10
+SY LongArm = 26.4
+SY ShortArm = 13.2
+SY EndLongToGnd = 5	'Far end of arm to gnd.
+SY EndShortToGnd = 5	'Far end of arm to gnd
+SY LongDrop = Apex - EndLongToGnd
+SY ShortDrop = Apex - EndShortToGnd
+GW	1	29	0	0	Apex	sqr((LongArm*LongArm) - (LongDrop*LongDrop))	0	EndLongToGnd	#12
+GW	2	14	0	0	Apex	-sqr((ShortArm*ShortArm) - (ShortDrop*ShortDrop))	0	EndShortToGnd	#12
+GE	1
+GN	2	0	0	0	15	0.01
+EK
+EX	0	1	1	0	1.0	0	0
+FR	0	0	0	0	Freq	0
+EN

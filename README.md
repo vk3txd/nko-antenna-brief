@@ -32,6 +32,8 @@ NKO is a new antenna that challenges many existing and pre-conceived ideas about
 
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
+I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are paramtric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
+
 ---
 
 ## NKO Key Concepts
