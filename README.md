@@ -32,12 +32,12 @@ NKO is a new antenna that challenges many existing and pre-conceived ideas about
 
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
-I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are paramtric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
+I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
 
 ---
 
 ## NKO Key Concepts
-The antenna consists of:
+The NKO antenna consists of:
 - A long wire element and a shorter wire element
 - A defined length of coaxial feedline forming a vertical radiating section
 - A 1:1 current balun with high choking impedance is used at the bottom of the coax feedline
