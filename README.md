@@ -26,12 +26,11 @@ For information on Baluns, UnUns, OCF and New Carolina Windom, and the NKO anten
 
 ---
 
-## Key Concept
+## NKO Key Concepts
 The antenna consists of:
-- A long wire element
-- A shorter wire element
+- A long wire element and a shorter wire element
 - A tuned length of coaxial feedline connected via a 4:1 autotransformer (UnUn)
-- A good 1:1 current balun at the bottom of the coax feedline.
+- A good 1:1 current balun is used at the bottom of the coax feedline.
 
 In the NKO configuration:
 - The coax shield is electrically bonded to the short arm
@@ -53,22 +52,11 @@ The result is a hybrid antenna with both horizontal and vertical radiation compo
 ---
 
 ## Basic Build Specification (Example Variant)
-## Example Build Variants
 
 | Variant        | Long Arm Length | Short Arm Length | Vertical Coax Length |
 |----------------|-----------------|------------------|----------------------|
 | 80m Band (NKO-80) | ~27 m           | ~13.5 m            | 4.7 m              |
 | 40m Band (NKO-40) | ~13.5 m         | ~6.75 m          | 3.5 m              |
-
-- Configuration: NKO-80 class
-- Total length: ~80m band equivalent
-- Feedpoint: Off-centre (~4.7:1 ratio typical)
-- Transformer: 4:1 autotransformer (UnUn)
-- Connections:
-  - Long arm → top of autotransformer
-  - Short arm → bottom (common) of autotransformer
-  - Coax shield → bonded to short arm
-- Feedline: Allow a vertical drop from feedpoint where possible
 
 ---
 
