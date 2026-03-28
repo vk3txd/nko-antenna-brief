@@ -130,3 +130,6 @@ Further detailed analysis, measurements, and optimisation will be released separ
 Richard Holmes  VK3TXD
 Revisions
 - 28 March 2026 Initial public release
+
+
+google-site-verification: google007f037c0542f3f4.html
