@@ -20,16 +20,20 @@ It differs from conventional OCF and Windom-type antennas in that feedline curre
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
 
-NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performancee are open to further analysis. See:
+NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performance are open to further analysis. See:
+
 [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md)
 
 For detailed information on baluns, ununs, OCF, NCW, and NKO, see:
+
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
 For a glossary of terms used here that are relevant to this antenna and repository see:
+
 [NKO Glossary Of Terms](docs/NKO_Glossary.md)
 
 NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:
+
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
 NEC Models. I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
