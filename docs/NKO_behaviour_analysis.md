@@ -56,17 +56,17 @@ This behaviour aligns with principles described in earlier amateur literature on
 **Summary:**  
 The NKO deliberately utilises feedline radiation to create a hybrid polarisation antenna system. The extent of this, the relative strengths of the vertical and horizontal components, are unknown at this time.
 
-We consider this to be a plausible hypothesis, that the radiating vertical coax section and the horizonetal OCF arms form a radiating system as described. Our observations of signal strengths and other factors to be discussed lead us to believe that there is an interation. However;
+We consider this to be a plausible hypothesis, that the radiating vertical coax section and the horizonetal OCF arms form a radiating system as described. Our observations of signal strengths and other factors to be discussed lead us to believe that there is an interaction. However;
 - we do not have measurement of the NKO arms and coax shield currents
 - we do not have comparative measurement of the current in a conventional 'standard' OCF that uses a current balun
 - we do not have measurements of relative field strengths
-- we do know that NKO does in general have a better signal strength leading us to believe that the use of an UnUn and having the vertical coax radiate, as being the only difference in the antenna, are indeed contributing significantly (not not by how much)
+- we do know that NKO does in general have a better signal strength leading us to believe that the use of an UnUn and having the vertical coax radiate, as being the only difference in the antenna, are indeed contributing significantly (but not by how much)
 
 ---
 
 ## 2a. Signal Strength and Phase Relationships
 
-Field observations have reported variations in received signal strength when comparing the NKO to conventional OCF implementations. These differences are consistent with changes in current distribution and radiation geometry resulting from the inclusion of the feedline as an active radiating element, rather than a purely passive transmission line.
+Field observations have reported variations in received signal strength (improvements) when comparing the NKO to conventional OCF implementations. These differences are consistent with changes in current distribution and radiation geometry resulting from the inclusion of the feedline as an active radiating element, rather than a purely passive transmission line.
 
 In the NKO configuration, the long arm, short arm, and feedline shield form a multi-conductor three element radiating system. Each conductor has a different electrical length and supports a different current distribution, leading to phase differences between their radiated fields. The resulting far-field radiation is therefore the vector sum of multiple contributions with differing amplitudes and phases.
 
@@ -115,9 +115,21 @@ These delay and path length differences are consistent with HF ionospheric propa
 
 They also reinforce the observations showing lesser change in shorter paths, and greater differences on DX with strongest on 20m as the band of greatest difference (longest paths hence longer delays). Also it is easy to suggest this may be strongly condition sensitive with the way the ionosphere refracts signals playing a key role.
 
-From observations on 80m and 40m where the path lengths are shortest and hence the possibility of significant time delay differences, we suggest that fricatives, concentrated toward the upper end of the SSB passband, are most sensitive to moderate delay spreads (on the order of 0.5–2 ms). This is where the comb-filter null spacing falls within the 1–3 kHz region. Under these conditions, relatively small changes in the relative amplitudes and polarisations of multipath components—such as those introduced by a hybrid-polarisation antenna—can produce disproportionately large changes in perceived intelligibility. Put simply, these high pitch parts of the SSB audio band are the most easily affected.
+From observations on 80m and 40m where the path lengths are shortest and hence the possibility of significant time delay differences are the smallest, we suggest that fricatives, concentrated toward the upper end of the SSB passband, are most sensitive to moderate delay spreads (on the order of 0.5–2 ms). This is where the comb-filter null spacing falls within the 1–3 kHz region. Under these conditions, relatively small changes in the relative amplitudes and polarisations of multipath components—such as those introduced by a hybrid-polarisation antenna—can produce disproportionately large changes in perceived intelligibility. Put simply, these high pitch parts of the SSB audio band are the most easily affected.
 
-The current theory is that a hybrid polarisation antenna may reduce selective attenuation of higher-frequency audio components by providing multiple propagation paths with differing polarisation states, thereby improving perceived intelligibility. Why it selects better intelligibility as opposed to worse remains unknown. Resolving this theory will require more testing and the use of DSP analysis of recorded speech.
+The current theory is that a hybrid polarisation antenna may reduce selective attenuation of higher-frequency audio components by providing multiple propagation paths with differing polarisation states, thereby improving perceived intelligibility. Why it selects better intelligibility as opposed to worse remains unknown.
+
+It is suggested that improvements may be more noticeable than degradation.
+
+The NKO configuration does not inherently increase signal information content, but may reduce the severity of frequency-selective fading. In HF propagation, multipath effects often produce deep spectral nulls within the audio passband, particularly in the 2–4 kHz region critical for speech intelligibility. These nulls can significantly degrade received audio.
+
+By introducing a hybrid polarisation and multi-element radiation structure, the NKO effectively provides partial diversity. The resulting signal at the receiver can be viewed as the combination of multiple components with differing phase and polarisation characteristics. Because these components are not fully correlated, deep fades in one component are often partially filled by others.
+
+This process tends to reduce the depth of spectral nulls rather than introduce new severe attenuation. As a result, the received audio spectrum may exhibit reduced deep fading and more uniform frequency response. From a perceptual standpoint, shallow spectral variation is less detrimental to intelligibility than deep, narrow nulls, leading to a subjective improvement in clarity.
+
+It should be noted that this effect is statistical rather than deterministic. Under certain conditions, destructive combination may occur, and no universal improvement can be assumed. However, in typical HF multipath environments, a reduction in deep frequency-selective fading provides a plausible explanation for the observed tendency toward improved intelligibility.
+
+Resolving this theory will require more testing and the use of DSP analysis of recorded speech.
 
 **Summary:**  
 Multipath propagation and frequency-selective fading provide a plausible mechanism linking antenna characteristics to observed differences in audio intelligibility.
