@@ -51,17 +51,19 @@ The above is intended to be indicative of what we may expect. Again, same caveat
 
 ### 2.1 Horizontal Components
 
-Horizontal antenna elements interact with ground primarily through boundary effects:
+Horizontal antennas (like dipoles and OCFs) don’t just radiate into free space — they also interact with the ground below them.
 
-- Interaction at the ground–air boundary (including reflection effects)
-- Formation of image currents
-- Constructive/destructive interference shaping elevation patterns
+Part of the signal goes straight out, and part of it bounces off the ground, and part of it is absorbed by ground. These combine in the air, which shapes where the signal goes (angle etc), especially the takeoff angle.
 
-Ground properties influence:
+Because of this, the ground affects:
 
-- Takeoff angle
+- Takeoff angle (how much energy goes out low vs high)
 - Pattern shape
-- Effective gain (especially at low heights)
+- Effective signal strength, especially when the antenna is low
+
+In simple terms, the ground acts a bit like a reflector. Good ground helps reinforce useful radiation, while poor ground weakens it.
+
+---
 
 ### 2.2 Vertical Components (Feedline Radiation)
 
