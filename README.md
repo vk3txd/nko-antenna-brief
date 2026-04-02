@@ -43,15 +43,18 @@ NEC Models. I've included naive (super simple) NEC models you can use with 4NEC2
 ## NKO Key Concepts
 The NKO antenna consists of:
 - A long wire element and a shorter wire element
-- A defined length of coaxial feedline forming a vertical radiating section
+- A 4:1 UnUn that connects the coax shield to the short arm
+- A defined length of coaxial feedline forming a top-fed vertical radiating section
 - A 1:1 current balun with high choking impedance is used at the bottom of the coax feedline
 
 In the NKO configuration:
 - The coax shield is electrically bonded to the short arm
-- The feedline carries current that is in-phase with the short arm and contributes to radiation
+- The feedline carries current that is broadly in-phase with the short arm and contributes to radiation
 - A 1:1 current balun defines the boundary of the radiating feedline section
 
 This results in a **three-conductor radiating system** rather than a simple two-wire dipole.
+
+The antenna should be analysed as a coupled system of all three conductors, not as a dipole with an attached feedline.
 
 ---
 
