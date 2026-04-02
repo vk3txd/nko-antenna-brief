@@ -36,13 +36,18 @@ How well the ground conducts electricity (salt water, salt pans vs wet soil vs d
 
 Poor ground tends to absorb energy instead, weakening the signal and reducing efficiency.
 
-| Ground Type   | Conductivity | Vertical Efficiency | Low-Angle Radiation | DX Performance (Typical) | NKO Behaviour |
-|--------------|-------------|---------------------|---------------------|--------------------------|--------------|
-| Salt Pan     | Very high   | Excellent           | Very strong         | Often enhanced           | Strong vertical + horizontal hybrid |
-| Arable Soil  | Moderate    | Good                | Good                | Typical                  | Balanced hybrid |
-| Mountain Soil| Very low    | Poor                | Weak                | Often reduced            | Mostly horizontal behaviour |
+| Ground Type              | Conductivity        | Vertical Efficiency | Low-Angle Radiation | DX Performance (Typical) | NKO Behaviour |
+|-------------------------|--------------------|---------------------|---------------------|--------------------------|--------------|
+| Salt Pan                | Very high          | Excellent           | Very strong         | Often enhanced           | Strong vertical + horizontal hybrid |
+| Coastal (near salt water)| High (effective)  | Very good           | Strong              | Often enhanced           | Strong hybrid, low-angle aided by sea reflection |
+| Arable Soil             | Moderate           | Good                | Good                | Typical                  | Balanced hybrid |
+| Sandy Soil (dry)        | Low                | Moderate to poor    | Moderate to weak    | Variable                 | Reduced vertical contribution |
+| Sandy Soil (wet/saline) | Moderate to high   | Good                | Good to strong      | Often improved           | Improved hybrid behaviour |
+| Mineralised Ground (e.g. Golden Triangle) | Variable (often lossy) | Variable            | Variable                | Unpredictable            | Mixed behaviour, potential additional losses |
+| Mountain / Rocky Soil   | Very low           | Poor                | Weak                | Often reduced            | Mostly horizontal behaviour |
+| Urban / Mixed           | Highly variable    | Variable            | Variable            | Highly variable          | Strongly environment-dependent |
 
-The above is intended to be indicative of what we can expect. Again, same caveats about installation height etc.
+The above is intended to be indicative of what we may expect. Again, same caveats about installation height etc.
 
 ### 2.1 Horizontal Components
 
