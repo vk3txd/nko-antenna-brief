@@ -248,7 +248,8 @@
   - _Common Mode_
     - _Origin_ Arises as part of the intended current distribution  
     - _Response_ Not suppressed; incorporated into system operation  
-    - _Effect_ Feedline current contributes directly to radiation  
+    - _Effect_ Feedline current contributes directly to radiation
+    - _Vertical Coax Shield_ Functions as a radiator with maximum current at the apex and with reduced reliance on ground
 
 - _Performance_ Produces a hybrid radiation pattern with horizontal and vertical components  
 

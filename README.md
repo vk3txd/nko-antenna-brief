@@ -15,7 +15,7 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 ## NKO Overview
 New Kallista OCF (NKO) is a hybrid HF wire antenna system in which the feedline is an intentional part of the radiating structure.
 
-It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the radiating system.
+It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the radiating system. It acts as an elevated vertical radiator with its maximum current at the apex and with reduced reliance on ground.
 
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">

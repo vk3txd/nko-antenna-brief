@@ -13,7 +13,9 @@ Traditional OCF antennas typically employ a balun to provide impedance transform
 A 1:1 balun further down the feedline establishes a boundary for the feedline to become a controlled radiator.
 
 **Feedline Radiation and Hybrid Polarisation**  
-The vertical section of the coax feedline between the 4:1 UnUn and the 1:1 choke balun can support common-mode current and contribute to radiation. This introduces a vertically polarised component alongside the predominantly horizontal radiation of the OCF arms, forming a hybrid polarisation system that may improve performance under varying propagation conditions.
+The vertical section of the coax feedline between the 4:1 UnUn and the 1:1 choke balun can support common-mode current and contribute to radiation.
+This introduces a vertically polarised component alongside the predominantly horizontal radiation of the OCF arms, forming a hybrid polarisation system that may improve performance under varying propagation conditions.
+Of note, this feedline performs like an elevated top-fed radiator with the maximum current at the apex.
 
 **Audio Intelligibility and Frequency Selective Effects**  
 Field observations indicate improved speech intelligibility, particularly in fricative consonants. A plausible explanation is reduced frequency-selective fading through polarisation diversity and multipath interaction, preserving higher-frequency audio components critical for intelligibility.
