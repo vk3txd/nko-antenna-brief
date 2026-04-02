@@ -24,7 +24,7 @@ This results in a hybrid antenna system with both horizontal and vertical radiat
 
 Ground interaction therefore becomes more complex than in conventional antennas.
 
-Of special note is that the vertical coax section has its highest current at the apex, at the feedpoint and high in the air, so it behaves more like an elevated top-fed radiator and should be considered that way rather than a ground mounted vertical. This reduces the interaction with ground and reliance on it. At the same time we believe it makes the NKO vertical coax more effective than a ground mounted vertical.
+**Of special note** is that the vertical coax section has its highest current at the apex, at the feedpoint and high in the air, so it behaves more like an elevated top-fed radiator and should be considered that way rather than a ground mounted vertical. This reduces the interaction with ground and reliance on it. At the same time we believe it makes the NKO vertical coax more effective than a ground mounted vertical.
 
 ---
 
