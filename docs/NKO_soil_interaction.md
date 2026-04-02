@@ -2,33 +2,53 @@
 
 ## Abstract
 
-This document presents a structured engineering analysis of how soil properties and ground conductivity influence the behaviour of the NKO antenna.
+This document explores how soil properties and ground conductivity may influence the behaviour of the NKO antenna.
 
-Unlike conventional wire antennas, the NKO operates as a hybrid system incorporating both horizontal radiating elements and a vertical feedline component.
+Unlike conventional wire antennas, the NKO operates as a 3-wire hybrid system incorporating both horizontal radiating elements and a vertical radiating feedline component.
 
-This combination introduces multiple mechanisms of ground interaction, affecting radiation pattern, efficiency, and propagation behaviour. The analysis focuses on physical mechanisms and observed trends rather than fixed performance claims.
+This combination introduces multiple mechanisms of ground effects, affecting radiation pattern, efficiency, and propagation behaviour.
+
+We can't give fixed performance claimsbecause there are too many other factors; height above ground, feedline routing, nearby structures and actual conductivity of the soil versus what we think it is.
 
 ---
 
 ## 1. Introduction
 
-The NKO antenna departs from traditional off-centre-fed (OCF) designs by allowing the feedline to participate in the radiating system. This creates a multi-conductor structure comprising:
+The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the coax between the 4:1 Unun and the 1:1 balun radiates and really is part of the antenna system. This creates a multi-conductor structure comprising:
 
 - Long arm (horizontal)
 - Short arm (horizontal)
 - Feedline shield (vertical/common-mode)
 
-This configuration results in a hybrid antenna system exhibiting both horizontal and vertical radiation characteristics. Ground interaction therefore becomes more complex than in conventional antennas.
+This results in a hybrid antenna system with both horizontal and vertical radiation characteristics.
+
+Ground interaction therefore becomes more complex than in conventional antennas.
 
 ---
 
 ## 2. Ground Interaction Mechanisms
 
+At HF, the ground is part of the antenna system whether we like it or not.
+
+Some of the signal leaving the antenna goes straight out, and some interacts with the ground. The two combine in the air, which changes the radiation pattern, especially the takeoff angle.
+
+How well the ground conducts electricity (salt water, salt pans vs wet soil vs dry rock, for example) affects how strong this interaction is. Good ground acts more like a reflector, helping energy launch (or arrive) at useful low angles and reinforcing the signal. 
+
+Poor ground tends to absorb energy instead, weakening the signal and reducing efficiency.
+
+| Ground Type   | Conductivity | Vertical Efficiency | Low-Angle Radiation | DX Performance (Typical) | NKO Behaviour |
+|--------------|-------------|---------------------|---------------------|--------------------------|--------------|
+| Salt Pan     | Very high   | Excellent           | Very strong         | Often enhanced           | Strong vertical + horizontal hybrid |
+| Arable Soil  | Moderate    | Good                | Good                | Typical                  | Balanced hybrid |
+| Mountain Soil| Very low    | Poor                | Weak                | Often reduced            | Mostly horizontal behaviour |
+
+The above is intended to be indicative of what we can expect. Again, same caveats about installation height etc.
+
 ### 2.1 Horizontal Components
 
 Horizontal antenna elements interact with ground primarily through boundary effects:
 
-- Reflection at the الأرض–air interface
+- Interaction at the ground–air boundary (including reflection effects)
 - Formation of image currents
 - Constructive/destructive interference shaping elevation patterns
 
@@ -126,6 +146,7 @@ Ground conductivity influences the NKO through two mechanisms:
 The NKO combines both, resulting in:
 
 - Increased environmental sensitivity
+  - Soil type will change NKO behaviour more than for a simple dipole or vertical antenna
 - Hybrid radiation behaviour
 - Context-dependent performance
 
