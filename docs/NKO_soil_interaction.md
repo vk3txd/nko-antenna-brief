@@ -53,15 +53,15 @@ The above is intended to be indicative of what we may expect. Again, same caveat
 
 Horizontal antennas (like dipoles and OCFs) don’t just radiate into free space — they also interact with the ground below them.
 
-Part of the signal goes straight out, and part of it bounces off the ground, and part of it is absorbed by ground. These combine in the air, which shapes where the signal goes (angle etc), especially the takeoff angle.
+Part of the signal goes straight out, and part of it bounces off the ground, and part of it is absorbed by ground. The radiated and reflected signals combine in the air, which shapes where the signal goes (angle etc), especially the takeoff angle.
 
 Because of this, the ground affects:
 
-- Takeoff angle (how much energy goes out low vs high)
+- Takeoff angle (how much energy goes out and where - low vs high)
 - Pattern shape
-- Effective signal strength, especially when the antenna is low
+- Effective signal strength, especially when the antenna is low to the ground
 
-In simple terms, the ground acts a bit like a reflector. Good ground helps reinforce useful radiation, while poor ground weakens it.
+In simple terms, the ground acts a bit like a lossy reflector. Good ground helps reinforce useful radiation, while poor ground weakens it.
 
 ---
 
