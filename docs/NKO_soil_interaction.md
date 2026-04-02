@@ -4,17 +4,17 @@
 
 This document explores how soil properties and ground conductivity may influence the behaviour of the NKO antenna.
 
-Unlike conventional wire antennas, the NKO operates as a 3-wire hybrid system incorporating both horizontal radiating elements and a vertical radiating feedline component.
+Unlike conventional wire antennas, the NKO operates as a 3-wire hybrid system incorporating both horizontal radiating elements and a top-fed vertical radiating feedline component.
 
 This combination introduces multiple mechanisms of ground effects, affecting radiation pattern, efficiency, and propagation behaviour.
 
-Fixed performance claims are not appropriate, as results depend on factors such as installation height, feedline routing, nearby structures, and actual ground conductivity.
+Fixed performance claims are not appropriate. Results depend on factors such as installation height, feedline routing, nearby structures, and actual ground conductivity.
 
 ---
 
 ## 1. Introduction
 
-The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the top-fed coax shield between the 4:1 Unun and the 1:1 balun radiates and really is part of the antenna system. This creates a multi-conductor structure comprising:
+The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the top-fed coax shield between the 4:1 Unun and the 1:1 balun radiates and is part of the antenna system. This creates a multi-conductor structure comprising:
 
 - Long arm (horizontal)
 - Short arm (horizontal)

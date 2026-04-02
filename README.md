@@ -28,6 +28,10 @@ For detailed information on baluns, ununs, OCF, NCW, and NKO, see:
 
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
+All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:
+
+[NKO Soil Interactions](docs/NKO_soil_interaction.md)
+
 For a glossary of terms used here that are relevant to this antenna and repository see:
 
 [NKO Glossary Of Terms](docs/NKO_Glossary.md)
@@ -95,6 +99,24 @@ _Field testing since December 2025 has shown_
 - Evidence of reciprocity. Signal reports from Rx and Tx improvements align
 
 _These observations are consistent across multiple stations and configurations._
+
+---
+
+## Tried this antenna?
+
+If you’ve built or tested an NKO, I’d really appreciate your feedback.
+
+- Location / ground type
+- Apex and end of arms height
+- Vertical coax length
+- Bands used
+- Comparison antenna
+- Signal reports or recordings
+
+You can:
+- Please email me
+
+This helps validate and improve the design.
 
 ---
 

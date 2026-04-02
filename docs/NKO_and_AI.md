@@ -26,6 +26,8 @@ Note. AI did not do the innovation and in nearly 6 months of use, I have found t
 
 ## How AI Benefited Me
 
+Simplisitcally, AI can proof read and find sillinesses in text really well. Not onto that, it proof reads in context, and not just for grammar and spelling. This is a real help.
+
 AI can search the internet, collect and collate information, and then present results vastly quicker than any human. This alone makes it very valuable as a research tool.
 
 This is a huge help in analysing a situation, searching forums for user experiences and problems, and considering options. It can then use this in an analysis which is a huge help.
@@ -45,6 +47,12 @@ AI has helped me learn.
 ---
 
 ## AI Shortcomings
+
+Sometimes it loses its mind. It has recentlly started using an arabic term for ground, written in arabic characters in the middle of a document. Why do this? Somtimes I think it needs constant adult supervision.
+
+It can get a bad idea baked into its context which can be difficult to remove. It apologizes, then it uses it again.
+
+Its prior learing and particularly with Amateur Radio topics can be highly suspect for accuracy. It uses blogs and websites that are often just plain wrong. When queried and told to use first principles it is able to get past that, but it takes time and vigilence to detect then correct. It, like people, is susceptible to being convinced by repetition and the volume of information rather than only accepting good information, verified by proper analysis.
 
 In the early days, AI asked questions, or it's analysis led me to question it. One day I happily remember successfully challenging Grok-AI 4 times in an hour and calling out flawed results.
 
