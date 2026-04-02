@@ -95,42 +95,11 @@ Ground effects vary significantly with frequency:
 - Geometry dominates
 - Vertical contribution still present but less sensitive
 
----
-
-## 6. Geometry Dependence
-
-The NKO is highly sensitive to installation geometry:
-
-- Apex height
-- Arm lengths and ratio
-- Vertical feedline length
-- Choke position
-- Feedline routing
-- Local environment
-
-Ground effects cannot be considered independently of these parameters.
+_Ground effects cannot be considered independently of installation parameters such as height, feedline routing etc_
 
 ---
 
-## 7. Interaction with Propagation
-
-HF propagation introduces additional effects:
-
-- Multipath propagation
-- Frequency-selective fading
-- Polarisation rotation
-
-Small changes in radiation characteristics can produce:
-
-- Significant signal strength variation
-- Changes in intelligibility
-- Altered fading behaviour
-
-The antenna therefore forms part of the effective propagation channel.
-
----
-
-## 8. Practical Implications
+## 6. Practical Implications
 
 ### High Conductivity Ground (Salt Pan)
 
@@ -147,18 +116,7 @@ The antenna therefore forms part of the effective propagation channel.
 
 ---
 
-## 9. Installation Considerations
-
-To maintain intended NKO behaviour:
-
-- Preserve vertical feedline section
-- Position choke appropriately (not at feedpoint)
-- Avoid early grounding of feedline
-- Maintain consistent geometry
-
----
-
-## 10. Summary
+## 7. Summary
 
 Ground conductivity influences the NKO through two mechanisms:
 
@@ -173,7 +131,7 @@ The NKO combines both, resulting in:
 
 ---
 
-## 11. Key Statement
+## 8. Key Points
 
 High-conductivity ground such as a salt pan is expected to strengthen the NKO’s vertical/common-mode radiation component, improving low-angle radiation and potentially enhancing path-dependent signal strength and intelligibility, particularly on lower HF bands.
 
