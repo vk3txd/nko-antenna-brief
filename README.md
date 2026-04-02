@@ -47,11 +47,15 @@ NEC Models. I've included naive (super simple) NEC models you can use with 4NEC2
 ## NKO Key Concepts
 The NKO antenna consists of:
 - A long wire element and a shorter wire element
-- A 4:1 UnUn that connects the coax shield to the short arm
+- A 4:1 UnUn does 2 essential things
+  - It impedance matched the coax to the OCF arms
+  - It connects the coax shield to the short arm
 - A defined length of coaxial feedline forming a top-fed vertical radiating section
 - A 1:1 current balun with high choking impedance is used at the bottom of the coax feedline
+  - This device performs no impedance transformation; it stops common‑mode current and defines the boundary of the radiating coax
 
 In the NKO configuration:
+- The 4:1 UnUn is the only impedance‑transforming element in the NKO
 - The coax shield is electrically bonded to the short arm
 - The feedline carries current that is broadly in-phase with the short arm and contributes to radiation
 - A 1:1 current balun defines the boundary of the radiating feedline section
