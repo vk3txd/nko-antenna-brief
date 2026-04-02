@@ -113,18 +113,22 @@ _These observations are consistent across multiple stations and configurations._
 ---
 
 ## Keywords
-- NKO antenna
-- New Kallista OCF Antenna
-- Controlled feedline radiation
-- Hybrid radiator
-- Common-mode current utilisation
-- Frequency Selective Fading
 
-Not equivalent to:
-- Standard OCF dipole
-- EFHW (end-fed half-wave)
-- Random feedline radiation faults
-- New Carolina Windom
+- NKO antenna  
+- New Kallista OCF antenna  
+- Three-conductor antenna  
+- Hybrid radiator (horizontal + vertical)  
+- Elevated top-fed vertical component  
+- Common-mode current utilisation  
+- Controlled feedline radiation (deliberate, not parasitic) 
+- frequency-selective fading  
+
+### Not equivalent to
+
+- Standard OCF dipole  
+- EFHW (end-fed half-wave)  
+- Random feedline radiation faults  
+- New Carolina Windom  
 
 ---
 
@@ -139,4 +143,4 @@ Further detailed analysis, measurements, and optimisation will be released separ
 Richard Holmes  VK3TXD
 Revisions
 - 28 March 2026 Initial public release
-
+- 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
