@@ -14,7 +14,7 @@ Fixed performance claims are not appropriate, as results depend on factors such 
 
 ## 1. Introduction
 
-The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the coax between the 4:1 Unun and the 1:1 balun radiates and really is part of the antenna system. This creates a multi-conductor structure comprising:
+The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the top-fed coax shield between the 4:1 Unun and the 1:1 balun radiates and really is part of the antenna system. This creates a multi-conductor structure comprising:
 
 - Long arm (horizontal)
 - Short arm (horizontal)
