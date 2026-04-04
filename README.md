@@ -22,34 +22,28 @@ It differs from conventional OCF and Windom-type antennas in that feedline curre
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
 
-Want to build an NKO? See:
-
+Want to build an NKO? See:<br>
 [NKO Build Brief](docs/NKO_build.md)
 
-NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performance are open to further analysis. See:
-
+NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performance are open to further analysis. See:<br>
 [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md)
 
-For detailed information on baluns, ununs, OCF, NCW, and NKO, see:
-
+For detailed information on baluns, ununs, OCF, NCW, and NKO, see:<br>
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
 Some thinking and discussion points, a bref discussion on various NKO related topics. See:<br>
 [Discussion topics](docs/NKO_thinking_points.md)
 
-All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:
-
+All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:<br>
 [NKO Soil Interactions](docs/NKO_soil_interaction.md)
 
-For a glossary of terms used here that are relevant to this antenna and repository see:
-
+For a glossary of terms used here that are relevant to this antenna and repository see:<br>
 [NKO Glossary Of Terms](docs/NKO_Glossary.md)
 
-NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:
-
+NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:<br>
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
-NEC Models. I've included naive (super simple) NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
+NEC Models. I've included naive (super simple) 3-wire NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
 
 ---
 
