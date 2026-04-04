@@ -1,0 +1,66 @@
+# Building An NKO - New Kallista OCF
+
+There are two options - build suitable NKO UnUn and Baluns from components, or purchase ready made components.
+
+---
+
+## Purchase 100W Range
+
+LDG make a range of low cost UnUn and Balun components suitable for lower power builds.
+
+RU-4:1 Unun - looks to be suitable for the UnUn. The box is marked with an antenna symbol - connect to long arm. The Earth symbol - connect to short arm.
+
+RU-1:1 Unun - may be suitable for the 1:1 current balun at the bottom of the vertical coax. I have not used it or seen its technical specifications.
+
+---
+
+## Build 100W range
+
+These are quite easy to make so long as you are comfortable winding toroids, soldering, and have appropriate skills in packaging into a suitable enclosure. I have successfully built them into "jiffy" style boxes as well as better-sealed enclosures. 
+
+These have been made and measured with a VNA, and the 100W builds are the designs used by the test stations.
+
+### Build 4:1 UnUn
+
+This is made with
+- Ferrite core : a single FT140-43 or Jaycar LO1238 toroid
+- Wire : Use 2 x 70mm lengths of 0.8mm enamel wire sleeved in teflon tube, held close together as a bifilar pair by small short pieces of plastic tubing.
+- Wind 7 turns (so the bifilar pair goes through the hole 7 times)
+- Connect as per diagram below
+
+Note: I have used 6 turns for 80m builds. 7 turns tested as slightly lower loss. For 160m builds we suggest 8 turns.
+
+Here is the schematic;<br>
+<img src="4-1_100w_UnUn.png" alt="NKO 4:1 UnUn" width="250">
+
+### Build 1:1 Balun
+
+This component must have a high choking impedance and also be able to handle the common mode curent in the system. The good news, this is is quite easy to make for a 100W class UnUn.
+
+This is made with
+- Use a 4 stack of LO1234 toroids from Jaycar, or a 4 stack of FT110-43's
+- Use RG316 coax and wind on 7 turns
+- Terminate in LO239 connectors at each end.
+
+Here is the VNA scan of my LO1234 build;<br>
+<img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100W UnUn" width="250">
+
+---
+
+## Build 400W range
+
+For the 4:1 UnUn, substitute a stacked pair of FT140-43 toroids (or Jaycar LO1238's) and use 1mm enamel covered wire sleeved in teflon tubing.
+
+For the 1:1 Balun, substitute a 4 stack of FT140-43 toroids (or Jaycar LO1238's). The choking impedance will be slightly higher but the larger toroids will increase its ability to absorb the higher power (heat).
+
+---
+
+## Purchase QRO - 1,500W range
+
+We can only recommend components that look suitable to handle this level of power. We have not tested these, only read their published data. The 4:1 UnUn and 1:1 Balun specifications should handle QRO power with ease. 
+
+https://www.balundesigns.com/
+
+Balun Designs Model 4134 - 4:1 Unun 1.5 - 54MHz – 5kW
+
+Balun Designs Model 1115di - 1:1 Dual Core Isolation Balun Dual SO239, 3.5-54 Mhz, 5kW
