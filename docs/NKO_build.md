@@ -28,7 +28,9 @@ This is made with
 - Wind 7 turns (so the bifilar pair goes through the hole 7 times)
 - Connect as per diagram below
 
-Note: I have used 6 turns for 80m builds. 7 turns tested as slightly lower loss. For 160m builds we suggest 8 turns.
+Note: I have used 6 turns for 80m builds. Later, 7 turns tested as slightly lower loss. For 160m builds we suggest 8 turns.
+
+Performance; VNA scans indicate low loss, approx 0.1dB across HF, and with a 200R resistor, excellent impedance transformation across HF.
 
 Here is the schematic;<br>
 <img src="4-1_100w_UnUn.png" alt="NKO 4:1 UnUn" width="250">
@@ -42,8 +44,10 @@ This is made with
 - Use RG316 coax and wind on 7 turns
 - Terminate in LO239 connectors at each end.
 
-Here is the VNA scan of my LO1234 build;<br>
+Performance; here is the VNA scan of my LO1234 build;<br>
 <img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100W UnUn" width="250">
+
+I used a 4 stack of toroids to get a greater mass to handle more heating. Then reduced the turns count to 7 to make up for the increaed impedance the 4 stack produced. Adding more turns is easy, but it shifts the self resonance point down in frequency and adversely affects the 10m band.
 
 ---
 

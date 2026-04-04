@@ -34,8 +34,7 @@ For detailed information on baluns, ununs, OCF, NCW, and NKO, see:
 
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
-Some thinking and discussion points, a bref discussion on various NKO related topics. See: 
-
+Some thinking and discussion points, a bref discussion on various NKO related topics. See:<br>
 [Discussion topics](docs/NKO_thinking_points.md)
 
 All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:
