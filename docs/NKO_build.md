@@ -33,7 +33,7 @@ _1:1 Balun_
 - Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
 
 Performance; Here is the scan of 13 turns on a single LO1234 core.<br>
-<img src="13T_LO1238_Z.png" alt="NKO QRP UnUn" width="350">
+<img src="13T_LO1238_Z.png" alt="NKO QRP UnUn" width="500">
 
 _Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
 
@@ -60,7 +60,7 @@ Note: I have used 6 turns for 80m builds. Later, 7 turns tested as slightly lowe
 Performance; VNA scans indicate low loss, approx 0.1dB across HF, and with a 200R resistor, excellent impedance transformation across HF.
 
 Here is the schematic;<br>
-<img src="4-1_100w_UnUn.png" alt="NKO 4:1 UnUn" width="250">
+<img src="4-1_100w_UnUn.png" alt="NKO 4:1 UnUn" width="500">
 
 ### Build 1:1 Balun
 
