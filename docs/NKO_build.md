@@ -35,7 +35,7 @@ _1:1 Balun_
 Performance; Here is the scan of 13 turns on a single LO1234 core.<br>
 <img src="13T_LO1238_Z.png" alt="NKO QRP UnUn" width="500">
 
-_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
+_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into other 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
 
 _Why that power rating?_ The wire is 0.6mm which might be ok for a not recommended 100W. The issue though is the common mode current in the 1:1 on 80m is expected to be highest. This may lead to more heating than a single core of this type could withstand. It might get quite hot.
 
