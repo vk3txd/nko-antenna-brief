@@ -47,7 +47,7 @@ These have been made and measured with a VNA, and the 100W builds are the design
 
 This is made with
 - Ferrite core : a single FT140-43 or Jaycar LO1238 toroid
-- Wire : Use 2 x 70mm lengths of 0.8mm enamel wire sleeved in teflon tube, held close together as a bifilar pair by small short pieces of plastic tubing.
+- Wire : Use 2 x 750mm lengths of 0.8mm enamel wire sleeved in teflon tube, held close together as a bifilar pair by small short pieces of plastic tubing.
 - Wind 7 turns (so the bifilar pair goes through the hole 7 times)
 - Connect as per diagram below
 
