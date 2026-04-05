@@ -14,6 +14,28 @@ RU-1:1 Unun - may be suitable for the 1:1 current balun at the bottom of the ver
 
 ---
 
+## Build QRP
+
+This is an untested design.
+
+_4:1 UnUn_
+- Use a Jaycar LO1234 core, or FT110-43
+- Wind 7 turns of 0.6mm enamel covered wire, bifilar
+- use connectors and enclosure of choice
+- Power handling would be 50w SSB absolute max (untested)
+
+_1:1 Balun_
+- Use a Jaycar LO1234 core, or FT110-43
+- Wind on turns of 0.6mm enamel covered wire, bifilar
+- This has not scanned for choking impedance, math suggests it should be very similar to the 100W version below which is excellent
+- Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
+
+_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when you wind the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
+
+_Why that power rating?_ The wire is 0.6mm which might be ok for a not recommended 100W. The issue though is the common mode current in the 1:1 on 80m is expected to be highest. This may lead to more heating than a single core of this type could withstand. It might get quite hot.
+
+---
+
 ## Build 100W range
 
 These are quite easy to make so long as you are comfortable winding toroids, soldering, and have appropriate skills in packaging into a suitable enclosure. I have successfully built them into "jiffy" style boxes as well as better-sealed enclosures. 
@@ -47,7 +69,7 @@ This is made with
 Performance; here is the VNA scan of my LO1234 build;<br>
 <img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100W UnUn" width="250">
 
-I used a 4 stack of toroids to get a greater mass to handle more heating. Then reduced the turns count to 7 to make up for the increaed impedance the 4 stack produced. Adding more turns is easy, but it shifts the self resonance point down in frequency and adversely affects the 10m band.
+I used a 4 stack of toroids to get a greater mass to handle more heating. Then reduced the turns count to 7 to account for the increased impedance the 4 stack produced. Adding more turns is easy, but it shifts the self resonance point down in frequency and adversely affects the 10m band.
 
 ---
 
@@ -61,7 +83,7 @@ For the 1:1 Balun, substitute a 4 stack of FT140-43 toroids (or Jaycar LO1238's)
 
 ## Purchase QRO - 1,500W range
 
-We can only recommend components that look suitable to handle this level of power. We have not tested these, only read their published data. The 4:1 UnUn and 1:1 Balun specifications should handle QRO power with ease. 
+We can only recommend components that look suitable to handle this level of power. We have not tested these, only read their published data. The 4:1 UnUn and 1:1 Balun specifications of the devices should handle QRO power with ease. The 4:1 is way over-specced.
 
 https://www.balundesigns.com/
 
