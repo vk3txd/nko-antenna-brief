@@ -29,7 +29,7 @@ _1:1 Balun_
 - Use a Jaycar LO1234 core, or FT110-43
 - Wind on 13 turns of 0.6mm enamel covered wire, bifilar
 - Use connectors and enclosure of choice
-- This has not scanned for choking impedance, math suggests it should be very similar to the 100W version below which is excellent
+- This has been scanned for choking impedance. See below
 - Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
 
 Performance; Here is the scan of 13 turns on a single LO1234 core.<br>
