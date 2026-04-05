@@ -16,7 +16,7 @@ RU-1:1 Unun - may be suitable for the 1:1 current balun at the bottom of the ver
 
 ## Build QRP
 
-This is an untested design.
+This is an untested design. Test carefully after building.
 
 _4:1 UnUn_
 - Use a Jaycar LO1234 core, or FT110-43
