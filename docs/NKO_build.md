@@ -27,12 +27,13 @@ _4:1 UnUn_
 
 _1:1 Balun_
 - Use a Jaycar LO1234 core, or FT110-43
-- Wind on 9 turns of 0.6mm enamel covered wire, bifilar
+- Wind on 13 turns of 0.6mm enamel covered wire, bifilar
 - Use connectors and enclosure of choice
 - This has not scanned for choking impedance, math suggests it should be very similar to the 100W version below which is excellent
 - Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
 
-_Turns count_ on this core is under review. While 9 turns 'feels good' - I'm exploring 10 turns and 11 turns. The biggest impact will be on 80m choking impedance.
+Performance; Here is the scan of 13 turns on a single LO1234 core.
+<img src="13T_LO1238_Z.png" alt="NKO QRP UnUn" width="250">
 
 _Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
 
