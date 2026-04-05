@@ -31,7 +31,9 @@ _1:1 Balun_
 - This has not scanned for choking impedance, math suggests it should be very similar to the 100W version below which is excellent
 - Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
 
-_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when you wind the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
+_Turns count_ on this core is under review. 9 turns 'feels good' - I'm exploring 10 turns and 11 turns. The biggest impact will be on 80m choking impedance.
+
+_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
 
 _Why that power rating?_ The wire is 0.6mm which might be ok for a not recommended 100W. The issue though is the common mode current in the 1:1 on 80m is expected to be highest. This may lead to more heating than a single core of this type could withstand. It might get quite hot.
 
