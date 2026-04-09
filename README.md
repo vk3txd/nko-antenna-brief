@@ -7,7 +7,7 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 
 # NKO - New Kallista OCF Antenna – Design Brief
 
-**Status:** Private (alpha)  
+**Status:** Public (alpha)  
 **Author:** VK3TXD (Richard Holmes)  
 **License:** CC BY 4.0 for docs/design (`LICENSE`); Apache-2.0 for code (`LICENSE-CODE`)  
 **Brand policy:** See `TRADEMARKS.md`
