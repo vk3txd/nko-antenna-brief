@@ -28,6 +28,9 @@ Want to build an NKO? See:<br>
 NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performance are open to further analysis. See:<br>
 [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md)
 
+NKO is easily confused with the New Carolina Windom. Here is a comparison. See:<br>
+[NKO compared to New Carolina Windom](docs/NKO_And_The_Carolina_Windom.md)
+
 For detailed information on baluns, ununs, OCF, NCW, and NKO, see:<br>
 [Component and Antenna Notes](docs/NKO_Component_Notes.md)
 
