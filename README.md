@@ -147,6 +147,14 @@ This helps validate and improve the design.
 - _Not Equivalent To_ Standard OCF dipoles, EFHW antennas, or uncontrolled feedline radiation systems
 - _Implementation_ Typically realised using an off-centre-fed wire with a 4:1 autotransformer (UnUn) and a 1:1 balun to define the vertical radiator
 
+
+## Before Dismissing NKO as an OCF or New Carolina Windom
+Consider;
+- The use of a 4:1 UnUn at the feedpoint, phase bonding the vertical coax shield to the short arm
+- The maximum current in the vertical coax shield is at the feed point, maximum height, so ground interaction is reduced
+- The phase relationships, as well as vertical coax current, and the far field radiation patterns
+- The better defined vertical coax lengths for 80m and 40m builds
+
 ---
 
 ## Keywords
