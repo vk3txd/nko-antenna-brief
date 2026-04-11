@@ -18,7 +18,8 @@ This introduces a vertically polarised component alongside the predominantly hor
 Of note, this feedline performs like an elevated top-fed radiator with the maximum current at the apex.
 
 **Audio Intelligibility and Frequency Selective Effects**  
-Field observations indicate improved speech intelligibility, particularly in fricative consonants. A plausible explanation is reduced frequency-selective fading through polarisation diversity and multipath interaction, preserving higher-frequency audio components critical for intelligibility.
+Field observations indicate improved speech intelligibility, particularly in fricative consonants.
+One plausible explanation is reduced frequency-selective fading through polarisation diversity and multipath interaction, preserving higher-frequency audio components critical for intelligibility.
 
 ---
 
@@ -32,14 +33,15 @@ In a standard OCF dipole antenna, a balun is used to provide impedance transform
 
 Although the arms of an OCF antenna are of unequal length, the structure can still support balanced currents. However, the feedpoint impedance and current distribution are inherently asymmetric, placing practical demands on the balun to both transform impedance and maintain current symmetry. In practice, the effectiveness of this suppression depends on the balun design and its choking impedance.
 
-By contrast, in the NKO system the UnUn primarily performs impedance transformation while permitting common-mode current to develop on the feedline. The feedline shield is directly connected to the short arm, allowing it to participate in the overall current distribution.
+By contrast, in the NKO system the UnUn primarily performs impedance transformation while permitting common-mode current to develop on the feedline. The feedline shield is directly connected to the short arm as a phase bonded pair, allowing it to participate in the overall current distribution.
 
 > Insert diagram here of UnUn schematic and OCF arms.
 
-This results in a three-conductor system comprising the long arm, with the short arm and the feedline shield connected at the UnUn. The antenna must therefore be considered a coupled system rather than a simple two-conductor dipole, with the feedline acting as an additional radiating element rather than a purely passive transmission medium.
+This results in a three-conductor system comprising the long arm, with the short arm and the feedline shield connected at the UnUn. The antenna must therefore be considered a coupled 3 wire system rather than a simple two-conductor dipole, with the feedline acting as an additional and deliberate radiating element rather than an accidental and purely passive transmission medium.
 
 **Summary:**  
 The UnUn provides impedance transformation while allowing the feedline to participate in the radiating system.
+The phase relationships between the long arm, and the phase bonded pair of short arm and coax shield may (arguably) contribute to both efficiency of the antenna system, but also to other claims about its enhanced divertity performance.
 
 ---
 
@@ -48,6 +50,8 @@ The UnUn provides impedance transformation while allowing the feedline to partic
 In conventional antenna systems, feedline radiation is generally treated as an undesirable artefact. In the NKO configuration, it is instead encouraged to be a deliberate and functional component of the antenna system.
 
 The vertical section of the coax feedline between the feedpoint and the common-mode choke can support significant common-mode current and therefore contribute to radiation. This introduces a vertically polarised component to the overall radiation pattern, complementing the predominantly horizontal polarisation of the OCF arms.
+
+Importantly, the phase relationship of the long arm to the phase bonded pair of short arm and vertical coax suggests the NKO may have advantages compared to other antennas with regard to waveform coherence. Of special note, the effect of this will vary by frequency as a result of different current flows in the 3 arms of the radiating structure. The end-resultant waveform is a vector sum that includes the ampliture as well as the phase relationship of the currents.
 
 The answer to the question of "how much current" is flowing on the coax shield is unknown. We have no doubt it will be frequency dependant meaning it will change band by band. From observation of signal strengths and other effects it is surmised that it is enough to affect the radiation pattern and hence system performance.
 
@@ -72,7 +76,7 @@ Field observations have reported variations in received signal strength (improve
 
 In the NKO configuration, the long arm, short arm, and feedline shield form a multi-conductor three element radiating system. Each conductor has a different electrical length and supports a different current distribution, leading to phase differences between their radiated fields. The resulting far-field radiation is therefore the vector sum of multiple contributions with differing amplitudes and phases.
 
-We surmise these phase relationships are not fixed but vary with frequency, antenna geometry, and operating conditions. Consequently, the NKO may exhibit changes in radiation pattern, elevation angle distribution, and polarisation characteristics when compared to conventional OCF antennas.
+We surmise these phase relationships are not fixed but may vary with frequency, antenna geometry, and operating conditions. Consequently, the NKO may exhibit changes in radiation pattern, elevation angle distribution, and polarisation characteristics when compared to conventional OCF antennas.
 
 In this sense, the NKO behaves more like a loosely coupled three element system than a single wire radiator. While not a controlled array, the interaction between its elements can produce constructive and destructive field combinations that vary with frequency and environment. To date the signal reports indicate constructive field combinations.
 

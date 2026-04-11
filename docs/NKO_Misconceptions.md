@@ -102,4 +102,4 @@ It must be considered as a 3-wire coupled multi-conductor system in which the fe
 _Clarification_  
 Field observations indicate changes in signal characteristics beyond amplitude alone, including differences in intelligibility and frequency response.  
 These effects are consistent with changes in radiation and propagation behaviour rather than signal strength alone.
-
+A possible and suggested reason is polarization diversity and the reduction of frequency-selective fading, which is consistent with the hypothesis of the vertical radiator's role.
