@@ -7,7 +7,7 @@ _This section addresses common interpretations of antenna behaviour and clarifie
 ---
 
 ## Index
-1. Using an UnUn with OCF arms is incorrect  
+1. Using an UnUn with OCF arms is incorrect
 2. Feedline radiation is always a fault  
 3. A current balun is required to force balance  
 4. This is just a Carolina Windom  
@@ -24,8 +24,10 @@ _This section addresses common interpretations of antenna behaviour and clarifie
 
 _Clarification_  
 The NKO is not a conventional OCF antenna.  
-It is a three-conductor hybrid system in which the feedline is an intentional part of the radiating structure.  
+It is a three-conductor hybrid system in which the feedline is an intentional part of the radiating structure.
 The UnUn is used to couple currents within this system rather than to enforce balance between two conductors.
+The UnUn top-feeds the coax shield making it into a top-fed vertical radiator with the short antenna arm acting similarly to a cap-hat.
+In reality the use of an UnUn creates the antenna a 3 wire phase bonded antenna system.
 
 ---
 
@@ -34,14 +36,15 @@ The UnUn is used to couple currents within this system rather than to enforce ba
 _Clarification_  
 In conventional antenna systems, feedline radiation is typically undesirable.  
 In the NKO, feedline current is intentional, controlled, and contributes to radiation as part of the system design.
+Specifically, the 1:1 balun some metres down the feedline is used as both a boundary device making the coax above it into a vertical radiator, and eliminating the common mode current on the coax from there to the shack.
 
 ---
 
 ## Misconception 3: “A current balun is required to force balance.”
 
 _Clarification_  
-The NKO does not attempt to enforce equal currents in two conductors.  
-Instead, it operates with a defined current relationship between the long arm and the combined short arm and feedline currents.
+The NKO 4:1 UnUn does not attempt to enforce equal currents in the two OCF arm conductors.  
+Instead, the 4:1 UnUn operates with a defined current relationship between the long arm and the combined short arm and feedline currents.
 
 ---
 
@@ -65,7 +68,7 @@ In the NKO, it is a functional component of the radiating system and is not inhe
 
 _Clarification_  
 The NKO is not an end-fed antenna.  
-It is a hybrid system with a distinct current structure involving multiple coupled conductors.
+It is a 3 wire radiating structure, a hybrid system with a distinct current structure involving multiple coupled conductors.
 
 ---
 
@@ -74,6 +77,7 @@ It is a hybrid system with a distinct current structure involving multiple coupl
 _Clarification_  
 In many antenna systems, unintended feedline current is considered parasitic.  
 In the NKO, the feedline is a defined and intentional radiating element within the system.
+The coax shield is bonded at the feedpoint to the short arm and driven in-phase, intentionally and beneficially.
 
 ---
 
@@ -89,7 +93,7 @@ In the NKO, the 1:1 choke is used to define the boundary of the radiating feedli
 
 _Clarification_  
 The NKO does not operate as a two-conductor dipole.  
-It must be considered as a coupled multi-conductor system in which the feedline contributes to radiation.
+It must be considered as a 3-wire coupled multi-conductor system in which the feedline contributes to radiation.
 
 ---
 

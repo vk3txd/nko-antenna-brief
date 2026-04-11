@@ -189,3 +189,4 @@ Richard Holmes  VK3TXD
 Revisions
 - 28 March 2026 Initial public release
 - 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
+- 11 April 2026 Many tweaks, pointing out it is a 3 wire system, and the coax shield is fed at the top like a top fed vertical

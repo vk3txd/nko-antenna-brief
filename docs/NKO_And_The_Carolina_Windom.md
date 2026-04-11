@@ -8,9 +8,9 @@ They are not.
 
 **The 4:1 in the NKO is an UnUn**, and that is not a small detail. It is _not_ a balun. This distinction is central to the system's behaviour. In the NKO, the coax shield is directly bonded to the OCF short arm. That means feedline common-mode current is introduced deliberately by the connection topology, not merely as a by-product of a balun feeding an off-centre wire antenna.
 
-**The length of the vertical coax has been refined**, and it differs from the New Carolina Windom. The lengths we recommend were chosen because NEC modelling and field testing indicate better SWR behaviour and better radiation patterns for the design goals of the NKO.
+**The length of the vertical coax has been refined**, and it differs from the New Carolina Windom for good reasons. The lengths we recommend were chosen because NEC modelling and field testing indicate better SWR behaviour and better radiation patterns for the design goals of the NKO.
 
-**We specify a good 1:1 current balun at the bottom of the coax**, and this is not optional. Some people call it a "line isolator", but I prefer "1:1 current balun" because that is what it is. The NKO deliberately places substantial current on the coax shield, so the 1:1 current balun has to be good enough to define the radiating section properly and keep the rest of the feedline out of the antenna system.
+**We specify a good 1:1 current balun at the bottom of the coax**, and this is not optional as it defines the coax above it as a vertical radiator and prevents common mode currint going past it to the shack. It is a boundary device. Some people call it a "line isolator", but I prefer "1:1 current balun" because that is what it is. The NKO deliberately places substantial current on the coax shield, so the 1:1 current balun has to be good enough to define the radiating section properly and keep the rest of the feedline out of the antenna system.
 
 **The NKO has been analysed openly using NEC modelling, test builds, and modern tools.** There is substantially more technical detail available for the NKO than was ever published for the original Carolina Windom.
 
@@ -63,3 +63,4 @@ As far as I can tell, the New Carolina Windom most often uses a _4:1 voltage bal
 **Current phase on the coax shield is less explicitly controlled.** It may be in-phase, partly out of phase, or anti-phase with respect to current on the OCF arms. That matters, because the vector sum of those currents determines whether the vertical section reinforces or degrades the far-field pattern.
 
 **The commonly cited vertical coax lengths are 22 feet and 10 feet.** These appear to follow a simple quarter-of-the-fundamental-in-metres expressed in feet rule. Antenna modelling for 22 feet on an 80 m antenna shows that the 20 m pattern is not as good as with a 4.7 m coax length in the NKO models. It may be somewhat better on 40 m, but 20 m is the prime DX band we are optimising for. The 10 ft length on a 40 m OCF is, notably, quite close to the 3.5 m NKO length. For NKO, we recommend these lengths on the basis of NEC modelling, user feedback, and field testing.
+
