@@ -15,9 +15,9 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 ## NKO Overview
 New Kallista OCF (NKO) is a hybrid HF wire antenna system in which the feedline is an intentional part of the radiating structure.
 
-The NKO uses a 4:1 UnUn at the feedpoint to provide impedance transformation and to connect the coax shield to the short arm. The long arm is fed from the UnUn’s 200 Ω terminal. A defined length of coax is then used as a radiating element, and a 1:1 current balun at its lower end presents a high choking impedance to prevent common-mode current flowing back to the shack.
+The NKO uses a 4:1 UnUn at the feedpoint to provide impedance transformation and to connect the coax shield to the short arm. The long arm is fed from the UnUn’s 200 Ω terminal. A defined length of coax is then used as a radiating element, with a 1:1 current balun at its lower end defining the vertical coax above it as a radiator and presenting a high choking impedance to prevent common-mode current flowing back to the shack.
 
-It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the radiating system. It acts as an elevated _top fed vertical radiator_ with its maximum current at the apex and with reduced reliance on ground.
+It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the 3-wire radiating system. It acts as an elevated _top fed vertical radiator_ with its maximum current at the apex and with reduced reliance on ground.
 
 <!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
@@ -51,24 +51,26 @@ NEC Models. I've included naive (super simple) 3-wire NEC models you can use wit
 ---
 
 ## NKO Key Concepts
-The NKO antenna consists of:
-- A long wire element and a shorter wire element
-- A 4:1 UnUn does 2 essential things
-  - It impedance matched the coax to the OCF arms
-  - It connects the coax shield to the short arm
-- A defined length of coaxial feedline forming a top-fed vertical radiating section
-- A 1:1 current balun with high choking impedance is used at the bottom of the coax feedline
-  - This device performs no impedance transformation; it stops common‑mode current and defines the boundary of the radiating coax
 
-In the NKO configuration:
-- The 4:1 UnUn is the only impedance‑transforming element in the NKO
-- The coax shield is electrically bonded to the short arm
-- The feedline carries current that is broadly in-phase with the short arm and contributes to radiation
-- A 1:1 current balun defines the boundary of the radiating feedline section
+The NKO antenna system consists of:
 
-This results in a **three-conductor radiating system** rather than a simple two-wire dipole.
+* **An symmetric 3-wire Radiator System:** A long OCF wire element and a shorter OCF wire element, and a vertical radiatoring coax element.
+* **4:1 Autotransformer (UnUn):** Performs two critical functions:
+    * Impedance matching the feedline to the OCF arms.
+    * **Electrically bonding** the coax shield to the short arm.
+* **Vertical Radiating Section:** A defined length of coaxial feedline acting as an **elevated, top-fed radiator**.
+* **1:1 Boundary Choke:** A high-impedance current balun placed at the **base** of the radiating coax section. It performs no impedance transformation; it defines the electrical boundary of the radiator and **terminates** common-mode current.
 
-The antenna should be analysed as a coupled system of all three conductors, not as a dipole with an attached feedline.
+**In the NKO configuration:**
+
+* The 4:1 UnUn is the sole impedance-transforming element.
+* The coax shield is bonded to the short arm, making them a **single phased unit**.
+* **Maximum current (antinode)** occurs at the apex; the feedline carries intentional current in-phase with the short arm.
+* The 1:1 choke defines the physical limit of the vertical radiating section.
+
+This results in a **three-conductor coupled system** rather than a traditional two-wire dipole.
+
+The antenna must be analyzed as a single radiating structure comprising all three conductors.
 
 ---
 
