@@ -27,7 +27,7 @@ The NKO is not a conventional OCF antenna.
 It is a three-conductor hybrid system in which the feedline is an intentional part of the radiating structure.
 The UnUn is used to couple currents within this system rather than to enforce balance between two conductors.
 The UnUn top-feeds the coax shield making it into a top-fed vertical radiator with the short antenna arm acting similarly to a cap-hat.
-In reality the use of an UnUn creates the antenna a 3 wire phase bonded antenna system.
+In reality the use of an UnUn makes the NKO antenna a 3 wire phase bonded antenna system.
 
 ---
 
@@ -60,14 +60,14 @@ The NKO uses an autotransformer and establishes a defined current relationship b
 
 _Clarification_  
 Common-mode current is often associated with unwanted effects in conventional systems.  
-In the NKO, it is a functional component of the radiating system and is not inherently a loss mechanism.
+In the NKO, it is a functional component of the radiating system and is not inherently a loss mechanism. NKO uses it on the vertical coax section to radiate, with the 1:1 balun at the bottom defining the boundary of the radiating coax above.
 
 ---
 
 ## Misconception 6: “This is an EFHW variant.”
 
 _Clarification_  
-The NKO is not an end-fed antenna.  
+The NKO is not an end-fed antenna. 
 It is a 3 wire radiating structure, a hybrid system with a distinct current structure involving multiple coupled conductors.
 
 ---
@@ -85,7 +85,9 @@ The coax shield is bonded at the feedpoint to the short arm and driven in-phase,
 
 _Clarification_  
 In conventional systems, a choke is used to suppress common-mode current.  
-In the NKO, the 1:1 choke is used to define the boundary of the radiating feedline section rather than to eliminate feedline current entirely.
+In the NKO, the 1:1 choke performs two functions;
+- it is used to define the boundary of the radiating feedline section, making the coax above it a defined radiator 
+- It is used to eliminate feedline current past the radiating coax and to the shack 
 
 ---
 
@@ -93,7 +95,7 @@ In the NKO, the 1:1 choke is used to define the boundary of the radiating feedli
 
 _Clarification_  
 The NKO does not operate as a two-conductor dipole.  
-It must be considered as a 3-wire coupled multi-conductor system in which the feedline contributes to radiation.
+It must be considered as a 3-wire coupled multi-conductor system in which the feedline contributes to radiation. It has 2 horizontal arms, and one vertical arm.
 
 ---
 
