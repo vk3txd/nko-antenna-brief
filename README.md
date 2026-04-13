@@ -40,6 +40,9 @@ Some thinking and discussion points, a bref discussion on various NKO related to
 All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:<br>
 [NKO Soil Interactions](docs/NKO_soil_interaction.md)
 
+Test stations using NKO have given feedback on its performance. See:<br>
+[NKO Feedback](docs/NKO_feedback.md)
+
 For a glossary of terms used here that are relevant to this antenna and repository see:<br>
 [NKO Glossary Of Terms](docs/NKO_Glossary.md)
 
@@ -190,3 +193,4 @@ Revisions
 - 28 March 2026 Initial public release
 - 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
 - 11 April 2026 Many tweaks, pointing out it is a 3 wire system, and the coax shield is fed at the top like a top fed vertical
+- 13 April 2026 Added feedback file - had some more from a new user
