@@ -27,4 +27,5 @@ I am very aware that the observations are all of course subjective, variable, an
 - All have said NKO gives an improvement in audio
 - My suggestion is that audio improvement is related to path distance, along with propogation
 - No one has complained about the extra weight of having a 1:1 in the coax feedline
+- After doing modelling of many antennas, getting 2 or 3dB of improvement is difficult to see. Loss is easier. Observations of NKO improvement of 1 and 2 S points suggests the reported signal advantages must be because of pattern changes with the vertical section, and maybe to a lesser degree efficiency improvements from using an UnUn.
 
