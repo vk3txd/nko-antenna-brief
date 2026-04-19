@@ -72,7 +72,7 @@ This is made with
 - Terminate in LO239 connectors at each end.
 
 Performance; here is the VNA scan of my LO1234 build;<br>
-<img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100W UnUn" width="250">
+<img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100w Balun" width="250">
 
 I used a 4 stack of toroids to get a greater mass to handle more heating. Then reduced the turns count to 7 to account for the increased impedance the 4 stack produced. Adding more turns is easy, but it shifts the self resonance point down in frequency and adversely affects the 10m band.
 
@@ -82,7 +82,8 @@ I used a 4 stack of toroids to get a greater mass to handle more heating. Then r
 
 For the 4:1 UnUn, substitute a stacked pair of FT140-43 toroids (or Jaycar LO1238's) and use 1mm enamel covered wire sleeved in teflon tubing.
 
-For the 1:1 Balun, substitute a 4 stack of FT140-43 toroids (or Jaycar LO1238's). The choking impedance will be slightly higher but the larger toroids will increase its ability to absorb the higher power (heat).
+For the 1:1 Balun, substitute a 4 stack of FT140-43 toroids (or Jaycar LO1238's) and use 8 turns of RG316. The choking impedance will be higher and the larger toroids will increase its ability to absorb the higher power (heat). See;<br>
+<img src="8T_4xLO1238_1-1_blun.png" alt="NKO 1:1 400w Balun width="250">
 
 ---
 
