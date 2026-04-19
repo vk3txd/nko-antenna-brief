@@ -310,6 +310,8 @@ This is a form of polarisation diversity achieved within a single antenna struct
 
 The degree of vertical component in the NKO is frequency-dependent and not yet precisely quantified. The phase relationship between horizontal and vertical components varies with frequency and installation geometry. These are open questions. But the existence of a meaningful vertical component is supported by the field observations, and the mechanism by which it produces intelligibility improvements is physically coherent.
 
+A note on transmit behaviour: the vertical feedline section that contributes to polarisation diversity on receive also adds a low-angle radiation component on the higher HF bands, particularly 20m, where the section is a meaningful fraction of a wavelength. This is a useful bonus — low-angle radiation favours DX paths — but it is not the primary mechanism being described here. The receive intelligibility improvement is the observed effect that motivates this analysis. The transmit pattern improvement, where it exists, is a secondary benefit consistent with the antenna's hybrid structure.
+
 ---
 
 ## 8. Why Improvement Is Asymmetric — Answering the Sceptic
@@ -329,6 +331,10 @@ So the comparison is not between two antennas with equal baseline performance, o
 To put it simply: **a horizontal-only antenna is wearing polarised sunglasses. When the ionosphere rotates the light, it goes partially blind. The NKO has both lenses — horizontal and vertical — and catches what the horizontal alone would miss. You are not choosing the best signal. You are not throwing half of it away. You are getting both.**
 
 The improvement appears asymmetric because the baseline — the comparison antenna — is already compromised in the conditions where the NKO shows its advantage. The NKO is not occasionally better. It is consistently less vulnerable.
+
+A note on how much improvement to expect: the communications engineering literature on polarisation diversity typically documents 6–12 dB improvement in deep fades for fully uncorrelated channels with optimal active combining — that is, two separate antennas feeding a combining circuit that selects or weights the better signal. The NKO does not do this. It produces a passive vector sum of both polarisation components at a single feedpoint, with no active selection or weighting. The effective diversity gain in typical conditions is realistically lower — perhaps 3–6 dB in the fades that matter most — but this is still sufficient to shallow the spectral nulls in the consonant region that cause intelligibility loss.
+
+The NKO should be understood as delivering partial polarisation diversity within a single antenna, not the full gain of a dedicated two-antenna combining system. That is an honest and still useful result.
 
 ---
 
