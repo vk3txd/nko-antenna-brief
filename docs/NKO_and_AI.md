@@ -1,6 +1,6 @@
 # NKO antenn and the use of AI
 
-I don't know of any other HF antenna aimed at the Amateur Radio community that has been so heavily influenced by AI.
+I don't know of any other HF antenna aimed at the Amateur Radio community that has been so heavily influenced and analyzed by AI.
 
 This is the story of how it came about, and what human and AI interaction brought.
 
@@ -20,15 +20,15 @@ AI made the comment, "to make the vertical radiator effective it needs to have s
 
 I then suggested an UnUn. Simple as that. The UnUn shares a terminal with an antenna arm - you can't get a stronger current flow on the coax shield than a direct connection - and the NKO was born.
 
-Note. AI did not do the innovation and in nearly 6 months of use, I have found this to be the case. It is not, or rarely, innovative.
+Note. AI did not do much if any innovation and in nearly 6 months of use, I have found this to be the case. It is not, or rarely, innovative.
 
 ---
 
 ## How AI Benefited Me
 
-Simplisitcally, AI can proof read and find sillinesses in text really well. Not onto that, it proof reads in context, and not just for grammar and spelling. This is a real help.
+Simplisitcally, AI can proof read and find sillinesses in text really well. In addition it proof reads in context, and not just for grammar and spelling. This is a real help in finding contradictions and sanity-lapses.
 
-AI can search the internet, collect and collate information, and then present results vastly quicker than any human. This alone makes it very valuable as a research tool.
+AI can search the internet, collect and collate information, and then present results vastly quicker than any human. This alone makes it valuable as a research tool.
 
 This is a huge help in analysing a situation, searching forums for user experiences and problems, and considering options. It can then use this in an analysis which is a huge help.
 
@@ -48,7 +48,9 @@ AI has helped me learn.
 
 ## AI Shortcomings
 
-Sometimes it loses its mind. It has recentlly started using an arabic term for ground, written in arabic characters in the middle of a document. Why do this? Somtimes I think it needs constant adult supervision.
+There are many.
+
+Sometimes it loses its mind. It has recently started using an arabic term for ground, written in arabic characters in the middle of a document. Why do this? Somtimes I think it needs constant adult supervision.
 
 It can get a bad idea baked into its context which can be difficult to remove. It apologizes, then it uses it again.
 
@@ -58,11 +60,13 @@ In the early days, AI asked questions, or it's analysis led me to question it. O
 
 As a simple test; ask the AI of your choice how using a 4:1 UnUn with an OCF antenna arms will perform. Almost universally it will complain about common mode current and raise issues and strongly suggest a 4:1 current balun is best. Then ask it about how a balun deals with imbalanced impedances of the OCF arms and query its assumptions. Challenge its 'beliefs' and criticise assumptions. Then give it a link to this GitHub repo - and it all changes. Then 'sycophancy' kicks in and it praises the concept.
 
+AI talking about saturation of a toroid is also a golden-mistake driven by amateur literature. Ask it to get the Bsat value for a toroid, give it a turns count and ask for what power would saturate the core. Quite often it is in the 10kw to 15kw range. Nonsensical. Saturation is not a consideration at amateur power levels - and the complaint is driven by amateur literature.
+
 This made me highly sceptical of AI. At the same time it made me keenly aware that results can be skewed by human input.
 
-An example. AI was analysing ground interaction with the vertical radiating coax and treating it as a vertical monopole. All good and sounds sensible. So I suggested that the highest current is at the apex, high in the air where the coax shield connects to the antenna arm. This radiating section is more like an upside down monopole. AI then changed its analysis significantly. It had not taken into account the struture of the antenna properly. Yet we had 4 months or more of history on exactly this.
+An example. AI was analysing ground interaction with the vertical radiating coax and treating it as a vertical monopole. All good and sounds sensible. So I told it (not that I should have had to do this) that the highest current is at the apex, high in the air where the coax shield connects to the antenna arm and most distant from earth effects. This radiating section is more like an upside down monopole. AI then changed its analysis significantly. It had not taken into account the struture of the antenna properly. Yet we had 4 months or more of history on exactly this. AI can be unbelievably blinkered in its thinking.
 
-This is a significant failing. It was myopic in its analysys despite being hugely involved in the project for months.
+This are significant failings. It can so easily be myopic in its analysys despite being hugely involved in the project for months.
 
 I queried AI on this specifically. It said;
 - AI tends to prefer known models using existing scenarios and do analysis using them, instead of a new innovation. It _assumed_ using a ground mounted vertical antenna.
@@ -80,6 +84,8 @@ There are a number;
 - Be careful that AI actually uses the correct parameters / equations / structures / factors that are in play
 - Ask what assumptions have been used
 - Use AI to get corroboration - cross check
+- Get references that can be checked and actually exist
+- Tell AI you want the truth even if it is not supporting an theory. AI tends to want to "market" as if it was selling something and not disclosing fully
 - Be critical.
 
 

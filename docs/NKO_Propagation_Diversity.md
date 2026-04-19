@@ -36,6 +36,9 @@ All the terms and principles are well established in communications engineering 
 
 What is less well established, particularly in accessible amateur radio literature, is how they interact, and how antenna design choices affect them.
 
+AI has driven the creation of this document. I mave used it extensivly to research and present information. Importantly I have made is provide references that can be checked. What is presented below is not just one short interaction with AI, it is the result of days of work and cross checking.
+
+
 ---
 
 ## 1. The Amateur Radio Antenna And State of the Art
