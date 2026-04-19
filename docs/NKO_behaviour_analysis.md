@@ -89,7 +89,7 @@ When the two components combine at the feedpoint, the deepest nulls of one are p
 Broadly speaking, it all boils down to NKO being like a diversity antenna system; both horizontal and vertical, and combining them in one.
 
 Here is a technical treatment on Faraday rotation and multi-path effects and how NKO operates. <br>
-[Audio Enhancement and A diversity antenna, propagation mechanisms and NKO ](docs/NKO_Propagation_Diversity_And_Intelligibility.md)
+[Audio Enhancement and A diversity antenna, propagation mechanisms and NKO ](docs/NKO_Propagation_Diversity.md)
 
 
 **Summary:**  
