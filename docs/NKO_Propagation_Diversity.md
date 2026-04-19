@@ -214,7 +214,7 @@ This is an area where more data is needed, and where the NKO community can contr
 
 ---
 
-## What This Means In Summary
+### What This Means In Summary
 
 The VHF satellite operator uses a crossed Yagi because Faraday rotation makes a single polarisation antenna unreliable on any path through the ionosphere. That is considered standard practice and completely unremarkable.
 
