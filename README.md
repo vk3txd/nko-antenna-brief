@@ -197,3 +197,4 @@ Revisions
 - 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
 - 11 April 2026 Many tweaks, pointing out it is a 3 wire system, and the coax shield is fed at the top like a top fed vertical
 - 13 April 2026 Added feedback file - had some more from a new user
+- 19 April 2027 Added 400w 1:1 balun scan and plot to build doc. Added file on NKO Propogation And Concepts

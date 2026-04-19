@@ -14,13 +14,13 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 
 ---
 
-## A Note On This Document
+## Overview
 
 This document addresses a specific and initially puzzling observation about the NKO antenna: that it consistently produces improvements in received audio intelligibility that do not always correlate with signal strength as shown on an S-meter or signal report.
 
 This is not a claim about magic. It is an attempt to identify the physics behind a real and repeatable observation, and to place it in a framework that experienced HF operators and technically minded readers can evaluate for themselves.
 
-_The mechanisms described here — multipath propagation and polarisation fading as causes, frequency-selective fading as their principal effect on audio, and polarisation diversity as the NKO's partial answer to both._
+_The mechanisms described here include multipath propagation and polarisation fading as causes, frequency-selective fading as their principal effect on audio, and polarisation diversity as the NKO's partial answer to both._
 
 The actual cause and effect chain is:
 
@@ -32,9 +32,7 @@ Effects:
 - Frequency-selective fading; result of multipath time delay differences producing comb-filter interference across the audio band
 - Polarisation fading;  result of Faraday rotation and birefringence making a single-polarisation antenna periodically blind to the arriving signal
 
-
-
-All are well established in communications engineering literature and are referenced later.
+All the terms and principles are well established in communications engineering literature and are referenced later.
 
 What is less well established, particularly in accessible amateur radio literature, is how they interact, and how antenna design choices affect them.
 
@@ -47,6 +45,8 @@ Amateur radio operators have been building and using HF antennas for over a cent
 Within this framework, the choice of antenna comes down to a practical binary: **horizontal or vertical**. Horizontal antennas — dipoles, OCFs, EFHWs, loops — are understood to favour higher-angle radiation and horizontal polarisation. Vertical antennas favour low-angle radiation and vertical polarisation. Operators choose based on space, budget, target bands, and operating preference. Both work. Both are well understood.
 
 What is rarely questioned is whether the **polarisation characteristic of the antenna affects received signal quality beyond what the four parameters capture**. Gain, pattern, bandwidth and impedance say nothing about how an antenna behaves when the arriving signal's polarisation has been scrambled by the ionosphere, or when multipath delay has carved spectral nulls into the audio passband.
+
+Notably, there is an exception on common use in the VHF and above range; the crossed yagi. These are commonly used and available to reduce the effects of Faraday rotation on satellite comms. This is an accepted practice. There is a clear similarity to NKO.
 
 This document examines that gap — and the NKO antenna exists precisely because of it. The NKO challenges the assumption that these four parameters are sufficient to describe antenna performance, and questions the orthodoxy that horizontal and vertical are the only choices that matter. It suggests that a hybrid antenna, deliberately combining both polarisations at a single feedpoint, can produce a qualitative improvement in received signal that no S-meter will show and no NEC model will predict.
 
@@ -82,7 +82,7 @@ When a linearly polarised HF signal enters the ionosphere, two things happen. Fi
 
 The result is that a signal transmitted with horizontal polarisation does not arrive at the receiver with horizontal polarisation. The polarisation state of the arriving wave is continuously and unpredictably changing — rotating, tilting, and shifting between linear, elliptical, and sometimes near-circular polarisation states. This change can be slow or fast, and it is largely independent of signal strength.
 
-This matters enormously for a single-polarisation antenna. A horizontal antenna is maximally sensitive to horizontally polarised signals and relatively insensitive to vertically polarised signals. When Faraday rotation has shifted the arriving signal's polarisation significantly away from horizontal, the horizontal antenna suffers a **polarisation fade** — a loss of received signal that has nothing to do with path loss, absorption, or multipath geometry.
+This matters enormously for a single-polarisation antenna. A horizontal antenna is most sensitive to horizontally polarised signals and relatively insensitive to vertically polarised signals. When Faraday rotation has shifted the arriving signal's polarisation significantly away from horizontal, the horizontal antenna suffers a **polarisation fade** — a loss of received signal that has nothing to do with path loss, absorption, or multipath geometry.
 
 A useful analogy: polarised sunglasses block light that is polarised at 90 degrees to their lens orientation. Rotate the sunglasses 90 degrees and the world goes dark — not because the light got weaker, but because the antenna (the lens) can no longer receive it. A horizontal HF antenna in a polarisation fade is exactly this. The signal is there. The antenna cannot see it.
 
@@ -94,7 +94,9 @@ Multipath and polarisation fading are independent mechanisms, but they compound 
 
 Multipath creates spectral nulls — frequency ranges within the audio passband where signal components cancel. Polarisation fading reduces the overall received signal level in a polarisation-dependent way. When both occur simultaneously, as they typically do on HF, the result is a received signal that is both spectrally distorted and variably attenuated.
 
-The speech band runs roughly from 300 Hz to 3 kHz for SSB communications. Vowel sounds carry energy predominantly in the lower part of this range. Consonants — particularly fricatives such as s, f, sh, and th — carry their distinguishing energy in the upper part, from roughly 2 to 4 kHz. These high-frequency consonants are what make speech intelligible rather than merely audible. You can hear someone speaking without being able to understand them — the vowels come through but the consonants are lost.
+The speech band runs roughly from 300 Hz to 3 kHz for SSB communications. Vowel sounds carry energy predominantly in the lower part of this range. Consonants — particularly fricatives such as s, f, sh, and th — carry their distinguishing energy in the upper part, from roughly 2 to 4 kHz. These high-frequency consonants are what make speech intelligible rather than merely audible.
+
+If you can hear someone speaking without being able to understand them — it is likely the vowels come through but the consonants are lost.
 
 Multipath delay spreads of 0.5 to 2 ms produce comb-filter nulls with spacing in the 500 Hz to 2 kHz range — directly overlapping the consonant region. A relatively small change in multipath geometry or polarisation state can place a deep spectral null precisely where fricatives live, reducing intelligibility dramatically while leaving signal strength largely unchanged.
 
@@ -118,21 +120,178 @@ The four standard antenna parameters — gain, pattern, bandwidth, impedance —
 
 Polarisation diversity is a well-established technique in communications engineering for mitigating polarisation fading. The principle is straightforward: if you receive the same signal on two antennas with orthogonal polarisations — one horizontal, one vertical — the fading on each antenna is largely uncorrelated. When the horizontal antenna is in a polarisation fade, the vertical antenna is not, and vice versa. By combining or selecting between the two received signals, the system maintains a more consistent received signal level.
 
-This technique is used extensively in mobile communications infrastructure, where base stations routinely employ cross-polarised antenna pairs at ±45 degrees precisely because the polarisation of signals from mobile handsets is unpredictable and constantly changing. The improvement in reliability is well documented and quantified.
+This technique is used extensively in mobile communications infrastructure, where base stations routinely employ cross-polarised antenna pairs at ±45 degrees precisely because the polarisation of signals from mobile phone handsets is unpredictable and constantly changing. The improvement in reliability is well documented and quantified.
 
 In traditional implementations, polarisation diversity requires two physically separate antennas, two receiver front ends, and a combining or selection circuit. It is a system-level solution, not an antenna-level one. For amateur radio operators this is impractical — most stations have one antenna and one radio.
 
-** A familiar example from amateur radio practice makes this concrete. **
+**A familiar example from amateur radio practice makes this concrete.**
 
 Operators working amateur satellites routinely use a **crossed Yagi** — two Yagi antennas mounted on the same boom at 90 degrees to each other, one horizontally polarised and one vertically polarised, fed with a 90-degree phasing harness to produce circular polarisation.
 
-The reason this is standard practice is exactly the problem described above. A satellite tumbling in orbit presents a continuously and unpredictably changing polarisation to the ground station — but that is only part of the story. The signal also passes through the ionosphere on the way up and on the way down, and Faraday rotation acts on it both times. At VHF the rotation is less severe than at HF, but it is not negligible, particularly at low elevation angles where the signal traverses a longer ionospheric path, and during periods of high solar activity.
+The reason this is standard practice is exactly the problem described above. A satellite may be tumbling in orbit so it presents a continuously and unpredictably changing polarisation to the ground station — but that is only part of the story. The signal also passes through the ionosphere on the way up and on the way down, and Faraday rotation acts on it both times. At VHF the rotation is less severe than at HF, but it is not negligible, particularly at low elevation angles where the signal traverses a longer ionospheric path, and during periods of high solar activity.
 
 The crossed Yagi receives both polarisation components simultaneously — neither is discarded, both contribute to the received signal. Ask any satellite operator why they use one and the answer is immediate: Faraday rotation. The ionosphere rotates the polarisation of the signal on the way up and again on the way down, and a single polarisation Yagi cannot track that rotation. The crossed Yagi is the standard solution, and every operator using one has already accepted — whether they use the term or not — that polarisation diversity is necessary, effective, and worth building into an antenna system.
 
 This is polarisation diversity. It is considered completely normal and unremarkable in the satellite operating community. It is standard equipment.
 
 The ionosphere does exactly the same thing to HF signals — Faraday rotation continuously and unpredictably rotates the polarisation of every signal on every path. The crossed Yagi addresses this at VHF without most operators realising it. The NKO addresses the same problem at HF deliberately and by design. The frequency is different. The physics is the same.
+
+
+## Faraday Rotation Is Worse At HF Than At VHF — By A Large Margin
+
+Faraday rotation is not equally severe across all frequencies. The rotation angle is inversely proportional to the **square** of the frequency — written as Ω ∝ 1/f². This is not a linear relationship. Double the frequency and you get one quarter of the rotation. Halve the frequency and the rotation quadruples.
+
+The practical consequence is that HF operators face a polarisation rotation problem that is significantly larger than anything experienced at VHF or UHF.
+
+The table below shows the **relative** rotation between amateur bands, using 2m (144 MHz) as the reference point. These ratios are derived directly from the inverse square law and are valid for comparing bands against each other.
+
+| Band | Frequency | Faraday Rotation Relative to 2m (144 MHz) |
+|------|-----------|------------------------------------------|
+| 80m  | 3.5 MHz   | ~1700× more                              |
+| 40m  | 7 MHz     | ~420× more                               |
+| 20m  | 14 MHz    | ~105× more                               |
+| 2m   | 144 MHz   | reference point                          |
+| 70cm | 432 MHz   | ~11× less                                |
+
+Note; they are for a signal travelling completely through the ionosphere, not "grazing it" like HF signals do.
+
+### An Important Note On Absolute Rotation Angles
+
+The relative ratios in the table are correct. However, absolute rotation angles for HF skywave paths cannot be calculated by simple scaling from figures published for trans-ionospheric satellite paths.
+
+The reason is that an HF signal does not pass through the full ionosphere — it refracts within it and returns to Earth. The effective plasma path traversed is considerably shorter than a full trans-ionospheric path, and the geometry is different. Applying satellite-derived TEC figures to HF skywave paths produces unrealistically large absolute rotation numbers that are not consistent with observed HF behaviour.
+
+Measurements of actual HF skywave polarisation changes indicate rotation on the order of **tens to a few hundred degrees** on a typical path — significant, continuous, and unpredictable, but not the thousands of turns a naive scaling calculation would suggest. This is consistent with field experience: HF works, but signals fade, audio quality varies, and polarisation is a contributing factor.
+
+The polarisation state of an arriving HF signal is unpredictable and continuously changing. A single-polarisation antenna is periodically blind to a significant fraction of the available signal. The effect does not need to be catastrophic to matter — tens to hundreds of degrees of continuous unpredictable rotation is more than sufficient to produce the observed fading and intelligibility degradation that motivates the NKO's hybrid polarisation design.
+
+---
+
+### The NKO Vertical Section — An Assessment Across Bands
+
+The NKO's diversity benefit comes from the combination of its horizontal OCF arms and its vertical coaxial feedline section. The vertical section has a fixed physical length — 4.7m for the NKO-80 build. How effective that vertical section is as a radiator depends on how long it is relative to the wavelength of the band in use.
+
+Wavelength is calculated as 300 / frequency in MHz. The table below shows the 4.7m vertical section as a fraction of a wavelength across the main HF bands:
+
+| Band | Frequency | Wavelength | 4.7m as fraction of λ | Vertical contribution |
+|------|-----------|------------|-----------------------|----------------------|
+| 10m  | 28 MHz    | ~10.7m     | ~0.44λ                | Strong — close to half wave |
+| 15m  | 21 MHz    | ~14.3m     | ~0.33λ                | Good                 |
+| 20m  | 14 MHz    | ~21.4m     | ~0.22λ                | Moderate             |
+| 40m  | 7 MHz     | ~42.8m     | ~0.11λ                | Reduced              |
+| 80m  | 3.5 MHz   | ~85.7m     | ~0.055λ               | Electrically short, minimal |
+
+### The Crossover Problem
+
+This produces an uncomfortable but honest result when combined with the Faraday rotation table above.
+
+The bands where the NKO's vertical section is **most effective** as a radiator — 10m, 15m, 20m — are the bands where Faraday rotation and polarisation fading are **less severe**.
+
+The bands where polarisation fading is **worst** — 40m and 80m — are exactly the bands where the NKO's vertical section is **least effective** as a radiator, because it is electrically short relative to the wavelength.
+
+In plain terms: the NKO's diversity benefit works best where it is needed least, and is weakest where it is needed most.
+
+### What This Means In Practice
+
+This does not mean the NKO provides no diversity benefit on 40m and 80m. Even an electrically short vertical section contributes some vertical polarisation component, and any contribution from a second polarisation axis reduces the depth of polarisation fades compared to a purely horizontal antenna. But the benefit is reduced, and it would be dishonest to claim otherwise.
+
+The strongest case for the NKO's diversity effect is on **20m DX
+paths** — where the vertical section is a meaningful fraction of a
+wavelength, path lengths are long enough for significant multipath
+delay spread, and Faraday rotation is substantial. This is consistent
+with field observations that report the most pronounced improvements
+on 20m.
+
+On 40m and 80m the NKO's advantages are more likely attributable to its overall radiation pattern and current distribution than to polarisation diversity specifically. These bands warrant further investigation and honest reporting of results.
+
+### What We Don't Yet Know
+
+- The actual current on the vertical coaxial section has not been measured directly on any band. The fraction of total radiated power from the vertical section is unknown and frequency-dependent.
+- Whether the vertical section's contribution on 80m is large enough to produce a measurable diversity benefit has not been determined.
+- Field observations on 40m and 80m comparing NKO to a reference antenna with careful methodology are needed to establish whether any improvement is consistent and repeatable on those bands.
+ 
+This is an area where more data is needed, and where the NKO community can contribute meaningfully by reporting carefully observed comparisons across bands.
+
+---
+
+## What This Means In Summary
+
+The VHF satellite operator uses a crossed Yagi because Faraday rotation makes a single polarisation antenna unreliable on any path through the ionosphere. That is considered standard practice and completely unremarkable.
+
+The HF operator on a 20m DX path is experiencing **~105 times more** relative polarisation rotation than the VHF satellite operator on 2m. The 80m operator is experiencing **~1700 times more** — but the NKO's vertical section is least effective on 80m.
+
+The NKO's hybrid horizontal and vertical structure addresses the polarisation fading problem most effectively on the higher HF bands, particularly 20m, where the geometry, path characteristics, and antenna physics align most favourably. On lower bands the benefit is real but reduced, and further measurement is needed to quantify it.
+
+This is an honest assessment. The NKO is not a universal solution to all HF polarisation fading. It is a hybrid antenna whose diversity benefit varies with frequency in ways that are physically predictable and worth understanding clearly.
+
+---
+
+_References:_
+
+_The inverse square frequency dependence of Faraday rotation:
+Scientific Reports, Estimation of Faraday Rotation and Polarization Loss Based on 3D Electron Density for Space Surveillance Radar, 2025
+— https://www.nature.com/articles/s41598-025-26733-3_
+
+_Polarisation fading in HF producing losses of 0 to a few dB:
+Zaalov et al., Fading in the HF Ionospheric Channel and the Role of Irregularities, ScienceDirect, 2013
+— https://www.sciencedirect.com/science/article/abs/pii/S0273117713002081_
+
+_HF skywave polarisation measurements:
+Ionospheric Faraday Rotation Signatures in the Space-Time-Frequency Domain, IET Conference Publication, IEEE Xplore
+— https://ieeexplore.ieee.org/document/175887_
+
+---
+
+## Electron Density, Time of Day, and Faraday Rotation
+
+Faraday rotation does not stay constant — it varies continuously with the electron density of the ionosphere, and electron density varies with time of day, season, and the solar cycle. Understanding this relationship helps explain why some operators notice the NKO's diversity effect more than others, and gives testers guidance on when A/B comparisons are most likely to reveal a difference.
+
+The rotation angle is directly proportional to the integrated electron density along the signal path. More electrons means more rotation — the relationship is linear. Double the electron density and you double the rotation. Combined with the inverse square frequency dependence, electron density is the other major variable controlling how severe polarisation fading is at any given moment.
+
+### How Electron Density Varies Through The Day
+
+**Pre-dawn** — the lowest electron density of the day. The ionosphere has been recombining overnight with no solar input to replace lost electrons. Faraday rotation is at its minimum. Polarisation is most stable, and a single-polarisation antenna is least disadvantaged.
+
+**Sunrise** — electron density rises rapidly as solar UV begins ionising the upper atmosphere. Rotation increases quickly. The sunrise transition is particularly variable and unpredictable — polarisation state is changing faster than at any other time of day.
+
+**Mid-morning to early afternoon** — density continues rising toward the daily maximum. Rotation is increasing and significant.
+
+**Around 14:00 local time** — electron density typically peaks approximately two hours after solar noon. The delay occurs because ionisation is a cumulative process — the ionosphere takes time to build up to its maximum. This is the point of maximum Faraday rotation in the daily cycle.
+
+**Afternoon into evening** — density begins falling as recombination outpaces solar ionisation. Rotation reducing, but still substantial through the afternoon.
+
+**Sunset** — another transition period. The D and E layers collapse quickly as solar input ceases. The F layer persists but thins. Polarisation state is again changing rapidly during this transition.
+
+**Night** — the F layer persists at reduced density. Rotation is significantly lower than daytime but not zero. The lower bands become usable at night precisely because D layer absorption disappears — but some Faraday rotation remains on any ionospheric path.
+
+### The Solar Cycle Multiplier
+
+The daily variation sits on top of a longer cycle. At solar maximum, elevated UV and X-ray output raises electron density across the entire ionosphere above its solar minimum levels. Faraday rotation at solar maximum can be three to five times higher than at solar minimum for the same path and frequency. The current solar cycle — Solar Cycle 25 — has been more active than predicted, meaning conditions during 2025 and 2026 represent a relatively high-rotation environment for HF propagation.
+
+### What This Means For The NKO
+
+The NKO's polarisation diversity benefit is most valuable in the conditions that produce the most Faraday rotation — daytime operation, particularly around local noon to early afternoon, during periods of high solar activity, on longer paths, on the higher HF bands where the vertical section is most effective.
+
+Pre-dawn 80m operation during solar minimum is probably the least favourable case for observing a diversity benefit — electron density is low, rotation is minimal, and the vertical section is electrically short on 80m in any case.
+
+This dependency explains a real observation: operators who do most of their operating in the early morning or on the low bands may notice less difference from the NKO than operators who regularly work 20m DX during the day. Both observations are correct. The conditions are simply different.
+
+For anyone conducting A/B comparisons between the NKO and a reference antenna, mid-day operation on 20m during reasonable solar activity represents the most favourable conditions for detecting a polarisation diversity effect. Pre-dawn or late evening on 80m represents the least favourable. Noting the time of day and solar conditions alongside any comparison result will make the data significantly more useful.
+
+---
+
+_References:_
+
+_Electron density and daily variation:
+ITU-R P.533, HF Propagation Prediction Method
+— https://www.itu.int/rec/R-REC-P.533_
+
+_Daily TEC variation and Faraday rotation:
+Scientific Reports, Estimation of Faraday Rotation and Polarization Loss Based on 3D Electron Density for Space Surveillance Radar, 2025
+— https://www.nature.com/articles/s41598-025-26733-3_
+
+_Solar cycle effects on ionospheric electron density:
+Davies, K., Ionospheric Radio, IEE Electromagnetic Waves Series_
 
 ---
 
