@@ -306,7 +306,7 @@ This means the NKO is receiving both the horizontal and vertical polarisation co
 
 In practical terms: when Faraday rotation has shifted the arriving signal's polarisation away from horizontal, the NKO's vertical component is still responding to it. When the horizontal component is in a polarisation fade, the vertical component is not in the same fade — because polarisation fading is, by definition, polarisation-dependent. The two components fade independently, and their combination at the feedpoint produces a more consistent composite signal than either alone.
 
-This is a form of polarisation diversity achieved within a single antenna structure. It is not a deliberate design goal borrowed from communications engineering — it is an emergent consequence of the NKO's hybrid architecture. But the mechanism is the same, and the benefit is the same: reduced susceptibility to polarisation fading, and by extension, more consistent received audio quality.
+This is not true two-channel diversity in the classical communications sense. It is better described as a single-antenna, mixed-polarisation or diversity-like response whose practical benefit, if present, is likely to be smaller and more conditional than that of a dedicated dual-channel diversity system.
 
 The degree of vertical component in the NKO is frequency-dependent and not yet precisely quantified. The phase relationship between horizontal and vertical components varies with frequency and installation geometry. These are open questions. But the existence of a meaningful vertical component is supported by the field observations, and the mechanism by which it produces intelligibility improvements is physically coherent.
 

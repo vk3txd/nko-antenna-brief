@@ -306,6 +306,8 @@ If one antenna hears more urban noise, that must be separated from any propagati
 ### G. Model correlation
 Use NEC to predict the static ingredients — current distribution, angle, and H/V balance — and then see which measured outcomes correlate with them.
 
+Relative H and V field magnitudes from NEC are informative, but without the phase relationship they do not establish whether the resultant field is usefully dual-responsive, simply tilted, or elliptically polarised in a way that helps little or even harms in some directions.
+
 That is how the subject moves from “interesting observation” toward “supported engineering position”.
 
 ---
