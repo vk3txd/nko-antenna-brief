@@ -298,25 +298,23 @@ Davies, K., Ionospheric Radio, IEE Electromagnetic Waves Series_
 
 ---
 
-## 7. The NKO Approach — Diversity in a Single Antenna
+## 7. The NKO Approach — A Mixed-Polarisation Antenna
 
-The NKO antenna is a hybrid radiating system. Its horizontal OCF arms provide horizontal polarisation. Its vertical coaxial feedline section — driven in-phase with the short arm by the 4:1 UnUn — provides a vertical polarisation component. Both components are present simultaneously, connected at the same feedpoint, and delivered to the same receiver input.
+The NKO is a hybrid radiating system. Its horizontal OCF arms contribute primarily a horizontal response, while its radiating feedline section contributes a vertical response. Both are present at the same time and arrive at the receiver through the same feedpoint.
 
-This means the NKO is receiving both the horizontal and vertical polarisation components of the arriving wave at the same time. It does not switch between them. It does not select the stronger one. It combines them, passively, at the feedpoint. The receiver sees a vector sum of both.
+That means the NKO does not behave like a conventional single-polarisation wire antenna. It does not switch between horizontal and vertical response, and it does not actively select the stronger one. Instead, the receiver sees the passive sum of both.
 
-The mere presence of both horizontal and vertical components does not by itself prove a useful diversity effect. Their relative phase also matters, because the resultant field may be tilted or elliptical in ways that help, do little, or occasionally hurt.
+On a real HF path, the arriving wave is rarely a fixed, purely horizontal signal. The ionospheric channel can change polarisation, phase, angle of arrival, and relative path weighting as conditions vary. Under those conditions, a strongly single-polarisation antenna can be at a disadvantage when the arriving field shifts away from its preferred orientation. The NKO's mixed response may, in some conditions, make it less vulnerable to that effect.
 
-In practical terms: when Faraday rotation has shifted the arriving signal's polarisation away from horizontal, the NKO's vertical component may still respond to part of that arriving field. The horizontal and vertical responses therefore need not be affected in exactly the same way at the same time, and their passive combination at the feedpoint may, in some conditions, produce a more consistent composite signal than a strongly single-polarisation antenna alone.
+This should not be described as classical two-channel polarisation diversity in the communications-engineering sense. There are not two independent receive branches, no switching, and no intelligent combining. A better description is that the NKO has a mixed-polarisation, diversity-like response within a single antenna structure.
 
-Aside; NKO signal reports do not well align to NEC far field plots and estimates of gain. It is suggested this real-world performance may be as a result of these effects.
+That distinction matters. The mere presence of both horizontal and vertical components does not, by itself, prove a useful benefit. Their relative phase also matters, because the resulting field may be tilted or elliptical in ways that help, do little, or occasionally work against the hoped-for outcome. The balance between the horizontal and vertical contributions is also frequency-dependent and installation-dependent.
 
-This is better described as a mixed-polarisation or diversity-like response within a single antenna structure, not classical two-channel polarisation diversity in the communications-engineering sense. The practical benefit, where it occurs, is likely to be smaller and more conditional than that of a dedicated dual-branch diversity system, but still potentially useful in reducing susceptibility to some polarisation-related fades.
+Even so, the basic proposition remains reasonable. If the horizontal and vertical responses are not affected in exactly the same way by a changing HF channel, then their passive combination may produce a more consistent received signal than a strongly single-polarisation antenna alone. That is a more modest claim than classical diversity, but it is also the more accurate one.
 
-This is not true two-channel diversity in the classical communications sense. It is better described as a single-antenna, mixed-polarisation or diversity-like response whose practical benefit, if present, is likely to be smaller and more conditional than that of a dedicated dual-channel diversity system.
+This may help explain why some NKO signal reports do not align neatly with simple NEC far-field gain estimates. NEC can describe the antenna structure and its radiated field, but it does not model the full, time-varying ionospheric channel in which the antenna is actually being used. If part of the NKO's practical advantage appears only when that channel is involved, then field results and static model predictions will not always track one another closely.
 
-The degree of vertical component in the NKO is frequency-dependent and not yet precisely quantified. The phase relationship between horizontal and vertical components varies with frequency and installation geometry. These are open questions. The presence of both horizontal and vertical components does not by itself prove a useful diversity effect: phase matters as well, because the resultant field may be tilted or elliptical in ways that help, do little, or occasionally work against the hoped-for outcome.
-
-A note on transmit behaviour: the vertical feedline section that contributes to polarisation diversity on receive also adds a low-angle radiation component on the higher HF bands, particularly 20m, where the section is a meaningful fraction of a wavelength. This is a useful bonus — low-angle radiation favours DX paths — but it is not the primary mechanism being described here. The receive intelligibility improvement is the observed effect that motivates this analysis. The transmit pattern improvement, where it exists, is a secondary benefit consistent with the antenna's hybrid structure.
+A note on transmit behaviour: the same vertical feedline section that contributes to this mixed-polarisation response on receive can also contribute useful low-angle radiation on the higher HF bands, particularly where that section is a meaningful fraction of a wavelength. That may be an additional benefit of the architecture, especially on DX paths. It should, however, be treated as a secondary effect here. The main issue being discussed in this section is the observed receive-side improvement in consistency and intelligibility.
 
 ---
 
