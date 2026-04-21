@@ -138,8 +138,7 @@ The crossed Yagi receives both polarisation components simultaneously — neithe
 
 This is polarisation diversity. It is considered completely normal and unremarkable in the satellite operating community. It is standard equipment.
 
-The ionosphere does exactly the same thing to HF signals — Faraday rotation continuously and unpredictably rotates the polarisation of every signal on every path. The crossed Yagi addresses this at VHF without most operators realising it. The NKO addresses the same problem at HF deliberately and by design. The frequency is different. The physics is the same.
-
+The ionosphere also changes the polarisation of HF signals, often substantially and in a time-varying way. The crossed Yagi is therefore a useful reminder that polarisation mismatch is a real radio problem, not an exotic one. It is not, however, a direct analogue of the NKO: the crossed Yagi is a deliberately phased and well-defined system, whereas the NKO is a single passive antenna structure whose mixed-polarisation behaviour is installation- and frequency-dependent.
 
 ## Faraday Rotation Is Worse At HF Than At VHF — By A Large Margin
 
@@ -307,11 +306,15 @@ This means the NKO is receiving both the horizontal and vertical polarisation co
 
 The mere presence of both horizontal and vertical components does not by itself prove a useful diversity effect. Their relative phase also matters, because the resultant field may be tilted or elliptical in ways that help, do little, or occasionally hurt.
 
-In practical terms: when Faraday rotation has shifted the arriving signal's polarisation away from horizontal, the NKO's vertical component is still responding to it. When the horizontal component is in a polarisation fade, the vertical component is not in the same fade — because polarisation fading is, by definition, polarisation-dependent. The two components fade independently, and their combination at the feedpoint produces a more consistent composite signal than either alone.
+In practical terms: when Faraday rotation has shifted the arriving signal's polarisation away from horizontal, the NKO's vertical component may still respond to part of that arriving field. The horizontal and vertical responses therefore need not be affected in exactly the same way at the same time, and their passive combination at the feedpoint may, in some conditions, produce a more consistent composite signal than a strongly single-polarisation antenna alone.
+
+Aside; NKO signal reports do not well align to NEC far field plots and estimates of gain. It is suggested this real-world performance may be as a result of these effects.
+
+This is better described as a mixed-polarisation or diversity-like response within a single antenna structure, not classical two-channel polarisation diversity in the communications-engineering sense. The practical benefit, where it occurs, is likely to be smaller and more conditional than that of a dedicated dual-branch diversity system, but still potentially useful in reducing susceptibility to some polarisation-related fades.
 
 This is not true two-channel diversity in the classical communications sense. It is better described as a single-antenna, mixed-polarisation or diversity-like response whose practical benefit, if present, is likely to be smaller and more conditional than that of a dedicated dual-channel diversity system.
 
-The degree of vertical component in the NKO is frequency-dependent and not yet precisely quantified. The phase relationship between horizontal and vertical components varies with frequency and installation geometry. These are open questions. But the existence of a meaningful vertical component is supported by the field observations, and the mechanism by which it produces intelligibility improvements is physically coherent.
+The degree of vertical component in the NKO is frequency-dependent and not yet precisely quantified. The phase relationship between horizontal and vertical components varies with frequency and installation geometry. These are open questions. The presence of both horizontal and vertical components does not by itself prove a useful diversity effect: phase matters as well, because the resultant field may be tilted or elliptical in ways that help, do little, or occasionally work against the hoped-for outcome.
 
 A note on transmit behaviour: the vertical feedline section that contributes to polarisation diversity on receive also adds a low-angle radiation component on the higher HF bands, particularly 20m, where the section is a meaningful fraction of a wavelength. This is a useful bonus — low-angle radiation favours DX paths — but it is not the primary mechanism being described here. The receive intelligibility improvement is the observed effect that motivates this analysis. The transmit pattern improvement, where it exists, is a secondary benefit consistent with the antenna's hybrid structure.
 
@@ -333,13 +336,11 @@ So the comparison is not between two antennas with equal baseline performance, o
 
 To put it simply: **a horizontal-only antenna is wearing polarised sunglasses. When the ionosphere rotates the light, it goes partially blind. The NKO has both lenses — horizontal and vertical — and catches what the horizontal alone would miss. You are not choosing the best signal. You are not throwing half of it away. You are getting both.**
 
-The improvement appears asymmetric because the baseline — the comparison antenna — is already compromised in the conditions where the NKO shows its advantage. The NKO is not occasionally better. It is less vulnerable in some conditions, especially where the channel is mixed and the reference antenna is strongly single-polarisation.
-
-The improvement may appear asymmetric because the comparison antenna can be more vulnerable under some channel conditions. The NKO may, in those conditions, be less vulnerable often enough to produce a practical on-air advantage.
+The improvement can appear asymmetric because the baseline — the comparison antenna — may already be compromised in the conditions where the NKO shows its advantage. The NKO is not expected to be universally better, but it may be less vulnerable often enough under those conditions to produce a practical and repeatable on-air advantage.
 
 A note on how much improvement to expect: the communications engineering literature on polarisation diversity typically documents 6–12 dB improvement in deep fades for fully uncorrelated channels with optimal active combining — that is, two separate antennas feeding a combining circuit that selects or weights the better signal. The NKO does not do this. It produces a passive vector sum of both polarisation components at a single feedpoint, with no active selection or weighting. The effective diversity gain in typical conditions is realistically lower — perhaps 3–6 dB in the fades that matter most — but this is still sufficient to shallow the spectral nulls in the consonant region that cause intelligibility loss.
 
-The NKO should be understood as delivering partial polarisation diversity within a single antenna, not the full gain of a dedicated two-antenna combining system. That is an honest and still useful result.
+The NKO should be understood as delivering a diversity-like mixed-polarisation response within a single antenna, not the full behaviour or gain of a dedicated two-antenna combining system.
 
 ---
 
@@ -353,7 +354,9 @@ The NKO's benefit to intelligibility operates through two related mechanisms:
 
 **First**, reduced polarisation fading depth means the overall received signal is more consistent. Fewer deep fades means fewer moments where the signal drops below the threshold of readability.
 
-**Second**, and more subtly, the hybrid polarisation structure means that the spectral nulls produced by multipath are different in the two polarisation components. Multipath geometry is polarisation-dependent — the path delay differences, and therefore the comb-filter null positions, are not identical for horizontal and vertical polarisation components arriving from the same transmitter. 
+**Second**, and more subtly, it is plausible that the spectral nulls produced by multipath are not identical in the two polarisation responses. Multipath geometry can be polarisation-dependent, so the effective delay differences, weighting, and resulting comb-filter null positions need not be exactly the same for horizontal and vertical contributions.
+
+If that is so, their passive combination at the feedpoint could sometimes shallow the deepest spectral nulls. This should be treated as a working hypothesis rather than an established result. It is a reasonable explanation for some of the reported improvement in intelligibility, but it still requires more direct measurement and correlation with recordings.
 
 A plausible further mechanism is that the horizontal and vertical contributions may not experience identical spectral notching under multipath conditions. If so, their passive combination could sometimes shallow the deepest spectral nulls. This remains a hypothesis and should be treated as an open measurement question rather than an established result.
 
@@ -367,6 +370,7 @@ This explains the specific character of the improvement observers report. Not "l
 
 This document presents a physically coherent hypothesis, not a proven and measured result. The following remain open questions:
 
+- The effective correlation between the NKO's horizontal and vertical responses on real HF paths has not been measured. That correlation is important in determining how close the antenna comes, in practice, to a useful diversity-like behaviour.
 - **The magnitude of the vertical component** in the NKO feedline is frequency-dependent and has not been directly measured. Current probes on the coax shield would quantify this.
 - **The phase relationship** between horizontal and vertical components varies with frequency and installation geometry. Whether this relationship is consistently beneficial, or varies in ways that sometimes reduce the diversity benefit, is unknown.
 - **The relative contribution** of polarisation diversity versus multipath null-filling to the observed intelligibility improvement has not been separated.
@@ -521,7 +525,11 @@ Polarisation fading is distinct from multipath fading in its mechanism, but the 
 
 ### Polarisation Diversity
 
-Polarisation diversity is the technique of receiving both horizontal and vertical polarisation components of the arriving wave simultaneously, so that when one is in a polarisation fade the other is not.
+Polarisation diversity is a communications-engineering technique in which two orthogonally polarised receiving branches are used so that polarisation-related fading does not affect both branches in exactly the same way at the same time.
+
+In established implementations, the degree of correlation between those branches matters, and useful results normally rely on separate antennas or antenna ports together with some form of selection or combining.
+
+By combining or selecting between the two received signals, the system can maintain a more consistent received signal level despite changes in the instantaneous polarisation state of the arriving wave.
 
 The principle is well established in communications engineering. Polarisation fading affects horizontal and vertical components independently — when Faraday rotation has rotated the arriving signal toward vertical, the horizontal antenna fades but the vertical antenna does not. The fades on the two polarisation components are largely uncorrelated. By combining or selecting between the two received signals, the system maintains a more consistent received signal level regardless of the instantaneous polarisation state of the arriving wave.
 
@@ -529,7 +537,7 @@ This technique is used extensively in mobile communications infrastructure. Base
 
 In traditional implementations, polarisation diversity requires two physically separate antennas, two receiver front ends, and a combining or selection circuit. For most amateur radio operators this is impractical.
 
-The NKO achieves a form of polarisation diversity within a single antenna structure. Its horizontal OCF arms respond to horizontal polarisation. Its vertical coaxial feedline section responds to vertical polarisation. Both are connected at the same feedpoint and delivered to the same receiver input. The receiver sees the combination of both polarisation components simultaneously — not selected between, not switched, but summed.
+The NKO can be viewed as a single antenna with a mixed-polarisation response. Its horizontal OCF arms respond primarily to horizontal polarisation, while its vertical coaxial feedline section contributes a vertical response. Both are connected at the same feedpoint and delivered to the same receiver input, so the receiver sees a passive combination rather than a selected or actively combined pair of branches.
 
 The result may be a received signal that is less vulnerable to some polarisation-related fades than a strongly single-polarisation antenna, because the two responses need not degrade in exactly the same way at the same time.
 

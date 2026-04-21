@@ -56,6 +56,7 @@ That distinction is central.
 NEC can tell us:
 
 - how much horizontal and vertical field the antenna may launch
+  - H/V magnitude alone does not settle the matter. The relative phase between those components is also required to determine whether the resulting field is usefully mixed, simply tilted, or only conditionally helpful
 - at what elevation angles that energy leaves
 - how current divides between the conductors
 - how changing wire lengths, heights, or feed arrangements alters the pattern

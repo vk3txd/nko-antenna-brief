@@ -52,7 +52,7 @@ For a glossary of terms used here that are relevant to this antenna and reposito
 NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:<br>
 [Common Misconceptions](docs/NKO_Misconceptions.md)
 
-NKO can be described as a 'diversity antenna' with a single port (connection). A claim made about NKO prodicing better audio is easily seen as controversial. Here is a technical treatment of the mechanisms we believe are involved. See:<br>
+NKO can be described as a hybrid antenna with a mixed-polarisation response at a single port (connection). A claim made about NKO prodicing better audio is easily seen as controversial. Here is a technical treatment of the mechanisms we believe are involved. See:<br>
 [Audio Enhancement and A diversity antenna, propagation mechanisms and NKO](docs/NKO_Propagation_Diversity.md)
 
 NEC Models. I've included naive (super simple) 3-wire NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
