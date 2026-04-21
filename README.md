@@ -37,6 +37,9 @@ For detailed information on baluns, ununs, OCF, NCW, and NKO, see:<br>
 Some thinking and discussion points, a bref discussion on various NKO related topics. See:<br>
 [Discussion topics](docs/NKO_thinking_points.md)
 
+Observed signal reports and NEC modelling do not reconcile well. Here is a discussion. See:<br>
+[Discussing NEC and NKO and Propagation](docs/NKO_And_NEC_Position.md)
+
 All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:<br>
 [NKO Soil Interactions](docs/NKO_soil_interaction.md)
 
@@ -197,4 +200,5 @@ Revisions
 - 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
 - 11 April 2026 Many tweaks, pointing out it is a 3 wire system, and the coax shield is fed at the top like a top fed vertical
 - 13 April 2026 Added feedback file - had some more from a new user
-- 19 April 2027 Added 400w 1:1 balun scan and plot to build doc. Added file on NKO Propogation And Concepts
+- 19 April 2026 Added 400w 1:1 balun scan and plot to build doc. Added file on NKO Propogation And Concepts
+- 21 April 2026 Added discussion about NEC and how it may not model NKO performance well with relevance to propagation
