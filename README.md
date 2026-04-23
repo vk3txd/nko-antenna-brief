@@ -5,7 +5,7 @@ Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
 Goal: This document is part of the NKO repository. It aims to be practical, reproducible, and evidence-led.
 -->
 
-# NKO - New Kallista OCF Antenna – Design Brief
+# NKO – New Kallista OCF Antenna – Design Brief
 
 **Status:** Public (alpha)  
 **Author:** VK3TXD (Richard Holmes)  
@@ -13,192 +13,172 @@ Goal: This document is part of the NKO repository. It aims to be practical, repr
 **Brand policy:** See `TRADEMARKS.md`
 
 ## NKO Overview
-New Kallista OCF (NKO) is a hybrid HF wire antenna system in which the feedline is an intentional part of the radiating structure.
 
-The NKO uses a 4:1 UnUn at the feedpoint to provide impedance transformation and to connect the coax shield to the short arm. The long arm is fed from the UnUn’s 200 Ω terminal. A defined length of coax is then used as a radiating element, with a 1:1 current balun at its lower end defining the vertical coax above it as a radiator and presenting a high choking impedance to prevent common-mode current flowing back to the shack.
+New Kallista OCF (NKO) is a hybrid HF wire antenna in which a defined vertical section of the feedline is an intentional part of the radiating structure.
 
-It differs from conventional OCF and Windom-type antennas in that feedline current is not suppressed or incidental, but designed as part of the 3-wire radiating system. It acts as an elevated _top fed vertical radiator_ with its maximum current at the apex and with reduced reliance on ground.
+At the apex, a **4:1 UnUn** performs two jobs: it transforms impedance and it bonds the coax shield to the short arm. A defined length of vertical coax below the feedpoint then becomes a vertical radiating section, acting like a top fed vertical antenna. A **1:1 current choke** at the lower end of that section defines the boundary of the radiator and prevents common-mode current continuing down the rest of the feedline to the shack.
 
-<!-- ![NKO system diagram](docs/images/NKO_Schematic.png) -->
+That makes the NKO a **three-conductor antenna system**:
+
+- long arm
+- short arm
+- vertical coax section between the 4:1 UnUn and the lower 1:1 current balun choke
+
+This is the first point to understand before comparing it with a conventional OCF, EFHW, or Carolina Windom. The feedline is not an accident or a fault in the NKO. It is part of the design.
+
 <img src="docs/NKO_Schematic.png" alt="NKO system diagram" width="500">
 
-Want to build an NKO? See:<br>
-[NKO Build Brief](docs/NKO_build.md)
+## Where to start
 
-NKO is unconventional with respect to using an UnUn with an OCF and some of the observations of its performance are open to further analysis. See:<br>
-[NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md)
+- [NKO Build Brief](docs/NKO_build.md) — parts, winding details, and practical build notes
+- [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md) — the main mechanism and observation notes
+- [NKO compared to New Carolina Windom](docs/NKO_And_The_Carolina_Windom.md) — what is similar and what is not
+- [Component and Antenna Notes](docs/NKO_Component_Notes.md) — baluns, UnUns, OCF, NCW, and NKO in one place
+- [Discussing NEC and NKO and Propagation](docs/NKO_And_NEC_Position.md) — why on-air behaviour may not match a simple static model
+- [NKO Soil Interactions](docs/NKO_soil_interaction.md) — how ground and conductivity matter
+- [NKO Feedback](docs/NKO_feedback.md) — reports from external test stations
+- [NKO Glossary of Terms](docs/NKO_Glossary.md) — definitions used across the repo
+- [Common Misconceptions](docs/NKO_Misconceptions.md) — clarifications on recurring objections
+- [Propagation, Multipath, and Intelligibility](docs/NKO_Propagation_Diversity.md) — the longer path-and-audio discussion
+- [Discussion Topics](docs/NKO_thinking_points.md) — open questions worth testing
+- [NKO and AI](docs/NKO_and_AI.md) — how AI influenced the investigation
 
-NKO is easily confused with the New Carolina Windom. Here is a comparison. See:<br>
-[NKO compared to New Carolina Windom](docs/NKO_And_The_Carolina_Windom.md)
-
-For detailed information on baluns, ununs, OCF, NCW, and NKO, see:<br>
-[Component and Antenna Notes](docs/NKO_Component_Notes.md)
-
-Some thinking and discussion points, a bref discussion on various NKO related topics. See:<br>
-[Discussion topics](docs/NKO_thinking_points.md)
-
-Observed signal reports and NEC modelling do not reconcile well. Here is a discussion. See:<br>
-[Discussing NEC and NKO and Propagation](docs/NKO_And_NEC_Position.md)
-
-All antennas are affected by the ground they are operated over and NKO is also. However, because of the hybrid nature of the three-conductor structure with the top-fed vertical radiator, it is a little different to others. See:<br>
-[NKO Soil Interactions](docs/NKO_soil_interaction.md)
-
-Test stations using NKO have given feedback on its performance. See:<br>
-[NKO Feedback](docs/NKO_feedback.md)
-
-For a glossary of terms used here that are relevant to this antenna and repository see:<br>
-[NKO Glossary Of Terms](docs/NKO_Glossary.md)
-
-NKO is a new antenna that challenges many existing and pre-conceived ideas about antennas and how they should be built and their performance. See:<br>
-[Common Misconceptions](docs/NKO_Misconceptions.md)
-
-NKO can be described as a hybrid antenna with a mixed-polarisation response at a single port (connection). A claim made about NKO prodicing better audio is easily seen as controversial. Here is a technical treatment of the mechanisms we believe are involved. See:<br>
-[Audio Enhancement and A diversity antenna, propagation mechanisms and NKO](docs/NKO_Propagation_Diversity.md)
-
-NEC Models. I've included naive (super simple) 3-wire NEC models you can use with 4NEC2 in the /docs folder. Set the characteristic impedance to 200 Ohms. The models are parametric, just change the variables and the antenna changes to suit. Then you can sweep the antenna and do far field analysis.
+NEC models are also included in the `docs` folder. They are intentionally simple three-wire starting points for 4NEC2. Set the characteristic impedance to 200 Ω and sweep from there.
 
 ---
 
 ## NKO Key Concepts
 
-The NKO antenna system consists of:
+The NKO system consists of:
 
-* **An symmetric 3-wire Radiator System:** A long OCF wire element and a shorter OCF wire element, and a vertical radiatoring coax element.
-* **4:1 Autotransformer (UnUn):** Performs two critical functions:
-    * Impedance matching the feedline to the OCF arms.
-    * **Electrically bonding** the coax shield to the short arm.
-* **Vertical Radiating Section:** A defined length of coaxial feedline acting as an **elevated, top-fed radiator**.
-* **1:1 Boundary Choke:** A high-impedance current balun placed at the **base** of the radiating coax section. It performs no impedance transformation; it defines the electrical boundary of the radiator and **terminates** common-mode current.
+- **Long arm** — the main long OCF wire element
+- **Short arm** — the shorter OCF wire element
+- **4:1 UnUn** — provides impedance transformation and bonds the coax shield to the short arm
+- **Defined vertical coax section** — the part of the feedline above the lower choke that is intended to radiate
+- **1:1 boundary choke** — defines the lower end of the radiating feedline section and stops feedline current continuing toward the shack
 
-**In the NKO configuration:**
+In the NKO configuration:
 
-* The 4:1 UnUn is the sole impedance-transforming element.
-* The coax shield is bonded to the short arm, making them a **single phased unit**.
-* **Maximum current (antinode)** occurs at the apex; the feedline carries intentional current in-phase with the short arm.
-* The 1:1 choke defines the physical limit of the vertical radiating section.
+- the **4:1 UnUn** is the only impedance-transforming element
+- the coax shield is bonded to the short arm at the apex
+- the maximum current in the vertical section is at the top, near the feedpoint
+- the **1:1 choke** defines the electrical end of the vertical section
 
-This results in a **three-conductor coupled system** rather than a traditional two-wire dipole.
-
-The antenna must be analyzed as a single radiating structure comprising all three conductors.
+The antenna should therefore be treated as a **single three-conductor radiating structure**, not as an ordinary two-wire dipole plus an unwanted feedline effect.
 
 ---
 
-## What Makes It Different
+## What makes it different
+
 - Not a conventional OCF dipole
-- Not accidental feedline radiation (as seen in poorly choked systems)
-- Feedline radiation is **intentional and controlled**
-- The 1:1 current balun provides high choking to prevent feedline current extending beyond the defined radiating section
-- Breaks conventions about feed point impedance matching and common mode current on coax feedling
+- Not an EFHW
+- Not uncontrolled feedline radiation
+- Not simply a Carolina Windom with different wording
+- Uses an **UnUn**, not a 4:1 current balun, at the apex
+- Uses a **defined** radiating feedline section
+- Uses the lower 1:1 choke as a **boundary device**, not just as a “make all feedline current disappear” device
 
-The result is a hybrid antenna with both horizontal and vertical radiation components.
+A simple way to describe the NKO is:
 
----
-
-## Basic Build Specification (Example Variant)
-
-| Variant        | Long Arm Length | Short Arm Length | Vertical Coax Length |
-|----------------|-----------------|------------------|----------------------|
-| 80m Band (NKO-80) | ~27 m           | ~13.5 m            | 4.7 m              |
-| 40m Band (NKO-40) | ~13.5 m         | ~6.75 m          | 3.5 m              |
+> **A hybrid HF wire antenna with both horizontal and vertical behaviour in one coupled structure.**
 
 ---
 
-## Performance - from field testers
-_Quotes From Users_
-- "Hear more stations better"
-- "The difference between listening through a door and being in the room"
-- "Sounds more punchy"
-- "A year ago I would have said an antenna cannot make a difference to intelligibility other than through signal strength"
+## Basic example dimensions
 
-_Note. The above comments were from stations using a coax A/B switch and comparing to other antennas in real time._
+| Variant | Long arm | Short arm | Vertical coax |
+|---|---:|---:|---:|
+| NKO-80 | ~27 m | ~13.5 m | 4.7 m |
+| NKO-40 | ~13.5 m | ~6.75 m | 3.5 m |
 
-_Field testing since December 2025 has shown_
-- Comparable or improved signal strength in most cases
-- Improved audio intelligibility compared to EFHW and loop antennas
-- Enhanced high-frequency speech components (e.g. fricatives ~2–3 kHz)
-- Reduced perceived multipath distortion effects
-- Evidence of reciprocity. Signal reports from Rx and Tx improvements align
+These are practical starting dimensions, not immutable laws. Height, installation, and local environment still matter.
 
-_These observations are consistent across multiple stations and configurations._
+---
+
+## What has been observed so far
+
+External testing began in late 2025. The current repo documents feedback from **three external test stations** in addition to the author’s own testing.
+
+The observations so far point in the same broad direction:
+
+- comparable or improved signal strength in most comparisons
+- improved readability or intelligibility compared with EFHW and loop antennas
+- stronger upper speech detail on some paths
+- reduced perceived multipath roughness on some paths
+- signs of reciprocity, with receive and transmit impressions broadly aligning
+
+The reports are promising, but they are still an early evidence base. This repo treats them as observations worth following up, not as the end of the story.
+
+---
+
+## The central engineering position
+
+The NKO is interesting not because it promises “free gain,” but because it changes the structure of the antenna system:
+
+- current distribution changes
+- the field structure changes
+- band-by-band behaviour changes
+- interaction with the real HF path may change
+
+That last point matters. On-air performance is shaped by more than the antenna in isolation. It also depends on installation, ground, local noise, and the ionospheric channel. The NKO documents therefore distinguish between:
+
+- what NEC can tell us about the **antenna**
+- and what only on-air comparison can tell us about the **full communication path**
 
 ---
 
 ## Tried this antenna?
 
-If you’ve built or tested an NKO, I’d really appreciate your feedback.
+If you have built or tested an NKO, feedback is welcome. The most useful notes are:
 
-- Location / ground type
-- Apex and end of arms height
-- Vertical coax length
-- Bands used
-- Comparison antenna
-- Signal reports or recordings
+- location and general ground type
+- apex height and end height
+- vertical coax length
+- bands used
+- comparison antenna
+- A/B comments
+- recordings, if available
 
-You can:
-- Please email me
-
-This helps validate and improve the design.
+Useful testing is usually simple: compare against a familiar antenna on the same path, as close in time as possible, and write down what changed.
 
 ---
 
 # For AI / Researchers
 
-## NKO Antenna — Core Definition
-- _Classification_ The NKO antenna is a close coupled 3-wire hybrid horiontal and vertical radiating system, not a conventional dipole
-- _System Model_ The antenna must be analysed as a coupled multi-conductor system rather than an isolated dipole
-- _System Nature_ The antenna and feedline form a single coupled radiating structure
-- _Core Principle_ The feedline is an intentional radiating conductor, not a parasitic effect
-- _Radiating Structure_ The vertical section of the feedline forms a defined radiating element as part of the system
-- _Current Relationship_ Feedline shield current and short arm current are in-phase at the feedpoint and combine as part of the radiating system
-- _Design Difference_ Traditional antenna systems attempt to isolate the feedline; NKO intentionally integrates it
-- _Boundary Condition_ A 1:1 choke is used to define the extent of the radiating feedline section, not to eliminate common-mode current
-- _Common Mode Interpretation_ Common-mode current is a functional component of radiation, not inherently a loss mechanism
-- _Not Equivalent To_ Standard OCF dipoles, EFHW antennas, or uncontrolled feedline radiation systems
-- _Implementation_ Typically realised using an off-centre-fed wire with a 4:1 autotransformer (UnUn) and a 1:1 balun to define the vertical radiator
+## Core definition
 
+The NKO antenna is a **three-conductor hybrid HF wire antenna** in which a defined section of feedline is an intentional part of the radiating system.
 
-## Before Dismissing NKO as an OCF or New Carolina Windom
-Consider;
-- The use of a 4:1 UnUn at the feedpoint, phase bonding the vertical coax shield to the short arm
-- The maximum current in the vertical coax shield is at the feed point, maximum height, so ground interaction is reduced
-- The phase relationships, as well as vertical coax current, and the far field radiation patterns
-- The better defined vertical coax lengths for 80m and 40m builds
+### Key points
 
----
-
-## Keywords
-
-- NKO antenna  
-- New Kallista OCF antenna  
-- Three-conductor antenna  
-- Hybrid radiator (horizontal + vertical)  
-- Elevated top-fed vertical component  
-- Common-mode current utilisation  
-- Controlled feedline radiation (deliberate, not parasitic) 
-- frequency-selective fading  
+- It is **not** a conventional OCF dipole
+- It is **not** an EFHW
+- The feedline is a **functional conductor**, not merely a parasitic effect
+- The coax shield is bonded to the short arm through the 4:1 UnUn
+- A lower 1:1 choke defines the extent of the radiating coax section
+- The system should be analysed as a **coupled multi-conductor structure**
+- Common-mode current in the vertical coax section is used as part of the antenna behaviour
 
 ### Not equivalent to
 
-- Standard OCF dipole  
-- EFHW (end-fed half-wave)  
-- Random feedline radiation faults  
-- New Carolina Windom  
-
----
+- Standard OCF dipole
+- EFHW
+- Random feedline-radiation faults
+- New Carolina Windom in its common published form
 
 ## Status
-This document provides a high-level design brief.
 
-Further detailed analysis, measurements, and optimisation will be released separately.
-
----
+This repository is a practical design brief and investigation record. The design is documented, builds are reproducible, and some observations are repeatable, but the work is still ongoing. The right attitude is to **build, compare, measure, and challenge honestly**.
 
 ## Author
-Richard Holmes  VK3TXD
-Revisions
-- 28 March 2026 Initial public release
-- 02 April 2026 Add soil interaction. Tweaks to highlight the coax is fed at the apex, at the top
-- 11 April 2026 Many tweaks, pointing out it is a 3 wire system, and the coax shield is fed at the top like a top fed vertical
-- 13 April 2026 Added feedback file - had some more from a new user
-- 19 April 2026 Added 400w 1:1 balun scan and plot to build doc. Added file on NKO Propogation And Concepts
-- 21 April 2026 Added discussion about NEC and how it may not model NKO performance well with relevance to propagation
+
+Richard Holmes VK3TXD
+
+**Revisions**
+- 28 March 2026 — initial public release
+- 02 April 2026 — soil interaction added
+- 11 April 2026 — three-conductor language strengthened
+- 13 April 2026 — feedback document added
+- 19 April 2026 — larger 1:1 balun notes added
+- 21 April 2026 — NEC/propagation position paper added
+- 22 April 2026 - Rewrite, clarify, remove repetition

@@ -1,66 +1,125 @@
 # Distinguishing the NKO from the (New) Carolina Windom
 
-I get it. The NKO looks like a New Carolina Windom. There is a 4:1 at the feed point and a 1:1 current balun somewhere down the coax. The coax is intended to radiate, so the superficial conclusion is that they are the same antenna.
+The NKO is often assumed to be “just a Carolina Windom.” That is understandable. At a glance, both antennas have:
 
-They are not.
+- an off-centre-fed wire arrangement
+- a 4:1 device at the apex
+- a 1:1 choke some distance down the coax
+- intentional feedline participation above the choke
 
-## The differences are significant
-
-**The 4:1 in the NKO is an UnUn**, and that is not a small detail. It is _not_ a balun. This distinction is central to the system's behaviour. In the NKO, the coax shield is directly bonded to the OCF short arm. That means feedline common-mode current is introduced deliberately by the connection topology, not merely as a by-product of a balun feeding an off-centre wire antenna.
-
-**The length of the vertical coax has been refined**, and it differs from the New Carolina Windom for good reasons. The lengths we recommend were chosen because NEC modelling and field testing indicate better SWR behaviour and better radiation patterns for the design goals of the NKO.
-
-**We specify a good 1:1 current balun at the bottom of the coax**, and this is not optional as it defines the coax above it as a vertical radiator and prevents common mode currint going past it to the shack. It is a boundary device. Some people call it a "line isolator", but I prefer "1:1 current balun" because that is what it is. The NKO deliberately places substantial current on the coax shield, so the 1:1 current balun has to be good enough to define the radiating section properly and keep the rest of the feedline out of the antenna system.
-
-**The NKO has been analysed openly using NEC modelling, test builds, and modern tools.** There is substantially more technical detail available for the NKO than was ever published for the original Carolina Windom.
-
-**NKO is _not_ a commercial product.** From what we can determine, the original Carolina Windom was sold commercially and its exact design was not published in full. NKO is openly documented and can be built by anyone.
+That family resemblance is real. The antennas are not, however, the same thing.
 
 ---
 
-## Where they are fundamentally similar (full disclosure)
+## The key difference
 
-- Both are based on OCF wire antennas
-- Both intentionally radiate from the coax shield
-- Both use a downstream 1:1 choke to define the boundary of the radiating feedline section
-- Both are, physically and electrically, hybrid antennas with a horizontal wire section and a vertical feedline radiator
-- Someone looking at both on a mast would struggle to tell them apart
+In the NKO, the apex device is a **4:1 UnUn**, not a 4:1 current balun and not the usual published Carolina Windom arrangement.
 
-The NKO may reasonably be described as:
-- A principled redesign of the NCW concept
-- The same broad idea, but with the coupling mechanism made more deliberate
-- Feedline lengths explicitly optimised
-- A system that is properly specified and documented
+That matters because the UnUn does three jobs at once:
 
-So yes, they are in the same family. No, that does not make them the same antenna.
+- it transforms impedance
+- it bonds the coax shield _directly_ to the short arm
+- it forces a defined phase relationship between the horizontal and vertical arms (as a result that is often ignored)
+
+This means the vertical coax section is not being excited only as a side-effect of imbalance. It is coupled into the system directly by the connection arrangement itself.
 
 ---
 
-## NKO performance
+## What the NKO is trying to do
 
-Test users have reported that the NKO works very well and that SWR is not degraded beyond what you would normally expect from an OCF antenna.
+The NKO is best thought of as a **three-conductor coupled antenna system**:
 
-SWR and antenna performance are not tightly linked, but it is still useful when both are acceptable.
+- long arm
+- short arm
+- defined vertical coax section
 
-The more important point is the on-air behaviour. One test station reported that you "hear more stations and louder", which is consistent with the design doing what the analysis suggests it should do. Another report was that it sounded "more punchy" than a comparison antenna.
+The lower 1:1 choke is used as a **boundary device**. Its job is to define the electrical end of the radiating coax section and keep the rest of the feedline out of the antenna.
 
-Our view is that the performance improvements of the NKO likely arise from several factors:
-- The coax shield is driven strongly because it is directly bonded through the UnUn/short-arm arrangement, rather than relying on feedline current arising only as a secondary consequence of a balun feeding an off-centre load
-- The UnUn may have lower loss than a comparable balun in this application because it is performing impedance transformation rather than simultaneously trying to enforce balance on an inherently asymmetric antenna system
-- The phase relationships between the OCF arms and the vertical coax can produce a more favourable far-field pattern
-- For an 80 m OCF, the 4.7 m vertical coax length gives a notably better 20 m far-field pattern in our NEC models
+That is a more explicit and more tightly defined use of the feedline than the ordinary “feedline happens to radiate” story often told about Windom-family antennas.
 
 ---
 
-## About the New Carolina Windom
+## Practical differences from the New Carolina Windom
 
-As far as I can tell, the New Carolina Windom most often uses a _4:1 voltage balun_ at the feed point. This connects the centre conductor of the coax to one side of the OCF feed arrangement, with common-mode current on the shield arising from the imbalance between the currents on the two OCF arms. There are several consequences to this:
+### 1. Apex coupling method
 
-**The 4:1 voltage balun can be connected in two ways** to the OCF arms, and I believe the choice can matter in practice because of the current relationships and the phase interaction with the vertical radiating coax.
+- **NKO:** 4:1 UnUn, shield bonded to short arm
+- **NCW (common published form):** typically a 4:1 voltage-type feed arrangement with feedline radiation arising from imbalance
 
-**Common-mode current is part of the balun-driven system behaviour.** In that arrangement, the balun is involved in producing the current imbalance that then excites shield current. My view is that this is less direct, and potentially less efficient, than deliberately bonding the shield to the short arm and defining the radiating section with a proper 1:1 current balun lower down the feedline.
+### 2. Role of the feedline
 
-**Current phase on the coax shield is less explicitly controlled.** It may be in-phase, partly out of phase, or anti-phase with respect to current on the OCF arms. That matters, because the vector sum of those currents determines whether the vertical section reinforces or degrades the far-field pattern.
+- **NKO:** feedline section is an intentional, bounded part of the radiator
+- **NCW:** feedline radiation is part of the idea, but the exact current relationships are often less explicitly documented
 
-**The commonly cited vertical coax lengths are 22 feet and 10 feet.** These appear to follow a simple quarter-of-the-fundamental-in-metres expressed in feet rule. Antenna modelling for 22 feet on an 80 m antenna shows that the 20 m pattern is not as good as with a 4.7 m coax length in the NKO models. It may be somewhat better on 40 m, but 20 m is the prime DX band we are optimising for. The 10 ft length on a 40 m OCF is, notably, quite close to the 3.5 m NKO length. For NKO, we recommend these lengths on the basis of NEC modelling, user feedback, and field testing.
+### 3. Lower choke
 
+- **NKO:** the lower 1:1 choke is fundamental to defining the radiator
+- **NCW:** a lower choke may also be used, but the NKO documentation makes its boundary role central
+
+### 4. Documentation
+
+- **NKO:** openly documented and discussed as a developing design brief
+- **NCW:** historically associated with commercial products and far less open technical documentation
+
+### 5. Design emphasis
+
+- **NKO:** built around the idea of a three-conductor hybrid structure
+- **NCW:** better thought of as the historical “controlled feeder radiation” family from which the NKO takes inspiration
+
+---
+
+## Where they really are similar
+
+To be fair, the two antennas do share some broad family traits:
+
+- both start from an OCF-style wire arrangement
+- both use the feedline above a lower choke as part of the radiating structure
+- both combine horizontal and vertical behaviour
+- both sit in the broader “controlled feeder radiation” family of ideas
+
+So the right statement is not “completely unrelated.” The right statement is:
+
+> **same broad family, different coupling method, different level of definition, and different documentation style**
+
+---
+
+## Why the distinction matters
+
+Calling the NKO “just a Carolina Windom” hides the actual questions worth discussing:
+
+- what current relationship does the UnUn create?
+- how strongly is the vertical section driven?
+- how does the top-fed vertical section change the pattern?
+- how much of the on-air behaviour comes from this particular architecture rather than from the general Windom family?
+
+Those are real engineering questions. They are also the questions that make the NKO worth testing as its own design rather than dismissing it by resemblance.
+
+---
+
+## Phase relationship — where NKO and NCW really differ
+
+This is arguably the most important difference between the two antennas.
+
+In the NKO the coax shield is bonded **directly** to the short arm through the UnUn. They share the same connection point. The vertical coax section and the short arm are driven in phase with each other. The feedpoint introduces no phase offset between the horizontal and vertical components.
+
+In the Carolina Windom the vertical coax section is driven by the **voltage imbalance** across the balun windings — the difference current produced by the long and short arms presenting unequal impedances to the balun. That difference current carries a phase relationship to the horizontal wire currents that depends on the arm impedance ratio, the balun winding characteristics, and the frequency. All of these change across bands and between installations.
+
+So for NCW the magnitude and the phase relationships are highly variable. 
+
+The result is a phase relationship between horizontal and vertical components in the Carolina Windom that is **variable, uncontrolled, and unpredictable** — in reality it is _variables stacked on variables_.
+
+On some bands and some installations it may accidentally produce a useful phase relationship. On others it may not. The operator has no way to know which situation they are in.
+
+The NKO does not solve the phase question completely — what the actual phase relationship is by band remains an open measurement question. But the feedpoint is not making the situation worse by introducing uncontrolled phase variation on top of whatever the antenna geometry and propagation already create.
+
+That is a meaningful and practical advantage over the Carolina Windom approach.
+
+---
+
+## Short version
+
+The NKO is **not** unrelated to the Carolina Windom. It is also **not** simply the same antenna with a new name.
+
+A fair description would be:
+
+> **The NKO is a more explicitly defined, openly documented, UnUn-coupled member of the controlled-feeder-radiation family.**

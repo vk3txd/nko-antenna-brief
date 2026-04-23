@@ -1,198 +1,189 @@
 # NKO Antenna: Mechanisms, Observations, and Performance Implications
 
-This document examines three non-conventional aspects of the NKO antenna system: (1) the use of an UnUn in an off-centre-fed (OCF) configuration, (2) the role of vertical feedline radiation as an active radiating element, and (3) observed improvements in received and transmitted audio intelligibility potentially linked to frequency-selective fading and multipath effects.
-
-The following sections present observations and plausible mechanisms; where causal relationships are proposed, they are identified as hypotheses consistent with established electromagnetic and propagation theory.
-
----
-
 ## Summary
 
-**UnUn with OCF**  
-Traditional OCF antennas typically employ a balun to provide impedance transformation and suppress common-mode currents. The NKO departs from this by using an UnUn, primarily for impedance transformation, while permitting controlled interaction between the feedline and the radiating structure. This alters current distribution and challenges assumptions about strict feedline isolation.
-A 1:1 balun further down the feedline establishes a boundary for the feedline to become a controlled radiator.
+The NKO is not just a conventional OCF with a different transformer.
 
-**Feedline Radiation and Hybrid Polarisation**  
-The vertical section of the coax feedline between the 4:1 UnUn and the 1:1 choke balun can support common-mode current and contribute to radiation.
-This introduces a vertically polarised component alongside the predominantly horizontal radiation of the OCF arms, forming a hybrid polarisation system that may improve performance under varying propagation conditions.
-Of note, this feedline performs like an elevated top-fed radiator with the maximum current at the apex.
+It is a three-conductor antenna system:
 
-**Audio Intelligibility and Frequency Selective Effects**  
-Field observations indicate improved speech intelligibility, particularly in fricative consonants.
-One plausible explanation is reduced frequency-selective fading through polarisation diversity and multipath interaction, preserving higher-frequency audio components critical for intelligibility.
+- the apex coupling method is different, it uses a 4:1 **UnUn**
+- the vertical feedline section above the lower 1:1 balun is part of the antenna system
+- the vertical section is top-fed making it act like a top fed vertical antenna
+- the resulting current distribution, pattern, and on-air behaviour can differ from a conventional OCF or EFHW
+- signal reports and comparisons to other antennas indicate signal strenth enhancements, and audio quality improvements
 
----
-
-## 1. UnUn Behaviour in an OCF Configuration
-
-The use of an UnUn in the NKO configuration intentionally departs from conventional OCF practice.
-
-In a standard OCF dipole antenna, a balun is used to provide impedance transformation while suppressing common-mode current on the feedline.
-
-> Insert diagram here of balun and OCF arms
-
-Although the arms of an OCF antenna are of unequal length, the structure can still support balanced currents. However, the feedpoint impedance and current distribution are inherently asymmetric, placing practical demands on the balun to both transform impedance and maintain current symmetry. In practice, the effectiveness of this suppression depends on the balun design and its choking impedance.
-
-By contrast, in the NKO system the UnUn primarily performs impedance transformation while permitting common-mode current to develop on the feedline. The feedline shield is directly connected to the short arm as a phase bonded pair, allowing it to participate in the overall current distribution.
-
-> Insert diagram here of UnUn schematic and OCF arms.
-
-This results in a three-conductor system comprising the long arm, with the short arm and the feedline shield connected at the UnUn. The antenna must therefore be considered a coupled 3 wire system rather than a simple two-conductor dipole, with the feedline acting as an additional and deliberate radiating element rather than an accidental and purely passive transmission medium.
-
-**Summary:**  
-The UnUn provides impedance transformation while allowing the feedline to participate in the radiating system.
-The phase relationships between the long arm, and the phase bonded pair of short arm and coax shield may (arguably) contribute to both efficiency of the antenna system, but also to other claims about its enhanced divertity performance.
+The purpose of this document is to summarise the main working explanation for the behaviour observed so far.
 
 ---
 
-## 2. Feedline Radiation and Hybrid Polarisation
+## 1. The UnUn
 
-In conventional antenna systems, feedline radiation is generally treated as an undesirable artefact. In the NKO configuration, it is instead encouraged to be a deliberate and functional component of the antenna system.
+The NKO uses a **4:1 UnUn** at the apex, and that choice is fundamental to the antenna.
 
-The vertical section of the coax feedline between the feedpoint and the common-mode choke can support deliberate significant common-mode current and therefore contribute to radiation. This introduces a vertically polarised component to the overall radiation pattern, complementing the predominantly horizontal polarisation of the OCF arms.
+A conventional OCF has two unequal arms, so it is not balanced in the ordinary sense. That means a balun is never working under ideal conditions.
 
-Importantly, the phase relationship of the long arm to the phase bonded pair of short arm and vertical coax suggests the NKO may have advantages compared to other antennas with regard to waveform coherence. Of special note, the effect of this will vary by frequency as a result of different current flows in the 3 arms of the radiating structure. The end-resultant waveform is a vector sum that includes the ampliture as well as the phase relationship of the currents.
+The UnUn does two important jobs here. It transforms impedance, and it bonds the coax shield directly to the short arm. That direct bond is what makes the feedline section part of the antenna system.
 
-The answer to the question of "how much current" is flowing on the coax shield is unknown. We have no doubt it will be frequency dependant meaning it will change band by band. From observation of signal strengths and other effects it is surmised that it is enough to affect the radiation pattern and hence system performance.
+Because the shield is directly connected to the short arm, it is driven in phase with it. The feedline current is therefore a direct result of the antenna structure, not something that depends on the UnUn somehow forcing it into existence.
 
-The resulting structure behaves as a hybrid antenna system with both horizontal and vertical polarisation components. Under ionospheric propagation conditions, where polarisation can rotate and vary due to propagation effects, this may provide a form of polarisation diversity.
+In comparison; 
+- A conventional 4:1 current balun on an OCF is being asked to feed an antenna whose two arms are unequal from the outset, so it is never operating in a truly comfortable balanced condition.
+- A 4:1 voltage balun is possibly a worse choice, because it is still feeding the same unequal antenna but is less tolerant of that kind of asymmetrical load.
+- Using a balun, shield current is largely a symptom of imbalance and produces stress on the core. In the NKO, the UnUn makes shield current part of the design, helps current balance, and becomes a useful part of the antenna.
+- In the NKO, the 4:1 UnUn is not trying to correct that basic asymmetry.
+- Instead, it:
+  - transforms impedance
+  - bonds the coax shield directly to the short arm
+  - makes that shield current part of the antenna system and driven in phase with the short arm
+- That direct connection increases the effective current on the short side by adding the shield current to it.
+- This tends to improve current balance against the long arm in a way a conventional OCF cannot achieve as directly.
 
-This behaviour aligns with principles described in earlier amateur literature on controlled feedline radiation (CFR), although the NKO represents a more structured and repeatable implementation of these effects.
+The result is not magic and it does not guarantee the UnUn has low loss on every band, but it does give the NKO a more natural and physically coherent current structure from the start.
 
-### Why Does It Always Seem To Improve Audio?
+It is also easily possible there is less loss, and less stress on the 4:1 core due to the improved balance.
 
-The most common challenge to the NKO's observed audio improvement goes like this: _"If the effect is caused by multipath and propagation effects — which are statistical and random — then it should improve audio half the time and make it worse the other half. Why does it seem to always improve?"_
+## How the NKO changes by band
 
-It is a fair challenge. And the short answer is: _the question contains a hidden assumption that, once removed, resolves the apparent paradox._
+Because the vertical section is a fixed physical length, its importance changes by band. On the lower bands it is a smaller electrical fraction of a wavelength and acts more as an added influence on the overall antenna system. As frequency rises, it becomes a more significant part of the radiator and has a greater effect on how the antenna behaves.
 
-The assumption is that both antennas — the NKO and the comparison antenna — are equally affected by propagation conditions, and the NKO is simply getting lucky. It isn't. Here is why.
+### 80 m
 
-Two things are happening simultaneously on any HF path.
+On 80 m, the vertical section is electrically short, so its contribution is likely to be modest. It still adds some vertical component and changes the overall current structure, but the antenna is still behaving mainly as a horizontal wire system.
 
-- The first is multipath. Your signal leaves the transmitter and arrives at your receiver via multiple ionospheric paths, each with a slightly different length and therefore a slightly different travel time. These delayed copies combine at the receiver and interfere with each other — constructively at some frequencies, destructively at others. The result is a comb-filter pattern across the audio band, with some frequencies reinforced and others cancelled. This pattern shifts constantly as the ionosphere moves. The frequencies that get cancelled are not random — delay spreads typical of medium to long HF paths consistently place spectral nulls in the 1–4 kHz region. That is precisely where fricative consonants live — the s, f, sh, th sounds that make speech intelligible rather than merely audible. This is why you can hear someone but not understand them. The vowels survive. The consonants don't.
-The second is polarisation fading. The ionosphere does not simply reflect or refract your signal — it continuously rotates its polarisation via Faraday rotation, and splits it into ordinary and extraordinary wave components that travel slightly different paths. A signal that left the transmitter horizontally polarised does not arrive horizontally polarised. Its polarisation state is constantly and unpredictably changing.
+80 m is likely the hardest band on the UnUn and the least rewarding band for the vertical section, while the 1:1 choke is doing important work defining the feedline boundary but may not yet be seeing its worst common-mode stress.
 
-- A purely horizontal antenna — an EFHW, a standard dipole, a conventional OCF — can only respond to the horizontal component of the arriving wave. When polarisation rotation has shifted the arriving signal away from horizontal, the horizontal antenna fades. Not because the signal got weaker. Because the antenna can no longer see it properly.
-Think of polarised sunglasses. Rotate them 90 degrees and the world goes dark — not because the light changed, but because the lens can only receive one orientation. A horizontal antenna in a polarisation fade is exactly that. The signal is there. The antenna is partially blind to it.
+### 40 m
 
-**Here is the key point.** These two effects — multipath spectral nulls and polarisation fading — are happening at the same time, and both disproportionately damage the consonant region of the audio band. The horizontal antenna has no defence against either. It receives whatever the propagation channel delivers, degraded by both mechanisms simultaneously.
+On 40 m, the vertical section becomes a more meaningful part of the antenna. Its vertical contribution is likely to be useful rather than incidental, and this is probably where the NKO starts to show more obvious hybrid horizontal/vertical behaviour.
 
-The NKO has a vertical component — its coaxial feedline section, driven in-phase by the UnUn, radiates vertically as well as horizontally. Both components arrive at the same feedpoint and are combined passively. The receiver sees the sum of both.
+40 m is likely the most balanced band overall: the UnUn is still under real load, but the vertical section is now contributing usefully, and the 1:1 choke becomes more important because the feedline section is starting to matter more as part of the antenna.
 
-This matters for two reasons.
+### 20 m
 
-- First, when polarisation fading has reduced the horizontal component, the vertical component is not in the same fade — polarisation fading is by definition polarisation-dependent. The vertical component catches what the horizontal misses.
-- Second, the multipath comb-filter pattern is not identical for horizontal and vertical polarisation components — the path geometries differ slightly. 
+On 20 m, the vertical section is electrically significant and is likely to be one of the main contributors to the antenna’s overall behaviour. This is probably where the NKO shows its strongest added vertical component and its most obvious mixed-polarisation behaviour.
 
-When the two components combine at the feedpoint, the deepest nulls of one are partially filled by the other. The result is shallower, broader spectral variation rather than deep narrow nulls in the consonant region.
-
-Broadly speaking, it all boils down to NKO being like a diversity antenna system; both horizontal and vertical, and combining them in one.
-
-Here is a technical treatment on Faraday rotation and multi-path effects and how NKO operates. <br>
-[Audio Enhancement and A diversity antenna, propagation mechanisms and NKO ](./NKO_Propagation_Diversity.md)
-
-
-**Summary:**  
-The NKO deliberately utilises feedline radiation to create a hybrid polarisation antenna system. The extent of this, the relative strengths of the vertical and horizontal components, are unknown at this time.
-
-We consider this to be a plausible hypothesis, that the radiating vertical coax section and the horizonetal OCF arms form a radiating system as described. Our observations of signal strengths and other factors to be discussed lead us to believe that there is an interaction. However;
-- we do not have measurement of the NKO arms and coax shield currents
-- we do not have comparative measurement of the current in a conventional 'standard' OCF that uses a current balun
-- we do not have measurements of relative field strengths
-- we do know that NKO does in general have a better signal strength leading us to believe that the use of an UnUn and having the vertical coax radiate, as being the only difference in the antenna, are indeed contributing significantly (but not by how much)
+20 m is likely where the vertical section becomes most useful, so the antenna may show its strongest hybrid behaviour here, while the 1:1 choke becomes increasingly critical in defining the radiating section and the UnUn may be under less low-band magnetic stress but still significant voltage and current stress depending on match.
 
 ---
 
-## 2a. Signal Strength and Phase Relationships
+## 2. Feedline participation and hybrid behaviour
 
-Field observations have reported variations in received signal strength (improvements) when comparing the NKO to conventional OCF implementations. These differences are consistent with changes in current distribution and radiation geometry resulting from the inclusion of the feedline as an active radiating element, rather than a purely passive transmission line.
+In the NKO, the feedline above the lower choke is not an accident. It is an intended conductor in the radiating system.
 
-In the NKO configuration, the long arm, short arm, and feedline shield form a multi-conductor three element radiating system. Each conductor has a different electrical length and supports a different current distribution, leading to phase differences between their radiated fields. The resulting far-field radiation is therefore the vector sum of multiple contributions with differing amplitudes and phases.
+That means the antenna combines:
 
-We surmise these phase relationships are not fixed but may vary with frequency, antenna geometry, and operating conditions. Consequently, the NKO may exhibit changes in radiation pattern, elevation angle distribution, and polarisation characteristics when compared to conventional OCF antennas.
+- the horizontal wire behaviour of the OCF arms
+- the vertical behaviour of the defined coax section (which is driven at the top like a top fed vertical antenna)
 
-In this sense, the NKO behaves more like a loosely coupled three element system than a single wire radiator. While not a controlled array, the interaction between its elements can produce constructive and destructive field combinations that vary with frequency and environment. To date the signal reports indicate constructive field combinations.
+This is the basis for describing the NKO as a **hybrid antenna**.
 
-Under ionospheric propagation conditions—where multiple refracted paths, time delays, and polarisation states are present—these differences in radiated field structure may interact with the propagation channel. This provides a plausible mechanism for observed variations in both received signal strength and audio intelligibility.
+### Why that matters
 
-Also by a process of elimination, it is most likely that the vertical coax radiation is responsible. The NKO changes the matching device to an UnUn. How that could change signal strength to the degree observed is unlikely. That leaves the only other change bring the use of the coax as the most likely cause.
+A strongly single-polarisation antenna can be excellent when the arriving field suits it and disappointing when it does not. The NKO may, on some paths, be less vulnerable because it is not relying on one orientation alone.
 
-**Summary:**  
-The NKO forms a multi-conductor radiating system with variable phase relationships, leading to changes in radiation characteristics that can interact with real-world propagation conditions.
+In other words it combines the performance of both the horizontal OCF, and the performance of a top fed vertical antenna.
+
+The NKO has been described as a "Single Port Diversity Antenna" - which is not strictly correct but is indicative of how we consider it.
+
+That is not a claim of magical gain. It is a claim that the antenna may interact with a real HF path differently.
 
 ---
 
-## 3. Audio Intelligibility and Frequency Selective Fading
+## 3. Why does it seem to improve audio?
 
-This is a 'work in progress' and we are raising it here as a consideration and discussion point. It is an observed characteristic that has been independantly reported.
+This is the most controversial part of the NKO story, so it is important to state it carefully.
 
-Field observations from multiple independent stations have reported improved speech intelligibility, particularly in fricative consonants, when using the NKO antenna compared to conventional wire antennas. These observations challenge the common assumption that antennas influence only signal strength and not recovered audio quality.
+The effect is to make the audio sound sharper, more clear, less muffled, more intelligible.
 
-The effect was first noticed on 20m DX between VK3 and Japan, USA and the UK. Signals on an EFHW were Q0 but of acceptable strength, while on the NKO they were 2 S points stronger but the intelligibility changed to be Q4 to Q5. A similar but less strong response was observed across VK3 on 40m on an approx 360klm path, raising intelligibility from Q2 to Q4. On 80m, DSP analysed audio analysis showed approx 3dB change (lift) on audio frequencies associated with speech fricatives on a 180klm path.
+We did not "design" NKO for this, did not expect it, and reports of NKO giving better audio were unexpected. But they were repeated and confirmed by multiple sources. To be honest, it was difficult to believe and is not commonly mentioned on the internet and it seemed to contradict our expectations of how antennas and radios work. But it is regularly observed to different degrees.
 
-Searches of the internet revealed the effect is not commonly discussed or documented. We conjecture that for NKO it was so quickly observed within a few days of testing because the test stations were using a coax switch and comparing an NKO to their own pre-existing antennas. They were listening for differences, flicking between antennas quickly which is not normally done.
+The NKO is **not** being presented as an audio equaliser in the sky.
 
-How this can happen has been the target of much research and conjecture.
+The better working explanation is:
 
-HF propagation via the ionosphere occurs through refraction within a graded medium, where electron density varies continuously with height rather than forming a discrete reflecting boundary. Signals just do not bounce from a hard medium, rather, they bend gradually over a vertical distance. As a result, transmitted waves are progressively bent back toward Earth, with the exact trajectory determined by frequency, angle of incidence, and the vertical electron density profile.
+- real HF paths often suffer from **selective fading**
+- selective fading can damage intelligibility without making the signal vanish completely
+- NKO being different to an OCF or EFHW, combines both horizontal and vertical components of a signal which may result in better audio
 
-Under typical conditions, multiple refractive paths can exist simultaneously—arising from different effective refraction heights within the E and F regions, as well as single- and multi-hop geometries—each with a distinct path length and therefore a distinct time of arrival delay. These delayed components arrive concurrently at the receiver and combine as a vector sum, producing constructive and destructive interference that varies with frequency, time, and polarisation.
+So the improvement where it exists may be better thought of as:
 
-Because the delay spreads are commonly on the order of microseconds to milliseconds, they give rise to frequency-selective fading across the audio passband, where some frequency components are reinforced while others are attenuated. In this context, the antenna system forms part of the effective propagation channel, not merely the radiator.
+> **more usable and better signal rather than simply more signal**
 
-Time delay differences between multipath components determine the frequency spacing of constructive and destructive interference. As a rule of thumb, a delay Δt produces a comb-filter effect with nulls spaced at approximately 1/Δt in frequency.
+That matches the kind of reports received so far: punchier, easier copy, hearing more stations better, and less of the “through a door” effect.
 
-Typical relationships are:
+---
 
-- Δt ≈ 0.1 ms (100 µs) → path difference ≈ 30 km → null spacing ≈ 10 kHz (minimal audible effect)
-- Δt ≈ 0.5 ms → path difference ≈ 150 km → null spacing ≈ 2 kHz (affects upper speech components)
-- Δt ≈ 1 ms → path difference ≈ 300 km → null spacing ≈ 1 kHz (noticeable speech coloration)
-- Δt ≈ 2–3 ms → path difference ≈ 600–900 km → null spacing ≈ 300–500 Hz (significant intelligibility impact)
-- Δt > 5 ms → path difference > 1500 km → null spacing < 200 Hz (slow spectral variation, “hollow” audio)
+## 4. Signal strength and phase relationships
 
-These delay and path length differences are consistent with HF ionospheric propagation, where variations in refraction height, hop count, and ground interaction points can readily produce path differences of tens to thousands of kilometres.
+Some reported signal-strength improvements are large enough that pattern change is likely part of the explanation.
 
-They also reinforce the observations showing lesser change in shorter paths, and greater differences on DX with strongest on 20m as the band of greatest difference (longest paths hence longer delays). Also it is easy to suggest this may be strongly condition sensitive with the way the ionosphere refracts signals playing a key role.
+Possible contributors include:
 
-From observations on 80m and 40m where the path lengths are shortest and hence the possibility of significant time delay differences are the smallest, we suggest that fricatives, concentrated toward the upper end of the SSB passband, are most sensitive to moderate delay spreads (on the order of 0.5–2 ms). This is where the comb-filter null spacing falls within the 1–3 kHz region. Under these conditions, relatively small changes in the relative amplitudes and polarisations of multipath components—such as those introduced by a hybrid-polarisation antenna—can produce disproportionately large changes in perceived intelligibility. Put simply, these high pitch parts of the SSB audio band are the most easily affected.
+- stronger or better-positioned current on the vertical section
+- changed phase relationships between the three conductors
+- lower loss than some comparison arrangements
+- different ground interaction
+- different launch-angle weighting
 
-The current theory is that a hybrid polarisation antenna may reduce selective attenuation of higher-frequency audio components by providing multiple propagation paths with differing polarisation states, thereby improving perceived intelligibility. Why it selects better intelligibility as opposed to worse remains unknown.
+This is one of the reasons simple NEC gain comparisons do not settle the matter by themselves. Indeed, NEC can show a comparatively small pattern change yet signal reports indicated 1 to 2 S point improvements regularly compared to a reference antenna.
 
-It is suggested that improvements may be more noticeable than degradation.
+---
 
-The NKO configuration does not inherently increase signal information content, but may reduce the severity of frequency-selective fading. In HF propagation, multipath effects often produce deep spectral nulls within the audio passband, particularly in the 2–4 kHz region critical for speech intelligibility. These nulls can significantly degrade received audio.
+## 5. Frequency-selective fading and intelligibility
 
-By introducing a hybrid polarisation and multi-element radiation structure, the NKO effectively provides partial diversity. The resulting signal at the receiver can be viewed as the combination of multiple components with differing phase and polarisation characteristics. Because these components are not fully correlated, deep fades in one component are often partially filled by others.
+Voice communication over radio is not just about total RF strength. It is also about what happens across the recovered audio passband.
 
-This process tends to reduce the depth of spectral nulls rather than introduce new severe attenuation. As a result, the received audio spectrum may exhibit reduced deep fading and more uniform frequency response. From a perceptual standpoint, shallow spectral variation is less detrimental to intelligibility than deep, narrow nulls, leading to a subjective improvement in clarity.
+**Frequency-selective fading** happens when the same signal arrives by more than one path, or in more than one component, with slightly different delay and phase. When those copies combine at the receiver, they do not add up evenly across the passband. Some parts reinforce. Some parts cancel. The result is a series of peaks and notches across the recovered speech spectrum.
 
-It should be noted that this effect is statistical rather than deterministic. Under certain conditions, destructive combination may occur, and no universal improvement can be assumed. However, in typical HF multipath environments, a reduction in deep frequency-selective fading provides a plausible explanation for the observed tendency toward improved intelligibility.
+In practice, that means an HF signal can still be quite strong overall yet sound rough, hollow, or harder to understand. The lost parts are often in the upper speech region where consonants and fine speech detail live. That is why two antennas with broadly similar signal reports can still sound very different on air.
 
-Resolving this theory will require more testing and the use of DSP analysis of recorded speech.
+The NKO observations make the most sense when viewed in that context. The antenna combines horizontal and vertical components in one structure, and those components need not be affected in exactly the same way by a changing HF path.
 
-**Summary:**  
-Multipath propagation and frequency-selective fading provide a plausible mechanism linking antenna characteristics to observed differences in audio intelligibility.
+A plausible working explanation is that this changes how severely some of the worst spectral notches appear at the receiver, improving practical intelligibility even when average signal strength is not dramatically different.
 
-We consider this to be an unresolved area of study and disclose it as such;
-- we have a limited sample size and number of observations
-- all evidence suggest _something_ is happenening, we are choosing a possible and most likely hypothesis 
+---
+
+## 6. The working position
+
+The best current explanation for the NKO’s improved performance is that it changes three important things at once.
+
+1. A conventional OCF is a two-arm horizontal antenna. The NKO keeps those two horizontal arms, but also adds a top-fed vertical radiator driven in phase with the short arm. That makes it a different physical system from a normal OCF, dipole or EFHW, because it is no longer just a horizontal wire antenna.
+
+2. Because of that, the NKO does not behave like a strongly horizontal antenna alone. The horizontal wire arms still favour horizontal polarisation, much like an OCF, but the vertical section adds a vertical component as well. That means the NKO can couple to both the horizontal and vertical parts of a real HF signal in a way a conventional horizontal wire antenna cannot. In practical terms, that gives the antenna access to _more_ signal energy a conventional horizontal wire antenna may miss.
+
+3. It changes the way the antenna interacts with the real HF path. On-air performance is shaped not only by the antenna itself, but by the ionospheric channel it is working through. Multipath, fading, changing angle of arrival and changes in polarisation all matter there. If the NKO interacts with that channel differently, then modelled far-field gain alone will not tell the whole story.
+
+NKO from all signal reports has a "gain advantage" with stronger signals, and also improved audio quality on some signals, some of which are quite surprisingly strong. They can only come from;
+
+- better coupling to the path
+- a more useful launch angle for that path
+- a better match to the polarisation that actually arrives
+- lower effective loss in the overall system
+- useful contribution from the added vertical radiator
+
+That is the present working position. It is not a miracle claim, and it is not final proof. It is a practical explanation that fits both the structure of the antenna and the behaviour reported so far, and it is enough to justify serious further testing.
 
 ---
 
 ## Caveats
-Much of the above is AI generated and has been verified as much as is practical. Using AI has its own inherent risks. It does however remain and should be considered speculative.
 
-- No direct current or pattern measurements have been done
-- Observations are anecdotal/field-based from a small number of stations, but they have been repeated
-- Proposed mechanisms are consistent with theory but require empirical confirmation (e.g., current probes, field strength comparisons, more audio analysis)
+A number of things are still open:
 
-We invite peer review and others to replicate and report.
+- direct current measurement on the vertical section
+- exact phase relationships by band
+- how installation-sensitive the NKO is
+- whether the strongest benefit is receive, transmit, or both
+- under what path conditions the effect is strongest
+
+So the correct status of this document is:
+
+> **working explanation, not final proof**
 
 ---
 
 ## References
 
-- Radio Society of Great Britain, *RSGB Radio Communication Handbook*, various editions; https://rsgb.org/main/publications/books/radio-communication-handbook/
+- Radio Society of Great Britain, *RSGB Radio Communication Handbook*; https://rsgb.org/main/publications/books/radio-communication-handbook/
 - ARRL, *The ARRL Antenna Book*; https://www.arrl.org/arrl-antenna-book
 - Davies, K., *Ionospheric Radio*, IEE Electromagnetic Waves Series
 - ITU-R P.533, *HF Propagation Prediction Method*; https://www.itu.int/rec/R-REC-P.533
@@ -201,12 +192,9 @@ We invite peer review and others to replicate and report.
 
 - **“Controlled feeder radiation”**, *Radio Communication*, **May 1990** (RSGB).  
   Archive.org OCR text: https://archive.org/stream/RadCom_Magazine_1990-05/RadCom_Magazine_1990-05_djvu.txt  
-  (“Controlled feeder radiation” or “G2HCG”.)
 
 - **“Controlled Feeder Radiation Revisited”**, *RadCom / Radio Communication*, **July 1991** (RSGB).  
   PDF: https://electronicsandbooks.com/edt/manual/Magazine/R/RadCom%20RSGB%20UK/199107.pdf  
-  (“CONTROLLED FEEDER RADIATION REVISITED”.)
 
-A reprint/alternate publication also appears as:
 - **“Controlled Feeder Radiation”**, *Communications Quarterly*, **Summer 1992**, B. Sykes, G2HCG.  
   PDF: https://www.worldradiohistory.com/Archive-All-Communications/Communicationns-Quarterly/Communications-Quarterly-1992-02-Summer.pdf

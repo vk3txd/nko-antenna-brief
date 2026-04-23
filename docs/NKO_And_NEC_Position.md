@@ -1,351 +1,271 @@
 # NKO And NEC — A Statement of Position
 
 **Author:** VK3TXD (Richard Holmes)  
-**Status:** v0.4  
+**Status:** v0.5  
 **License:** CC BY 4.0
 
 ---
 
-## 1. Introduction — The Short Version
+## 1. Introduction — the short version
 
-NEC is an excellent antenna tool. It can model current distribution, feedpoint impedance, radiation pattern, launch angle, and the relationship between conductors in an antenna system. It tells us a great deal about what the antenna itself is doing.
+NEC is an excellent antenna modeller. It is also only _part_ of and not the complete answer for an antenna like the NKO.
 
-HF communication, however, is never only an antenna problem.
+The NKO is interesting because it appears to do things on air that are not fully captured by simple static NEC comparisons alone. That does not make NEC wrong. It means the full communication path includes more than the antenna in isolation.
 
-A real HF path also includes ground, local environment, receiver noise, and above all the ionospheric channel. On that path the wave can be refracted, split into multiple modes, arrive from more than one angle, change polarisation, and fade in ways that NEC does not model [2][3][6].
+The basic position of this document is:
 
-That is simply the nature of HF.
-
-The NKO was not created from a theory of ionospheric diversity. It emerged from a practical feed-system experiment. Once on-air observations began to show differences that were not obvious in simple NEC comparisons, the natural question followed: **what part of the real HF problem is being seen on air that is not present in the static model?**
-
-The position taken in this paper is straightforward:
-
-**NEC models the antenna well, but the full behaviour of an HF communication path depends on more than the antenna alone.**
-
-That view will not surprise many long-time amateurs. Old hands have often remarked that some antennas behave better or worse on air than a simple model might suggest. That does not mean NEC is faulty. It means HF operation includes a real propagation channel whose behaviour can dominate what operators actually experience.
+> **Use NEC to understand the antenna. Use field testing to understand the antenna in the real HF channel.**
 
 ---
 
-## 2. What NEC Tells Us
+## 2. What NEC tells us well
 
-NEC remains one of the most useful tools available to antenna experimenters.
+NEC is very good at showing:
 
-It is very good at the jobs it was built for:
+- current distribution
+- feedpoint impedance
+- relationships between conductors
+- far-field pattern
+- launch angle trends
+- the effect of height and geometry changes
 
-- calculating current distribution on conductors
-- estimating feedpoint impedance
-- showing radiation pattern and launch angles
-- comparing one physical geometry against another
-- helping with matching and multiband behaviour
-- showing whether the feedline is likely to be carrying common-mode current if it is included in the model
-
-That is real value. It is why NEC has remained useful for decades [1].
-
-For a conventional antenna in a reasonably clean environment, NEC can often get the experimenter very close to reality. Even with unusual antennas it can still be extremely helpful, provided it is used to answer the questions it is actually capable of answering.
-
-So the starting point here is not criticism of NEC. The starting point is that NEC gives a reliable description of the **antenna side** of the problem.
+For the NKO, that is already valuable. NEC can help show that the feedline section is not electrically irrelevant and that the system should be treated as a three-conductor structure, not just a normal OCF wire.
 
 ---
 
-## 3. Where NEC Fits In The Larger HF Picture
+## 3. Where NEC stops
 
-NEC models the antenna and its immediate electromagnetic environment. It does **not** model the time-varying HF propagation channel.
+NEC does not model the full time-varying HF communication path. It can't. The ionosphere changes over time, sometimes seconds to minutes and that changes propagation.
 
-That distinction is central.
+It does not model:
 
-NEC can tell us:
+- changing ionospheric polarisation
+- multipath fading over time
+- TIDs - Travelling Ionospheric Disturbances
+- changing angle of arrival
+- local receive noise behaviour
+- the way selective fading damages speech copy
 
-- how much horizontal and vertical field the antenna may launch
-  - H/V magnitude alone does not settle the matter. The relative phase between those components is also required to determine whether the resulting field is usefully mixed, simply tilted, or only conditionally helpful
-- at what elevation angles that energy leaves
-- how current divides between the conductors
-- how changing wire lengths, heights, or feed arrangements alters the pattern
+Those are not small details. On HF they are part of the lived reality of using an antenna. One example is QSB which can change signal strength from S2 to S9 on extreme paths, over a few minutes.
 
-A real HF path then adds further effects that sit outside the NEC solution:
-
-- what the ionosphere does to the wave after launch
-- whether the received signal is dominated by one mode or several
-- how much multipath fading will occur
-- how much the signal polarisation rotates on the way
-- whether the receiving site has high vertically polarised man-made noise
-- whether, over time, one antenna stays above the copy threshold better than another
-
-Those are not small details. On HF they are part of normal operating reality [2][3][6].
-
-There is also a second point that belongs here. Even before ionospheric effects are considered, NEC models and real installations can differ because of **ground accuracy, segmentation, nearby conductors, feedline routing, and common-mode details**. The NEC manual itself is open about this. Finite-conductivity ground approximations have limited accuracy for structures close to ground, and unusual or complex structures benefit from comparison with measurement where possible [1].
-
-So the practical position is this:
-
-**When NEC and field observations differ, the difference may come from the model, the installation, the ionosphere, or a mixture of all three.**
-
-That is not a weakness in NEC. It is the real scope of the problem.
+So when the question is “what is the exact current on this conductor?” NEC is helpful. 
+When the question is “why did one antenna sound easier to copy on a real path tonight?” NEC is only part of the answer.
 
 ---
 
-## 4. The World HF Actually Lives In
+## 4. The real HF path
 
-HF radio operates in a moving, imperfect, time-varying channel.
+A real HF path is a channel, not just a line between two antennas.
 
-A simple explanation says the signal “bounces” off the ionosphere. That is useful shorthand. The more accurate picture is **refraction through ionised layers** whose properties vary with height, time of day, season, solar activity, latitude, and geomagnetic conditions [2][3].
+That channel can introduce:
 
-As the wave enters regions of changing electron density, its path bends. Under suitable conditions it bends enough to return to Earth. Depending on frequency, launch angle, and ionospheric state, more than one propagation mode may exist at once. The receiver may then see more than one version of the signal, arriving with different amplitudes, phases, delays, angles, and polarisation states [3][6].
+- multipath
+- fading
+- polarisation change
+- angle-of-arrival change
+- time variation on scales from seconds to minutes
 
-That behaviour is part of everyday HF operation.
+We talk about signals being reflected from the ionosphere, they are not. They are refracted, bent gradually before returning to earth and that bending can happen aid different heights. An HF signal may also travel some distance within the ionosphere before exiting to earth - so there is no single place or boundary where signals "bounce off". All of this does a few things;
 
-The BOM propagation notes describe several distinct fading mechanisms on HF, including:
+- the polarisation of the signal can change according to the amount of time a signal is within the ionosphere
+- path differences cause multiple copies of the same signal to arrive at a receiving antenna at different times causing multipath interference
 
-- **multipath fading** — different modes or paths arriving together and interfering
-- **polarisation fading** — the arriving wave’s polarisation changing relative to the receiving antenna
-- **skip fading** — especially near skip-zone boundaries and around sunrise and sunset
-- **focusing and defocusing** caused by travelling ionospheric disturbances (TIDs) [3]
+In practical terms, two antennas with similar static gain numbers can still behave differently on air because they are not coupling to that channel in exactly the same way. A vertical may behave very differently to a horizontal signal because of polarity rotation.
 
-The ITU handbook also notes that interference fading can come from multiple reflected skywaves, the ordinary and extraordinary magneto-ionic waves, and scattered components from irregularities [6].
-
-So the received HF signal is often not one stable object. It is the vector sum of several unstable ones.
-
-**Travelling Ionospheric Disturbances (TIDs)** are moving, wave-like ripples in the ionosphere.
-
-In practical amateur-radio terms, they are disturbances passing through the refracting region of an HF skywave path. 
-
-As one moves through that region it can slightly raise, lower, tilt, focus or defocus the part of the ionosphere carrying the signal, which in turn can change the signal’s strength, phase, apparent arrival angle, and sometimes its polarisation.
-
-The result at the receiver can be slow fading, changing skip behaviour, and periods where a path becomes stronger, weaker, or simply less stable even though nothing has changed at either end.
-
-TIDs are thought to arise mainly from wave motion travelling up from below — especially atmospheric gravity waves caused by weather systems and other lower-atmosphere disturbances — and also from auroral and geomagnetic activity following solar events.
+That is the bigger context in which the NKO has to be judged.
 
 ---
 
-## 5. Faraday Rotation — Important And Part Of The Picture
+## 5. Faraday rotation — important, but not the whole story
 
-Faraday rotation belongs in this discussion because it is both real and operationally important.
+Faraday rotation matters on HF. It is one of the ways the ionosphere changes the polarisation of the wave between transmitter and receiver.
 
-When a linearly polarised wave passes through the ionosphere, the magnetised plasma causes the plane of polarisation to rotate. The ITU gives the rotation as being proportional to the integrated electron content and magnetic field along the path, and inversely proportional to the square of frequency [2]. In practical terms: **lower frequencies tend to suffer more rotation than higher frequencies, all else being equal**.
+It is not the only thing going on.
 
-This means that a signal launched as mainly horizontal may arrive at the far end as some other linear polarisation, or as a more complicated elliptical state. If the receiving antenna strongly prefers one polarisation, the received level can vary as the incoming wave rotates [2][3][6].
+Real HF fading can also involve:
 
-That is a genuine and familiar part of HF behaviour.
+- multipath interference
+- skip fading
+- focusing and defocusing
+- TIDs
+- changing mode mix
+- ordinary and extraordinary wave behaviour
 
-At the same time, Faraday rotation is only one member of the fading family. Multipath interference, mode structure, tilt, focusing and defocusing, angle-of-arrival changes, skip effects, and noise environment also contribute to what operators hear [3][6].
-
-So the position taken here is:
-
-**Faraday rotation is part of the explanation for what operators observe, but HF fading and HF performance are never reduced to one mechanism alone.**
-
-That is the way the channel behaves.
-
----
-
-## 6. Why A Mixed-Polarisation Antenna Can Matter
-
-This is where the practical antenna question becomes interesting.
-
-A conventional horizontal antenna mainly responds to the horizontal component of the arriving field. If the incoming wave happens, at that moment, to be arriving with a stronger vertical component, or if part of the useful energy is arriving on a component the antenna couples to poorly, the received signal can dip.
-
-An antenna with both horizontal and vertical response is not immune to fading. But it does have the possibility of coupling to **some useful part** of what the ionosphere is delivering at that moment.
-
-That is why the description “diversity-like” is reasonable, provided it is used carefully.
-
-The NKO is not a classical switched diversity system. It does not have independent receiving channels and a combiner. What it appears to be is a **single structure with mixed horizontal and vertical radiation and reception characteristics**, together with its own amplitude and phase relationships between the long arm, the short arm, and the radiating feedline section. Those relationships shape the total field the antenna launches and the way it responds to arriving fields.
-
-That can matter because the ionosphere does not usually deliver a single clean, fixed-polarisation signal. It delivers a changing mix.
-
-So the working position is:
-
-**The NKO may, on some paths and at some times, weight the available arrival components more favourably than a conventional horizontal antenna, and therefore reduce the depth or frequency of the worst fades.**
-
-That is not a dramatic claim. It is simply a practical statement about how a mixed-response antenna may behave in a mixed-response channel.
-
-The ITU has long recognised that polarisation diversity can reduce fading and distortion on HF systems [5]. That does not prove that NKO must do so in every installation. It does show that the general mechanism is well grounded.
+The NKO documents therefore treat Faraday rotation as an important part of the picture, not the whole picture.
 
 ---
 
-## 7. Why NEC May Undervalue NKO On Air
+## 6. Why a mixed-polarisation antenna can matter
 
-This leads to the main point of the paper.
+The NKO combines:
 
-NEC gives a static description. HF contacts take place in a dynamic channel.
+- horizontal wire antenna behaviour
+- a vertical feedline section acting as an antenna
 
-A static pattern plot naturally rewards:
+That does not make it a classical two-channel diversity system. It does make it different from a strongly single-polarisation reference antenna.
 
-- peak gain in a chosen direction
-- clean feedpoint behaviour
-- a pattern that looks efficient in one snapshot
-- polarisation purity, if the user is thinking in those terms
+A practical way to state the hypothesis is:
 
-A real HF path often rewards additional things:
+> **On some HF paths, a hybrid antenna with mixed horizontal and vertical behaviour may be less vulnerable to some fades than a strongly single-polarisation antenna.**
 
-- better coupling to a changing mix of arrival components
-- less severe deep fades
-- more stable copy over time
-- better performance at the bottom of the fading distribution, not only at the top
-
-That is the distinction between **peak gain** and **fade-floor performance**.
-
-If NKO is doing something useful in practice, it may not appear mainly as “several dB more gain on the plot.” It may appear as:
-
-- fewer deep nulls
-- shorter bad periods
-- better preservation of speech consonants
-- higher digital decode success
-- better copy when conditions are marginal rather than when they are easy
-
-This is one reason experienced operators sometimes report that a modest-looking antenna performs unusually well when the band is not behaving itself. The antenna may not be winning the static gain contest. It may simply be better matched to the way the real path misbehaves.
+That is a conditional and path-dependent claim. It is also a physically reasonable one that helps explain the signal reports from NKO users.
 
 ---
 
-## 8. There Are Also Non-Ionospheric Reasons NEC And Reality Differ
+## 7. Why NEC may undervalue the NKO on air
 
-Not every difference between model and practice comes from the sky.
+A static model naturally scores antennas using static quantities such as gain, bandwidth, pattern, and impedance - and we tend to judge them by these values. It is, arguably, all we really have.
 
-If the NKO in use differs from the NKO in the model, the cause may be partly or wholly local.
+But an antenna is used in the real world and interacts with the ionosphere that is not modelled and therefore the results can be highly skewed by that interaction. If an antenna works better with the ionosphere, it will perform better than one that does not - and modelling will not expose that.
 
-Possible reasons include:
+Operators care about:
 
-- the choke not providing the assumed common-mode boundary
-- the feedline routing in the real installation differing from the model
-- nearby gutters, masts, roofs, trees, fences, or wiring altering current distribution
-- the real ground being very different from the assumed ground constants
-- segmentation or geometry choices in the NEC model being too coarse
-- the current on the feedline in reality being larger or smaller than the model predicts
-- local noise having a strong polarisation preference, especially man-made noise which often tends to be vertically polarised [3]
+- signal strength, whether a signal stays above the copy threshold
+- readability
+- consistency
+- fade depth
 
-That last point matters.
+Antenna A may look better in a static plot and still be less useful on air if it falls apart badly during the fades that matter most.
 
-A stronger vertical component may help on some skywave paths. It may also raise noise at some suburban sites. So any realistic evaluation of NKO should separate:
-
-- **field strength**
-- **signal-to-noise ratio**
-- **intelligibility**
-- **fade-depth statistics**
-
-Those are related, but they are not identical.
-
-An antenna that is 2 S-points louder but also 2 S-points noisier has not necessarily improved communication. An antenna that keeps speech detail readable during the worst fades may be the better antenna even if its average meter reading is less dramatic.
+This is one of the reasons a design like the NKO can be more interesting on air than a first-pass NEC comparison suggests.
 
 ---
 
-## 9. The Specific NKO Position
+## 8. There are also non-ionospheric reasons model and reality differ
 
-The most defensible form of the NKO positioncompared to NEC, as matters presently stand, is this:
+Not every mismatch between model and field result is “the ionosphere.”
 
-1. The NKO is a three-conductor radiating system consisting of the long arm, the short arm, and a defined radiating section of feedline above the 1:1 choke.
+Other reasons include:
 
-2. That structure produces a mix of horizontal and vertical radiation and reception, with band-dependent amplitude and phase relationships.
+- real ground differing from the ground model
+- coax routing
+- mast coupling
+- nearby conductors
+- wet foliage
+- installation asymmetry
+- imperfect chokes
+- local noise differences
 
-3. Because HF propagation commonly involves changing polarisation, changing angle of arrival, and multipath interference, a mixed-response antenna can sometimes couple more favourably to the less-impaired arrival component than a conventional horizontal antenna.
-
-4. Therefore the NKO may show a **real on-air advantage** that appears mainly as reduced fade severity, improved intelligibility, or better decode robustness, rather than as a simple fixed-gain increase.
-
-5. NEC can help with points 1 and 2. It cannot directly evaluate point 3, and therefore it cannot by itself settle point 4.
-
-That is the position advanced here.
-
-It is cautious, but it is also testable.
-
----
-
-## 10. What We Still Do Not Know
-
-There are still unknowns, and they should be stated plainly.
-
-We do not yet have full measured data for:
-
-- the NKO’s exact horizontal/vertical amplitude ratio on each band
-- the phase relationship between those components in the far field
-- how those relationships change with feedline length, height, or installation geometry
-- whether the observed advantage comes more from polarisation behaviour, angle-of-arrival behaviour, current balance, noise behaviour, or some combination of them
-
-That matters because the vertical feedline section is one physical length serving multiple bands. Its current distribution and radiating contribution will not be the same on 80 m, 40 m, 20 m, and 10 m. It is entirely plausible that NKO is most effective on some bands and less so on others.
-
-That does not weaken the position. It simply identifies where the present investigation honestly stands and where further measurement would be useful.
+This is especially relevant for the NKO because some of the feed system is part of the antenna. Small installation details can matter more than they would in a more ordinary system.
 
 ---
 
-## 11. What NEC Can Still Tell Us About NKO
+## 9. The specific NKO position
 
-Used properly, NEC still has substantial value here.
+The evidence so far is consistent with NKO performing better than NEC suggests.
 
-It can help answer questions such as:
+NEC generates a static model in isolation, NKO with its both horizontal and vertical components interacts differently with the ionosphere compared to a simple static model. Signal reports indicate more "gain" than NEC does and also audio changes that are suggestive of very different ionospheric interaction. Some of this gain will be because of angle of radiation, and some will be from other reasons.
 
-- Is the feedline section actually carrying common-mode current in the model?
-- How much does the current distribution change if the choke location changes?
-- What happens to the elevation pattern when the feedline section is included versus excluded?
-- How large are the horizontal and vertical field components in the main directions of interest?
-- How sensitive is the pattern to feedline length, arm ratio, height, and slope?
-- Is the model stable under segmentation changes, or are the results moving around too much to trust?
+The NKO should be judged as:
 
-These are worthwhile questions. NEC is well suited to them [1].
+- a three-conductor antenna structure
+- in a real installation
+- on a real HF path
 
-What NEC does not provide, from that static answer alone, is a full account of how the antenna will behave over time on a live ionospheric path with real fading.
+The current working view is that the NKO may outperform some conventional reference antennas on air because of a combination of:
+
+- changed current distribution
+- changed field structure
+- changed pattern
+- altered interaction with the full HF channel
+
+That is a more serious and more restrained claim than saying “NEC is useless” or “the antenna has mystery gain.”
 
 ---
 
-## 12. How NKO Should Be Evaluated
+## 10. What we still do not know
 
-If the practical claim is that NKO performs better on air than a static model alone would suggest, then the evaluation should be designed to examine exactly that.
+Several questions remain open:
 
-A serious test programme should include:
+- the exact current magnitude on the vertical section, band by band
+- the phase relationship between the conductors under real installations
+- how installation-sensitive the best behaviour is
+- the degree to which local noise helps or hurts the NKO
+- where signal-strength effects end and intelligibility effects begin
+
+Those are not reasons to dismiss the antenna. They are reasons to keep measuring.
+
+---
+
+## 11. What NEC can still tell us about the NKO
+
+NEC remains useful for:
+
+- confirming that the feedline section is electrically active
+- comparing variants
+- checking launch-angle trends
+- understanding the effect of changing vertical section length
+- looking at current distribution on the three conductors
+
+H/V magnitude alone does not settle the full propagation question. Relative phase matters too. Even so, NEC is still the right tool for the antenna-side part of the problem.
+
+---
+
+## 12. How the NKO should be evaluated
 
 ### A. Fast switching against a reference antenna
-Compare NKO against a conventional reference antenna over the same path with switching intervals short enough that propagation has not changed much between samples.
+
+Compare against an EFHW, dipole, or ordinary OCF with an A/B switch on the same path.
 
 ### B. Long observation periods
-Short A/B tests can be misleading. The benefit, if real, is likely to be statistical and may show up mainly during the worst parts of the fading cycle.
+
+Short comparisons can be misleading. The more interesting differences may show up during the fades, not at the strongest moments.
 
 ### C. Fade-depth statistics
-Do not look only at average signal. Record minimum signal, fade duration, and time-below-threshold.
+
+Minimum useful signal can matter more than average signal.
 
 ### D. SNR and intelligibility
-Voice readability and digital decode success may matter more than raw S-meter differences.
+
+Recordings, decode success, and practical readability matter. This is especially true if the claimed improvement is in copy rather than raw signal.
 
 ### E. Multiple paths
-A single path can flatter or hide any antenna. Different distances, azimuths, and times of day are needed.
+
+Try local, medium, and DX paths where possible. Different paths stress antennas differently.
 
 ### F. Noise observations
-If one antenna hears more urban noise, that must be separated from any propagation advantage.
+
+Antenna behaviour is only half the receive story. Local noise pickup matters too.
 
 ### G. Model correlation
-Use NEC to predict the static ingredients — current distribution, angle, and H/V balance — and then see which measured outcomes correlate with them.
 
-Relative H and V field magnitudes from NEC are informative, but without the phase relationship they do not establish whether the resultant field is usefully dual-responsive, simply tilted, or elliptically polarised in a way that helps little or even harms in some directions.
-
-That is how the subject moves from “interesting observation” toward “supported engineering position”.
+Use NEC to ask sensible structure questions, then compare those predictions with field observations rather than assuming one replaces the other.
 
 ---
 
-## 13. Bottom Line
+## 13. Final position
 
-The most useful single statement is this:
+The NKO is not a rebuke to NEC. It is a reminder that NEC answers the antenna question, while on-air use answers the full communication question.
 
-> NEC can model the NKO as an antenna, but HF performance is determined by the antenna operating inside a real, time-varying propagation channel and a real installation. The NKO may therefore show practical advantages on air that are not fully expressed in a static NEC comparison.
+That is particularly important when the antenna under discussion:
 
-And the corresponding NKO position is:
+- is structurally unconventional
+- includes the feed system in the radiator
+- is being judged partly by copy quality, not just static gain
 
-> The plausible value of the NKO is not simply extra gain. It is that its mixed horizontal/vertical response and conductor phase relationships may, on some real HF paths, couple more favourably to the less-impaired arrival components and thereby improve fade-floor performance, intelligibility, or decode reliability.
+The right conclusion is therefore straightforward:
 
-That is not presented here as a slogan or a sales claim.
-
-It is presented as a practical reading of how HF behaves, how NEC behaves, and how the NKO has been observed to behave.
+> **Model the NKO seriously. Test it seriously. Do not assume either one is the whole story by itself.**
 
 ---
 
-## 14. Summary — The One Page Version
+## 14. Challenges - NKO has forced a change in thinking
 
-- NEC is a very useful antenna modeller, and it models the antenna and its local electromagnetic environment well [1].
+At a club meeting an old timer with vastly more experience than me stated very firmly that he did not put much faith in NEC modelling. His experience was that it was poor to wrong compared to observations.
 
-- Real HF communication takes place through a time-varying ionosphere that can change the wave’s path, delay, angle of arrival, and polarisation [2][3][6].
+At the time I was dismissive as in my mind NEC produced a very good model as to what I could expect in real life if I compared 2 antennas. NEC would tell me which was the better according to what I was evaluating.
 
-- Faraday rotation is real and important, but it is only one contributor to fading. Multipath, ordinary and extraordinary modes, skip effects, TIDs, focusing and defocusing, and local noise also matter [2][3][6].
+Now I believe him much more. He was right, I was wrong. NKO has done this to me.
 
-- The NKO is best regarded as a mixed-response antenna whose horizontal/vertical balance and conductor phase relationships can, on some paths, reduce the depth or frequency of the worst fades.
+Going through the technical information about the ionosphere and how HF signals interact with it, it is clear NEC analysis is only one part of the whole story about how an antenna works. The real world, how an antenna interacts with the ionosphere matters a lot.
 
-- That does not make it a magical antenna, nor a classical diversity receiver. It means only that a hybrid response can sometimes be more useful on a real HF path than a static single-polarisation model suggests.
+We know a vertical behaves differently to a horizontal antenna. We know we get QSB. We know the ionosphere refracts our signals but putting that into the big picture of antenna performance is a different story. Indeed, in this analysis investigation into the way the ionosphere works, what it does to HF signals has been remarkable. A lot more happens than I thought.
 
-- NEC may therefore undervalue NKO if the practical advantage appears mainly as better fade-floor performance, better intelligibility, or better digital robustness rather than as a simple static gain increase.
+The classic example is that signals launched from a vertical antenna are well-received by a horizontal antenna some distance away and vice versa. Yet we know there should be a huge signal strength problem as an antenna is best suited to same polarity signals. Yet in real life it works. Why? Why does a vertical antenna launch a vertically oriented signal that is then well received by a horizontal antenna? The ionosphere is the answer and this is what NEC cannot model.
 
-- At the same time, some NEC-versus-reality disagreement may come from ordinary modelling issues such as ground assumptions, segmentation, feedline routing, choke effectiveness, and nearby structures [1].
+**Yet more challenge** to my long held beliefs happened when signal reports came in saying, definitely, that NKO improved the quality, intelligibility, of some signals dramatically. This did not sound correct. Yet after months of testing by multiple test stations it is still being reported. NEC does not predict this (how could it) - and again it appears that the ionosphere and the way NKO works with it is the answer.
 
-- The correct approach is not to discard NEC. It is to use NEC for the part it can do, and measurement over real paths for the part that lies beyond it.
+NKO has challenged my understanding and this research has given me more appreciation of the way radio propagation and antennas work.
 
 ---
 
@@ -368,4 +288,3 @@ https://www.itu.int/dms_pub/itu-r/opb/rep/R-REP-P.266-7-1990-PDF-E.pdf
 
 [6] **ITU-R Handbook — The Ionosphere and its Effects on Radiowave Propagation**. Useful background on fading mechanisms including interference fading, polarisation fading, absorption fading, skip fading, and selective fading.  
 https://www.itu.int/dms_pub/itu-r/opb/hdb/R-HDB-32-1998-PDF-E.pdf
-

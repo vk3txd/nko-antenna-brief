@@ -1,98 +1,170 @@
-# Building An NKO - New Kallista OCF
+# Building an NKO – New Kallista OCF
 
-There are two options - build suitable NKO UnUn and Baluns from components, or purchase ready made components.
+This document is the practical build note for the NKO.
 
----
+There are two broad approaches:
 
-## Purchase 100W Range
+1. **Purchase suitable parts** and assemble the antenna quickly
+2. **Build the magnetic parts yourself** and package them as you prefer
 
-LDG make a range of low cost UnUn and Balun components suitable for lower power builds.
-
-RU-4:1 Unun - looks to be suitable for the UnUn. The box is marked with an antenna symbol - connect to long arm. The Earth symbol - connect to short arm.
-
-RU-1:1 Unun - may be suitable for the 1:1 current balun at the bottom of the vertical coax. I have not used it or seen its technical specifications.
+The examples here are the ones used in the early NKO testing. They are practical starting points, not the only possible builds.
 
 ---
 
-## Build QRP
+## Purchase option — lower power
 
-This is an untested design. Test carefully after building.
+LDG make low-cost parts that appear suitable for modest-power NKO builds.
 
-_4:1 UnUn_
-- Use a Jaycar LO1234 core, or FT110-43
-- Wind 7 turns of 0.6mm enamel covered wire, bifilar
-- Schematic, same as below for 100W version
-- Use connectors and enclosure of choice
-- Power handling would be 50w SSB absolute max (untested)
+### Candidate parts
 
-_1:1 Balun_
-- Use a Jaycar LO1234 core, or FT110-43
-- Wind on 13 turns of 0.6mm enamel covered wire, bifilar
-- Use connectors and enclosure of choice
-- This has been scanned for choking impedance. See below
-- Power handling would be 50w SSB absolute max (untested). On 80m, limit to 25w with NKO (NKO will have highest common mode current on 80m)
+- **RU-4:1 Unun** — suitable in principle for the apex UnUn  
+  - connect the terminal marked for the antenna to the long arm
+  - connect the earth/shield side to the short arm and coax shield side of the NKO arrangement
 
-Performance; Here is the scan of 13 turns on a single LO1234 core.<br>
-<img src="13T_LO1238_Z.png" alt="NKO QRP UnUn" width="500">
-
-_Should I use Teflon sleeving?_ Teflon sleeving is great for voltage withstand and also to prevent damage to the enamel coating when winding the core. For low power the voltages are lower and Teflon sleeving is not technically required. I've run 100W into other 1:1 baluns without teflon sleeving. The 4:1 may have higher voltages as a result of not being 50 ohms, so it makes more sense to sleeve that. 
-
-_Why that power rating?_ The wire is 0.6mm which might be ok for a not recommended 100W. The issue though is the common mode current in the 1:1 on 80m is expected to be highest. This may lead to more heating than a single core of this type could withstand. It might get quite hot.
+- **RU-1:1** — may be suitable as the lower 1:1 choke  
+  - I have not personally characterised it
+  - use with care and test thoroughly before relying on it
 
 ---
 
-## Build 100W range
+## Build option — QRP
 
-These are quite easy to make so long as you are comfortable winding toroids, soldering, and have appropriate skills in packaging into a suitable enclosure. I have successfully built them into "jiffy" style boxes as well as better-sealed enclosures. 
+This version is a reasonable starting point for low-power experimental builds. It is untested as a formal product design, so test carefully.
 
-These have been made and measured with a VNA, and the 100W builds are the designs used by the test stations.
+### 4:1 UnUn
 
-### Build 4:1 UnUn
+- Jaycar **LO1234** or **FT110-43**
+- 7 turns bifilar
+- 0.6 mm enamel wire
+- enclosure and connectors to suit your build
 
-This is made with
-- Ferrite core : a single FT140-43 or Jaycar LO1238 toroid
-- Wire : Use 2 x 750mm lengths of 0.8mm enamel wire sleeved in teflon tube, held close together as a bifilar pair by small short pieces of plastic tubing.
-- Wind 7 turns (so the bifilar pair goes through the hole 7 times)
-- Connect as per diagram below
+**Suggested limit:** around **50 W SSB absolute maximum**, and that is still a cautious experimental figure.
 
-Note: I have used 6 turns for 80m builds. Later, 7 turns tested as slightly lower loss. For 160m builds we suggest 8 turns.
+### 1:1 choke
 
-Performance; VNA scans indicate low loss, approx 0.1dB across HF, and with a 200R resistor, excellent impedance transformation across HF.
+- Jaycar **LO1234** or **FT110-43**
+- 13 turns bifilar
+- 0.6 mm enamel wire
+- package as convenient
 
-Here is the schematic;<br>
+This version has been scanned for choking impedance.
+
+**Suggested limit:** around **50 W SSB absolute maximum**, but for 80 m NKO use I would stay conservative. On 80 m the common-mode current in the lower choke is expected to be highest.
+
+### Performance example
+
+Scan of 13 turns on a single LO1234 core:
+
+<img src="13T_LO1238_Z.png" alt="QRP choke scan" width="500">
+
+### Teflon sleeving?
+
+At low power it is not strictly necessary, but it is still a good idea. It improves voltage withstand and protects the enamel while winding. The 4:1 UnUn is the part where sleeving makes the most sense.
+
+---
+
+## Build option — around 100 W
+
+These are the parts and winding details used by the early external test stations.
+
+### 4:1 UnUn
+
+Use:
+
+- **1 × FT140-43** or **Jaycar LO1238**
+- **2 × 750 mm** lengths of **0.8 mm enamel wire**
+- sleeve both wires in PTFE and hold them together as a bifilar pair
+- wind **7 turns**
+
+Connect as shown below:
+
 <img src="4-1_100w_UnUn.png" alt="NKO 4:1 UnUn" width="500">
 
-### Build 1:1 Balun
+### Notes
 
-This component must have a high choking impedance and also be able to handle the common mode curent in the system. The good news, this is is quite easy to make for a 100W class UnUn.
+- I have also used **6 turns** on 80 m builds
+- later testing suggested **7 turns** is slightly better overall
+- for 160 m work, **8 turns** is a sensible starting point
 
-This is made with
-- Use a 4 stack of LO1234 toroids from Jaycar, or a 4 stack of FT110-43's
-- Use RG316 coax and wind on 7 turns
-- Terminate in LO239 connectors at each end.
+VNA checks indicate low loss and good behaviour around a 200 Ω load across HF.
 
-Performance; here is the VNA scan of my LO1234 build;<br>
-<img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100w Balun" width="250">
+### 1:1 boundary choke
 
-I used a 4 stack of toroids to get a greater mass to handle more heating. Then reduced the turns count to 7 to account for the increased impedance the 4 stack produced. Adding more turns is easy, but it shifts the self resonance point down in frequency and adversely affects the 10m band.
+Use:
+
+- **4 stacked Jaycar LO1234** toroids, or **4 × FT110-43**
+- **RG316 coax**
+- **7 turns**
+- terminate in SO239 or other suitable connectors
+
+Example scan:
+
+<img src="7T_4xLO1234_1-1_balun.png" alt="NKO 1:1 100 W choke" width="250">
+
+### Notes
+
+- the four-core stack gives more ferrite mass to absorb heat
+- reducing the turns count to 7 keeps the self-resonance high enough for 10 m
+- more turns are easy to add, but they also pull the upper-frequency behaviour down
 
 ---
 
-## Build 400W range
+## Build option — around 400 W
 
-For the 4:1 UnUn, substitute a stacked pair of FT140-43 toroids (or Jaycar LO1238's) and use 1mm enamel covered wire sleeved in teflon tubing.
+### 4:1 UnUn
 
-For the 1:1 Balun, substitute a 4 stack of FT140-43 toroids (or Jaycar LO1238's) and use 8 turns of RG316. The choking impedance will be higher and the larger toroids will increase its ability to absorb the higher power (heat). See;<br>
-<img src="8T_4xLO1238_1-1_blun.png" alt="NKO 1:1 400w Balun width="250">
+- use a **stacked pair of FT140-43** or **Jaycar LO1238**
+- use **1 mm enamel wire**
+- sleeve it in PTFE
+
+### 1:1 boundary choke
+
+- use a **4-stack of FT140-43** or **Jaycar LO1238**
+- use **8 turns of RG316**
+
+Example scan:
+
+<img src="8T_4xLO1238_1-1_blun.png" alt="NKO 1:1 400 W choke" width="250">
+
+This gives higher choking impedance and more ferrite mass, which is what you want as common-mode current and heating rise.
 
 ---
 
-## Purchase QRO - 1,500W range
+## Purchase option — QRO / legal-limit class
 
-We can only recommend components that look suitable to handle this level of power. We have not tested these, only read their published data. The 4:1 UnUn and 1:1 Balun specifications of the devices should handle QRO power with ease. The 4:1 is way over-specced.
+These are not lab-verified by me. They are listed because their published specifications look suitable.
 
+### Candidate parts
+
+From **Balun Designs**:
+
+- **Model 4134** — 4:1 UnUn, 1.5–54 MHz, 5 kW
+- **Model 1115di** — 1:1 dual-core isolation balun, 3.5–54 MHz, 5 kW
+
+Website:  
 https://www.balundesigns.com/
 
-Balun Designs Model 4134 - 4:1 Unun 1.5 - 54MHz – 5kW
+---
 
-Balun Designs Model 1115di - 1:1 Dual Core Isolation Balun Dual SO239, 3.5-54 Mhz, 5kW
+## Practical build notes
+
+- The **4:1 UnUn** is the impedance-transforming part at the apex
+- The lower **1:1 choke** is not optional in the NKO concept
+- Keep the lower choke physically at the bottom of the intended vertical section
+- Package everything properly for weather, strain, and voltage
+- For higher power, worry more about **heating and voltage withstand** than about ferrite “saturation” myths
+
+---
+
+## Final note
+
+The magnetic parts are important, but the NKO only works as intended when the **whole system** is right:
+
+- arm lengths
+- apex height
+- vertical coax length
+- lower choke placement
+- feedline routing
+- mechanical layout
+
+Build the magnetic parts properly, but think of the antenna as the whole three-conductor structure.

@@ -2,180 +2,136 @@
 
 ## Abstract
 
-This document explores how soil properties and ground conductivity may influence the behaviour of the NKO antenna.
+The NKO is affected by ground and soil conditions like every other HF antenna, but it is affected in its own way because it combines horizontal wire elements with a defined vertical feedline section.
 
-Unlike conventional wire antennas, the NKO operates as a 3-wire hybrid radiatng system incorporating both horizontal radiating elements with a top-fed deliberately radiating vertical feedline component.
+This document sets out the practical position:
 
-This combination introduces multiple mechanisms of ground effects, affecting radiation pattern, efficiency, and propagation behaviour.
+- ground still matters
+- conductivity still matters
+- sea water still helps
+- poor ground still hurts
+- but the NKO should not be thought of as just another base-fed vertical or just another horizontal wire
 
-Fixed performance claims are not appropriate. Results depend on factors such as installation height, feedline routing, nearby structures, and actual ground conductivity.
-
----
-
-## 1. Introduction
-
-The NKO antenna is different to a traditional off-centre-fed (OCF) antenna because the top-fed coax shield between the 4:1 Unun and the 1:1 balun radiates and is part of the antenna system. This creates a multi-conductor structure comprising:
-
-- Long arm (horizontal)
-- Short arm (horizontal)
-- Feedline shield (vertical/common-mode)
-
-This results in a hybrid antenna system with both horizontal and vertical radiation characteristics.
-
-Ground interaction therefore becomes more complex than in conventional antennas.
-
-**Of special note** is that the vertical coax section has its highest current at the apex, at the feedpoint and high in the air, so it behaves more like an elevated top-fed radiator and should be considered that way rather than a ground mounted vertical. This reduces the interaction with ground and reliance on it. At the same time we believe it makes the NKO vertical coax more effective than a ground mounted vertical.
+The top-fed vertical section changes the picture.
 
 ---
 
-## 2. Ground Interaction Mechanisms
+## 1. Why soil matters at all
 
-At HF, the ground is part of the antenna system whether we like it or not.
+At HF, ground is part of the antenna environment whether we like it or not.
 
-Some of the signal leaving the antenna goes straight out, and some interacts with the ground. The two combine in the air, which changes the radiation pattern, especially the takeoff angle.
+It affects:
 
-How well the ground conducts electricity (salt water, salt pans vs wet soil vs dry rock, for example) affects how strong this interaction is. Good ground acts more like a reflector, helping energy launch at useful low angles and reinforcing the signal. 
+- loss
+- takeoff angle
+- reflected field strength
+- pattern shape
+- low-angle usefulness
 
-Poor ground tends to absorb energy instead, weakening the signal and reducing efficiency.
-
-| Ground Type              | Conductivity        | Vertical Efficiency | Low-Angle Radiation | Low-angle usefulness (typical) | NKO Behaviour |
-|-------------------------|--------------------|---------------------|---------------------|--------------------------|--------------|
-| Salt Pan                | Very high          | Excellent           | Very strong         | Often enhanced           | Strong vertical + horizontal hybrid |
-| Coastal (near salt water)| High (effective)  | Very good           | Strong              | Often enhanced           | Strong hybrid, low-angle aided by sea reflection |
-| Arable Soil             | Moderate           | Good                | Good                | Typical                  | Balanced hybrid |
-| Sandy Soil (dry)        | Low                | Moderate to poor    | Moderate to weak    | Variable                 | Reduced vertical contribution |
-| Sandy Soil (wet/saline) | Moderate to high   | Good                | Good to strong      | Often improved           | Improved hybrid behaviour |
-| Mineralised Ground (e.g. Golden Triangle) | Variable (often lossy) | Variable            | Variable                | Unpredictable            | Mixed behaviour, potential additional losses |
-| Mountain / Rocky Soil   | Very low           | Poor                | Weak                | Often reduced            | Mostly horizontal behaviour |
-| Urban / Mixed           | Highly variable    | Variable            | Variable            | Highly variable          | Strongly environment-dependent |
-
-The above is intended to be indicative of what we may expect. Again, same caveats about installation height etc.
-
-### 2.1 Horizontal Components
-
-Horizontal antennas (like dipoles and OCFs) don’t just radiate into free space — they also interact with the ground below them.
-
-Part of the signal goes straight out, and part of it bounces off the ground, and part of it is absorbed by ground. The radiated and reflected signals combine in the air, which shapes where the signal goes (angle etc), especially the takeoff angle.
-
-Because of this, the ground affects:
-
-- Takeoff angle (how much energy goes out and where - low vs high)
-- Pattern shape
-- Effective signal strength, especially when the antenna is low to the ground
-
-In simple terms, the ground acts a bit like a lossy reflector. Good ground helps reinforce useful radiation, while poor ground weakens it.
+Good conductive ground behaves more like a reflector. Poor ground behaves more like an absorber.
 
 ---
 
-### 2.2 Vertical Feedline Components (Feedline Radiation)
+## 2. Why the NKO is not a simple ground-mounted vertical
 
-The vertical section has the maximum current highest near the feedpoint (apex) and decreases toward the lower portion of the coax. As a result, radiation is concentrated in the upper section of the vertical run.
+The NKO vertical section is not base-fed at ground level. It is **top-fed** at the apex and this matters a lot.
 
-This behaviour is similar to a top-fed or “inverted” monopole, where the main radiation occurs away from the ground rather than at the base. The effect becomes stronger when the vertical section approaches a significant fraction of a wavelength, such as on 20 m.
+That matters because the strongest current in that vertical section is high in the air, not down near the dirt. So the NKO should generally be **less ground-hungry** than a conventional ground-mounted monopole.
 
-An important consequence is that the NKO’s vertical radiation component is likely less dependent on ground conductivity than a conventional ground-mounted vertical. Because the region of strongest current is elevated, ground losses are reduced while low-angle radiation is still supported.
-
-The end result is that the vertical section of coax will be less affected by ground that a simple 1/4 wave vertical mounted near ground.
-
-However and to a lesser degree than a ground mounted vertical there are still effects;
-
-- Ground still forms part of the current return path though to a lesser degree
-- Conductivity directly affects radiation efficiency
-- Poor ground increases resistive loss
-- High conductivity enhances low-angle radiation
-
-These points are consistent with observations that NKO performance from average farmland is often very good, suggesting that extremely high ground conductivity is not required for effective operation.
+That does not mean it is independent of ground. It means the comparison has to be made carefully.
 
 ---
 
-## 3. Combined Behaviour in the NKO
+## 3. The two ground-sensitive parts of the NKO
 
-The NKO combines both interaction mechanisms:
+The NKO has two broad parts that care about ground in different ways.
 
-| Component | Ground Interaction Type | Primary Effect |
-|----------|------------------------|---------------|
-| Horizontal arms | Reflection / boundary interaction | Pattern shaping, takeoff angle |
-| Feedline (vertical) | Elevated vertical radiator interacting with ground and surroundings | Efficiency, low-angle radiation |
+### Horizontal wire elements
 
-This results in a coupled system where:
+These behave broadly like elevated HF wire elements always do:
 
-- Radiation pattern is a vector combination of multiple elements
-- Polarisation is mixed (horizontal + vertical)
-- Performance is highly dependent on environment and geometry
+- height matters
+- reflected ground wave matters
+- conductivity changes pattern and low-angle behaviour
 
----
+### Vertical coax section
 
-## 4. Soil Type Effects
+This behaves more like an elevated top-fed vertical section:
 
-The following table summarises expected qualitative behaviour across common soil types:
-
-| Soil Type | Conductivity | Horizontal Effect | Vertical Effect (Feedline) | Overall NKO Behaviour | Notes |
-|----------|-------------|------------------|----------------------------|----------------------|------|
-| Salt pan / seawater | Very high | Strong reflection, low-angle reinforcement | Very efficient radiation, minimal loss | Strong hybrid behaviour, enhanced low-angle radiation | Best-case for vertical contribution |
-| Wet fertile soil | High | Good reflection, stable pattern | Efficient vertical radiation | Balanced hybrid behaviour | Typical “good” conditions |
-| Average soil | Moderate | Moderate reflection | Moderate efficiency | Geometry-dependent | Most common case |
-| Dry sandy soil | Low | Weaker reflection | Reduced vertical efficiency | Reduced hybrid effect | Vertical contribution diminished |
-| Rocky / arid terrain | Very low | Poor reflection | High loss in vertical component | Behaviour approaches horizontal antenna | Worst-case scenario |
-| Urban / mixed | Variable | Unpredictable reflections | Variable efficiency | Highly variable | Structures dominate |
+- better ground still helps
+- salt water still helps
+- poor ground still hurts
+- but not in exactly the same way as a base-fed quarter-wave over a radial field
 
 ---
 
-## 5. Frequency Dependence
+## 4. Expected site behaviour
 
-Ground effects vary significantly with frequency:
+The table below is deliberately practical rather than absolute.
+
+| Ground type | What to expect |
+|---|---|
+| Salt water / coastal edge | Strongest help to low-angle behaviour; NKO should benefit, though not necessarily as dramatically as a dedicated shoreline vertical |
+| Salt pan / very conductive ground | Similar to coastal good ground; strong support for low-angle work |
+| Average farmland / decent soil | Generally good all-round NKO behaviour |
+| Dry sandy or rocky ground | Reduced help to the vertical component; more installation sensitivity |
+| Highly variable urban ground | Hard to predict because nearby conductors and noise may matter as much as soil itself |
+
+---
+
+## 5. Frequency dependence
+
+The effect of ground is not uniform across bands.
 
 ### 80 m / 40 m
-On 80/40 m, soil still matters strongly, especially because the whole system is closer to the ground in wavelength terms and the horizontal section remains strongly ground-influenced;
+
+On the lower bands, the vertical section is a smaller fraction of a wavelength and the horizontal wire system may dominate more strongly. Ground still matters, but the vertical contribution may be less dramatic.
 
 ### 20 m and above
-On 20 m, the vertical/feedline section may become a more effective radiator in its own right, but because its current maximum is elevated, its behaviour is shaped increasingly by geometry and phase relationships, not just soil conductivity.
 
-_Overall; Ground effects cannot be considered independently of installation parameters such as height, feedline routing etc_
+On the higher bands, the vertical section can become a more significant electrical fraction of a wavelength. That is where good ground or salt water may do more to help the NKO’s low-angle behaviour.
 
 ---
 
-## 6. Practical Implications
+## 6. Practical implications
 
-### High Conductivity Ground (Salt Pan)
+### Inland field site
 
-- Strong vertical radiation component
-- Improved low-angle radiation
-- Enhanced DX potential on lower bands
-- Increased likelihood of diversity effects
+Expect the NKO to be affected by local ground, but not to depend on it in the same direct way as a conventional ground-mounted vertical.
 
-### Poor Ground (Rocky / Dry)
+### Coastal or island site
 
-- Reduced vertical efficiency
-- Increased loss
-- Behaviour approaches conventional horizontal wire
+Expect the NKO to benefit from the site. A dedicated vertical may still gain more dramatically from salt water, but the NKO should not be thought of as somehow exempt from the same advantage.
+
+### Poor ground
+
+Expect the NKO to lean more toward its horizontal-wire behaviour, especially on the lower bands.
 
 ---
 
 ## 7. Summary
 
-Ground affects the NKO in two different ways, and this is what sets it apart from more conventional antennas.
+The NKO is neither “just a horizontal wire” nor “just a vertical.”
 
-- The horizontal wires behave much like a dipole, where the ground mainly shapes the radiation pattern and takeoff angle  
-- The vertical feedline behaves more like an elevated vertical radiator, where ground quality affects how efficiently it contributes to low-angle radiation 
+That is exactly why soil interaction is worth discussing in its own right.
 
-Because both effects are present at the same time:
+The practical position is:
 
-- On good ground (e.g. salt pan, wet soil), the vertical component works better and adds useful low-angle radiation  
-- On poor ground (dry, rocky), the vertical contribution is reduced and the antenna behaves more like a conventional horizontal wire 
-- Compared to a simple dipole, the NKO has an additional vertical component that can change with ground conditions  
-- Note. Compared to a ground-mounted vertical, the NKO’s vertical component is _less dependent on ground_, because its strongest current is elevated  
-
-In practical terms, the NKO does not rely on ground in a single way — it shifts its behaviour depending on how well the vertical and horizontal parts are supported by the environment.
+- good ground helps
+- sea water helps
+- poor ground hurts
+- the top-fed vertical section makes the NKO less directly ground-dependent than a base-fed monopole
+- band and installation still matter
 
 ---
 
-## 8. Key Points
+## 8. Key points
 
-High-conductivity ground such as a salt pan is expected to strengthen the NKO’s vertical/common-mode radiation component, improving low-angle radiation and potentially enhancing path-dependent signal strength and intelligibility, particularly on lower HF bands.
-
-At the same time, ground also affects the horizontal wires by shaping the radiation pattern and takeoff angle, as in any dipole or OCF antenna. The NKO combines both effects, so changes in ground conditions can alter both the radiation pattern and the relative contribution of the vertical and horizontal components.
-
-The magnitude of these effects depends strongly on installation geometry and operating conditions and cannot be reduced to fixed numerical values without modelling or measurement.
+- The NKO vertical section is **top-fed**, not base-fed
+- Ground matters, but not in the same way as for a classic monopole
+- Sea water should improve NKO performance too
+- The strength of that improvement is likely to vary by band
+- The antenna should be judged by on-air behaviour, not by category alone
 
 ---
 

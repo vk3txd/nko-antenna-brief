@@ -1,108 +1,83 @@
 # NKO Antenna – Glossary of Terms
 
-_These definitions are specific to the NKO antenna system and are intended to clarify usage within this repository._
+These definitions are specific to the way terms are used in this repository.
 
 ---
 
-## Core Concepts
+## Core concepts
 
-### Common-Mode Current
-Current flowing on the outside of the coaxial cable shield that is not part of the differential signal. In NKO, this is an intentional radiating current.
+### Common-mode current
+Current flowing on the outside of the coax shield. In many antennas it is an unwanted side effect. In the NKO, common-mode current on the defined vertical coax section is used as part of the antenna.
 
-### Coupled System
-A system where multiple conductors interact electrically and influence each other's current distribution and radiation.
+### Coupled system
+A structure in which the conductors cannot be understood properly as separate isolated parts. The NKO is treated as a coupled three-conductor system.
 
-### Current Balance
-Relationship between currents in conductors. In NKO, balance exists between the long arm and (short arm + feedline).
+### Feedline radiation
+Radiation from current on the coax feedline. In ordinary installations this is usually unwanted. In the NKO, a defined section of feedline radiation is intentional. In NKO this is defined between the 4:1 UnUn and the 1:1 balun at the bottom, setting the boundaries.
 
-### Feedline Radiation
-Radiation from current on the outside of the coax. In NKO, this is controlled and intentional.
+### Hybrid antenna
+An antenna whose behaviour is not well described by one simple category alone. In the NKO context this means the structure has both horizontal and vertical behaviour.
 
-### Hybrid Radiator
-An antenna where multiple conductors (e.g. horizontal wire + vertical feedline) contribute to radiation.
+### Mixed-polarisation behaviour
+A practical description for an antenna that has both horizontal and vertical contributions. This repository prefers this term to stronger claims about classical diversity unless the distinction is made explicitly.
 
-### In-Phase Current
-Currents that peak simultaneously. In NKO, short arm and feedline shield (common mode) currents are in-phase.
+### Radiating feedline section
+The part of the coax above the lower 1:1 choke that is intended to behave as a vertical radiator in the NKO.
 
-### Radiating Feedline Section
-Defined portion of coax that contributes to radiation, bounded by the choke.
-
-### Three-Conductor System
-System consisting of long arm, short arm, and feedline acting together.
+### Three-conductor system
+The long arm, short arm, and radiating coax section considered together as one antenna.
 
 ---
 
 ## Devices
 
-### Choke (1:1 Current Balun)
-Device providing high impedance to common-mode current to define current boundaries.
+### 1:1 current choke
+A choke that presents high impedance to common-mode current. In the NKO it defines the lower end of the radiating feedline section.
 
-### Current Balun (Guanella)
-Transformer enforcing equal and opposite currents and suppressing common-mode current.
+### Current balun
+A balun that attempts to maintain equal and opposite currents in a _balanced_ load.
 
-### UnUn (Autotransformer)
-Unbalanced transformer providing impedance transformation without current balancing.
+### UnUn
+An unbalanced-to-unbalanced transformer. In the NKO the 4:1 UnUn is the apex coupling device.
 
-### Voltage Balun (Ruthroff)
-Transformer enforcing equal voltages but not equal currents.
-
----
-
-## Antenna Types
-
-### NKO Antenna
-Hybrid antenna where feedline is an intentional radiating conductor forming a coupled system.
-
-### New Carolina Windom (NCW)
-OCF variant using controlled feedline radiation with a downstream choke.
-
-### Off-Centre Feed (OCF)
-Dipole fed away from centre causing unequal current distribution.
+### Voltage balun
+A balun that transforms impedance and presents equal voltages, but does not force equal currents.
 
 ---
 
-## System Behaviour
+## Antenna types
 
-### Impedance Mismatch
-Difference between source and load impedance causing reflection and altered currents.
+### OCF
+Off-centre-fed dipole. A two-wire antenna fed away from the centre.
 
-### Impedance Transformation
-Conversion of impedance levels via transformer.
+### Carolina Windom / New Carolina Windom
+An antenna in the controlled-feeder-radiation family in which part of the coax above a lower choke contributes to the radiator.
 
-### Loss Mechanisms
-Energy lost as heat (core loss, resistive loss) instead of radiation.
-
-### Reciprocity
-Antenna behaves similarly in transmit and receive.
-
-### Standing Wave Ratio (SWR)
-Measure of mismatch on transmission line.
+### NKO
+New Kallista OCF. A three-conductor hybrid antenna in which a defined feedline section is an intentional part of the radiating structure.
 
 ---
 
-## Geometry & Installation
+## Propagation and audio terms
 
-### Boundary (Feedline Boundary)
-Point where radiating feedline section ends, defined by choke.
+### Faraday rotation
+Rotation of the wave’s polarisation as it passes through the ionosphere.
 
-### Installation Geometry
-Physical arrangement affecting antenna performance.
+### Frequency-selective fading
+Fading that affects some parts of the audio passband more than others.
 
-### System Interaction
-Dependence of antenna behaviour on installation and environment.
+### Intelligibility
+How easy speech is to understand, as distinct from raw signal level alone.
+
+### Multipath
+More than one version of the signal arriving by different paths, with different delay and phase.
+
+### TID
+Travelling Ionospheric Disturbance. A moving ripple in the ionosphere that can alter refraction height, angle, phase, and signal strength.
 
 ---
 
-## Propagation & Effects
+## Final note
 
-### Frequency Selective Fading (FSF)
-Different frequencies fade differently, affecting intelligibility.
+Where possible, this repository uses simple practical language. The aim is to keep the discussion technically competent without turning it into a glossary contest.
 
-### Radiation Pattern
-Spatial distribution of radiated energy.
-
-### Horizontal Radiation Component
-Radiation from horizontal conductors.
-
-### Vertical Radiation Component
-Radiation from vertical conductors.

@@ -1,31 +1,76 @@
-# Feedback From NKO Test Stations
+# Feedback from NKO Test Stations
 
-So far, as of April 13 2026 there are 3 test stations other than myself. Here is a list of their feedback and approximate dates of feedback.
+As of **20 April 2026**, there are **three external test stations** documented in this repository in addition to the author’s own testing.
 
-I am very aware that the observations are all of course subjective, variable, and may well change with conditions. But they do so far align well.
+A fourth station in U.S.A. is using WSPR to do comparisons - results have not been compiled as of end April 2026.
 
-## Test Station 1 - Eastern VK3 - 80m build
+These reports are subjective, path-dependent, and early. That said, they line up well enough to be worth recording.
 
-- December 2025. On 20m DX to JA/USA/Europe some stations were Q0 on an EFHW with adequate signal, turned to Q4 on NKO, signal strength jumped 2 S points.
-- January 2026. He said in summary after doing A/B tests between antennas, that NKO "hears more stations better"
-- January 2026. Commented the intelligibility improvement is more like "the difference between hearing through a door and being in the room"
-- February 2026. Commented a 360klm path on 40m went from Q1 and difficult copy to much better Q4
-- March 2026. I did a test with him on 80m, 180m path. He was transmitting on NKO then an EFHW. I recorded both off an SDR and used AI to do analysis of the audio. NKO had an approx 3dB advantage in the upper audio spectrum. I noticed it as well.
+---
 
-## Test Station 2 - VK5 - 80m build
+## Test station 1 — Eastern VK3 — 80 m build
 
-- January 2026. Commented that receiving stations said he was "punchier" which I interpreted as saying had a stronger audio signal
+- **December 2025**  
+  On 20 m DX paths to JA, USA, and Europe, some stations that were around **Q0** on an EFHW were reported as around **Q4** on the NKO, with roughly **2 S-points** more signal.
 
-## Test Station 3 - VK4 - 40m build
+- **January 2026**  
+  After repeated A/B tests, the station summarised the NKO as:  
+  **“hears more stations better”**
 
-- April 2026. He said NKO gave him easier copy on stations that he is familiar with.
+- **January 2026**  
+  Another comment was that the difference was like:  
+  **“the difference between hearing through a door and being in the room”**
 
+- **February 2026**  
+  On a 360 km path on 40 m, copy reportedly improved from difficult **Q1** copy to much easier **Q4** copy.
 
-## Richard's Summary
+- **March 2026**  
+  On an 80 m test over roughly 180 km, audio recorded from an SDR and later analysed showed about a **3 dB advantage in the upper speech region** for the NKO relative to an EFHW. The author also noted the difference by ear.
 
-- No one has said NKO has lower signal strength
-- All have said NKO gives an improvement in audio
-- My suggestion is that audio improvement is related to path distance, along with propogation
-- No one has complained about the extra weight of having a 1:1 in the coax feedline
-- After doing modelling of many antennas, getting 2 or 3dB of improvement is difficult to see. Loss is easier. Observations of NKO improvement of 1 and 2 S points suggests the reported signal advantages must be because of pattern changes with the vertical section, and maybe to a lesser degree efficiency improvements from using an UnUn.
+---
 
+## Test station 2 — VK5 — 80 m build
+
+- **January 2026**  
+  Other stations reportedly described the station on NKO as **“punchier”**, which the author interpreted as stronger or more assertive audio.
+
+---
+
+## Test station 3 — VK4 — 40 m build
+
+- **April 2026**  
+  The station reported that the NKO gave **easier copy on familiar stations**.
+
+---
+
+## Test station 4 - USA - WSPR comparison
+
+To be advise.
+
+---
+
+## What these reports do and do not say
+
+So far:
+
+- no tester has reported the NKO as **weaker**
+- all testers have reported some kind of **improvement in readability, punch, or clarity**
+- more than one report points specifically to **intelligibility**, not just S-meter change
+
+That does **not** mean the effect is fully explained or guaranteed. It does mean the reports are not random enough to ignore.
+
+---
+
+## Author’s summary
+
+My current working view is:
+
+- the reported improvement is not well explained by SWR alone
+- modest signal-strength changes may be part of the story
+- pattern changes from the vertical section are likely part of the story
+- lower system loss may also be part of the story
+- the receive-side improvement in clarity may be especially sensitive to **path length** and **propagation state**
+
+At this stage, the right way to treat the feedback is:
+
+> **interesting, consistent enough to take seriously, and worth further measuring**
