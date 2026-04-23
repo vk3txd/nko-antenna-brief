@@ -7,13 +7,13 @@ The NKO is often assumed to be “just a Carolina Windom.” That is understanda
 - a 1:1 choke some distance down the coax
 - intentional feedline participation above the choke
 
-That family resemblance is real. The antennas are not, however, the same thing.
+That family resemblance is superficially real. The antennas are not, however, the same thing.
 
 ---
 
 ## The key difference
 
-In the NKO, the apex device is a **4:1 UnUn**, not a 4:1 current balun and not the usual published Carolina Windom arrangement.
+In the NKO, the apex device is a **4:1 UnUn**, _not_ a 4:1 voltage or curent balun used with the usual published Carolina Windom designs.
 
 That matters because the UnUn does three jobs at once:
 
@@ -25,7 +25,7 @@ This means the vertical coax section is not being excited only as a side-effect 
 
 ---
 
-## What the NKO is trying to do
+## What the NKO does
 
 The NKO is best thought of as a **three-conductor coupled antenna system**:
 
@@ -49,12 +49,12 @@ That is a more explicit and more tightly defined use of the feedline than the or
 ### 2. Role of the feedline
 
 - **NKO:** feedline section is an intentional, bounded part of the radiator
-- **NCW:** feedline radiation is part of the idea, but the exact current relationships are often less explicitly documented
+- **NCW:** feedline radiation is part of the idea, but the exact current relationships are less explicitly documented, dependant on balun performance and the impedances of the OCF arms. It is variable
 
 ### 3. Lower choke
 
 - **NKO:** the lower 1:1 choke is fundamental to defining the radiator
-- **NCW:** a lower choke may also be used, but the NKO documentation makes its boundary role central
+- **NCW:** "line isolator" is a commonly used term with the NCW with the intention to make the coax above a defined radiator. The lack of documentation makes this unclear
 
 ### 4. Documentation
 
@@ -94,17 +94,19 @@ Calling the NKO “just a Carolina Windom” hides the actual questions worth di
 
 Those are real engineering questions. They are also the questions that make the NKO worth testing as its own design rather than dismissing it by resemblance.
 
+This was considered an 'issue' in that the New Carolina Windom has a history that I did not want to be associated with. I want the NKO to stand as its own antenna and be considered as such. The use of an UnUn makes the whole antenna behave differently to a New Carolina Windom.
+
 ---
 
 ## Phase relationship — where NKO and NCW really differ
 
-This is arguably the most important difference between the two antennas.
+This is an important difference between the two antennas.
 
-In the NKO the coax shield is bonded **directly** to the short arm through the UnUn. They share the same connection point. The vertical coax section and the short arm are driven in phase with each other. The feedpoint introduces no phase offset between the horizontal and vertical components.
+In the NKO the coax shield is connected **directly** to the short OCf arm at the UnUn. They share the same connection point. The vertical coax section and the short arm are driven in phase with each other. The feedpoint introduces no phase offset between the horizontal and vertical components.
 
 In the Carolina Windom the vertical coax section is driven by the **voltage imbalance** across the balun windings — the difference current produced by the long and short arms presenting unequal impedances to the balun. That difference current carries a phase relationship to the horizontal wire currents that depends on the arm impedance ratio, the balun winding characteristics, and the frequency. All of these change across bands and between installations.
 
-So for NCW the magnitude and the phase relationships are highly variable. 
+So for NCW the magnitude and the phase relationships are highly variable.
 
 The result is a phase relationship between horizontal and vertical components in the Carolina Windom that is **variable, uncontrolled, and unpredictable** — in reality it is _variables stacked on variables_.
 
