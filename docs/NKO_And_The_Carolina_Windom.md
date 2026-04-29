@@ -1,8 +1,10 @@
-# Distinguishing the NKO from the (New) Carolina Windom
-
 **Author:** VK3TXD (Richard Holmes)  
 **Status:** v0.5  
 **License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Distinguishing NKO from New Carolina Windom
+
+# Distinguishing the NKO from the (New) Carolina Windom
 
 The NKO has been assumed to be “just a Carolina Windom.” That is understandable. At a glance, both antennas have:
 
