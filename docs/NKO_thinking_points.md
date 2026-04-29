@@ -1,8 +1,8 @@
 **Author:** VK3TXD (Richard Holmes)  
 **Status:** v0.5  
 **License:** CC BY 4.0
-Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
-Goal: NKO Thinking Points
+**Attribution:** NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+**Goal:** NKO Thinking Points
 
 # NKO Thinking Points
 
