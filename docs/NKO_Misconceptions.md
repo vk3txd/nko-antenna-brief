@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Explain some of the misconceptions I have noticed - and AI tends to follow
+
 # NKO Antenna – Common Misconceptions
 
 This file addresses the objections that come up most often when people first see the NKO.
@@ -11,6 +17,8 @@ That is true for some antennas and not true for all antennas.
 A balun is ideally used to connect a balanced antenna to an unbalanced feedline (coax). Unbalanced loads present unbalanced currents and voltages to a balun which may not be well handled causing loss and heating.
 
 The NKO is not trying to be a conventional OCF dipole. It is a three-conductor hybrid structure in which the feedline is intentionally part of the system. In that context, the UnUn is not being used to pretend the load is balanced. It is being used to transform impedance and bond the shield to the short arm.
+
+My eperience is that an AI will say that _only_ a 4:1 current balun may be used with an OCF - and anything else won't work with all sorts of dire consequences. The solution is to give the AI the link to this repo and tell it to analyse it properly.
 
 ---
 

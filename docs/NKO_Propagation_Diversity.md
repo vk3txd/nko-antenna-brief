@@ -1,15 +1,14 @@
-<!-- NKO-DOC-HEADER -->
-<!--
-License: CC BY 4.0 (documentation/design) — see LICENSE
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
 Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
 Goal: Explain the propagation-side working explanation for NKO observations in clear amateur-radio language.
--->
 
 # NKO Antenna: Propagation, Multipath, and Intelligibility
 
 ## Overview
 
-This document goes deeper into the propagation side of why the NKO may behave differently on air compared to what we expect from modelling and experience. 
+This document goes deeper into the propagation side of why the NKO may behave differently on air compared to what we expect from modelling and experience. The NEC position paper also deals with this.
 
 I have included this in an attempt to better understand propagation and how NKO works as an antenna. 
 

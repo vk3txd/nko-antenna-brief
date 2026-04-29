@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Glossare of terms
+
 # NKO Antenna – Glossary of Terms
 
 These definitions are specific to the way terms are used in this repository.

@@ -1,6 +1,10 @@
 # Distinguishing the NKO from the (New) Carolina Windom
 
-The NKO is often assumed to be “just a Carolina Windom.” That is understandable. At a glance, both antennas have:
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+
+The NKO has been assumed to be “just a Carolina Windom.” That is understandable. At a glance, both antennas have:
 
 - an off-centre-fed wire arrangement
 - a 4:1 device at the apex
@@ -102,13 +106,11 @@ This was considered an 'issue' in that the New Carolina Windom has a history tha
 
 This is an important difference between the two antennas.
 
-In the NKO the coax shield is connected **directly** to the short OCf arm at the UnUn. They share the same connection point. The vertical coax section and the short arm are driven in phase with each other. The feedpoint introduces no phase offset between the horizontal and vertical components.
+In the NKO the coax shield is connected **directly** to the short OCF arm at the UnUn. They share the same connection point. The vertical coax section and the short arm are driven in phase with each other. The feedpoint introduces no phase offset between the horizontal and vertical components.
 
-In the Carolina Windom the vertical coax section is driven by the **voltage imbalance** across the balun windings — the difference current produced by the long and short arms presenting unequal impedances to the balun. That difference current carries a phase relationship to the horizontal wire currents that depends on the arm impedance ratio, the balun winding characteristics, and the frequency. All of these change across bands and between installations.
+In the Carolina Windom the vertical coax section is driven by the **voltage imbalance** across the balun windings — the difference current produced by the long and short arms presenting unequal impedances to the balun. That difference current carries a phase relationship to the horizontal wire currents that depends on the arm impedance ratio, the balun winding characteristics, and the frequency. All of these change across bands and between installations and mean there is no clear and determined phase relationship.
 
-So for NCW the magnitude and the phase relationships are highly variable.
-
-The result is a phase relationship between horizontal and vertical components in the Carolina Windom that is **variable, uncontrolled, and unpredictable** — in reality it is _variables stacked on variables_.
+The result for the NCW is a phase relationship between horizontal and vertical components in the Carolina Windom that is **variable, uncontrolled, and unpredictable** — in reality it is _variables stacked on variables_.
 
 On some bands and some installations it may accidentally produce a useful phase relationship. On others it may not. The operator has no way to know which situation they are in.
 

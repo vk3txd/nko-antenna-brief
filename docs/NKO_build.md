@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: build instructions for making an NKo antenna
+
 # Building an NKO – New Kallista OCF
 
 This document is the practical build note for the NKO.

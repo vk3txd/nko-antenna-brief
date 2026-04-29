@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: NKO Thinking Points
+
 # NKO Thinking Points
 
 These are open questions and working ideas. They are included because they are worth testing, not because they are already settled.
@@ -22,13 +28,17 @@ Questions worth testing:
 
 The stronger and more natural description is **hybrid antenna**.
 
-The NKO clearly combines horizontal and vertical behaviour in one structure. Calling it a “diversity antenna” is tempting, but it also invites arguments about what counts as classical diversity. For most of this repo, “hybrid” is the cleaner and more practical word.
+The NKO clearly combines horizontal and vertical behaviour in one structure. Calling it a “diversity antenna” is tempting and sounds clever, but it also invites arguments about what counts as classical diversity.
+
+For most of this repo, “hybrid” is the cleaner and more practical word.
 
 ---
 
 ## Current balance
 
-One working idea is that the combination of short-arm current plus vertical-coax current may make the current picture less unfavourable than in some ordinary OCF arrangements.
+One prevailing working theiry, as of December 2025, is that the combination of short-arm current plus vertical-coax current may make the current picture at the 4:1 UnUn less unfavourable than in some ordinary OCF arrangements.
+
+Why this matters: The 4:1 UnUn will have increased loss and more heat stress as the currents become less balanced.
 
 That is plausible, but it is not yet measured well enough to be treated as established. The band-to-band behaviour may be quite different, which is exactly why it needs measurement rather than assertion.
 
@@ -41,8 +51,9 @@ A useful question is whether the NKO may reduce system loss relative to some con
 Possible reasons include:
 
 - the UnUn is transforming impedance rather than trying to enforce balance on an inherently asymmetric structure
-- current on the vertical section is being used, not fought
-- the overall current pattern may be more favourable
+- current on the coax is not routed through the UnUn core - it is a direct connection and in-phase
+- current on the vertical section is being used, not fought or absorbed
+- overall, the currents in the 4:1 UnUn may be better-used with less loss than from baluns fighting imbalance
 
 Again, that is a sensible line of inquiry, not yet a settled conclusion.
 
@@ -72,11 +83,13 @@ The real question is what combination of the following is responsible:
 - changed channel interaction
 - ordinary test uncertainty
 
+People using the NKO, and receiving stations, univerally report it is clearer, has more body, has better signal strength. Backing this up with more observations is worthwhile, along with measurements.
+
 ---
 
 ## Feedpoint phase relationships
 
-This is one of the central open questions in the whole repository.
+This is one of the most difficult and central open questions in the whole repository.
 
 The long arm, short arm, and vertical section are clearly not unrelated. The exact phase relationships between them, by band and by installation, deserve more work.
 
@@ -94,7 +107,7 @@ That should make it less ground-hungry than a conventional ground-mounted vertic
 
 For practical builders, the real-world questions are mundane but important:
 
-- ferrite heating
+- ferrite heating - what size toroids are recommended for what power levels
 - voltage withstand
 - enclosure strength
 - weather resistance

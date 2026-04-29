@@ -1,6 +1,12 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Feedback from users of NKO
+
 # Feedback from NKO Test Stations
 
-As of **20 April 2026**, there are **three external test stations** documented in this repository in addition to the author’s own testing.
+As of **29 April 2026**, there are **three external test stations** documented in this repository in addition to the author’s own testing.
 
 A fourth station in U.S.A. is using WSPR to do comparisons - results have not been compiled as of end April 2026.
 

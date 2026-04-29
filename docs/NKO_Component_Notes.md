@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: About the parts of the NKO and also other components to help comparison - and for an AI but also as a terse tech reference
+
 # Antenna and Component Notes
 
 This note puts the common magnetic devices and antenna types used in NKO discussions in one place. It is not intended as a full textbook. It is intended to keep terms straight.

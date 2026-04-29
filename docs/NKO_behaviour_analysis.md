@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Behaviour and observations about the NKO antenna
+
 # NKO Antenna: Mechanisms, Observations, and Performance Implications
 
 ## Summary
@@ -9,6 +15,7 @@ It is a three-conductor antenna system:
 - the apex coupling method is different, it uses a 4:1 **UnUn**
 - the vertical feedline section above the lower 1:1 balun is part of the antenna system
 - the vertical section is top-fed making it act like a top fed vertical antenna
+- the vertical section acting as a vertical radiator may be less influenced by earth because of being top fed
 - the resulting current distribution, pattern, and on-air behaviour can differ from a conventional OCF or EFHW
 - signal reports and comparisons to other antennas indicate signal strenth enhancements, and audio quality improvements
 

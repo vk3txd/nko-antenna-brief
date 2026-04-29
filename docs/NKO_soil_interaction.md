@@ -1,3 +1,9 @@
+**Author:** VK3TXD (Richard Holmes)  
+**Status:** v0.5  
+**License:** CC BY 4.0
+Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
+Goal: Soil (ground) interaction
+
 # NKO Antenna: Soil Interaction, Ground Effects, and System Behaviour
 
 ## Abstract
@@ -32,7 +38,7 @@ Good conductive ground behaves more like a reflector. Poor ground behaves more l
 
 ---
 
-## 2. Why the NKO is not a simple ground-mounted vertical
+## 2. Why the NKO radiating coax is not a simple ground-mounted vertical
 
 The NKO vertical section is not base-fed at ground level. It is **top-fed** at the apex and this matters a lot.
 
