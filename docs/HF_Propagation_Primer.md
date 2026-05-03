@@ -73,7 +73,7 @@ NEC-style antenna modelling remains valuable. It is excellent for checking wheth
 18. [VK3RHF-style multi-band repeater events: best propagation guesses](#18-vk3rhf-style-multi-band-repeater-events-best-propagation-guesses)
 19. [VK4 inland Queensland geography: what it may hint at](#19-vk4-inland-queensland-geography-what-it-may-hint-at)
 20. [NKO audio/readability reports: cautious propagation interpretation](#20-nko-audioreadability-reports-cautious-propagation-interpretation)
-21. [Antenna A/B testing under ionospheric fading](#21-antenna-ab-testing-under-ionospheric-fading)
+21. [Comparing antennas without fooling ourselves](#21-comparing-antennas-without-fooling-ourselves)
 22. [Practical indicators to watch](#22-practical-indicators-to-watch)
 23. [What is solid, what is plausible, and what still needs testing](#23-what-is-solid-what-is-plausible-and-what-still-needs-testing)
 24. [Consolidated source list](#24-consolidated-source-list)
@@ -1913,7 +1913,7 @@ If the same antenna system improves practical copy on both bands, the improvemen
 
 ## 20. NKO audio/readability reports: cautious propagation interpretation
 
-[Previous](#19-vk4-inland-queensland-geography-what-it-may-hint-at) | [Home / Index](#index) | [Next](#21-antenna-ab-testing-under-ionospheric-fading)
+[Previous](#19-vk4-inland-queensland-geography-what-it-may-hint-at) | [Home / Index](#index) | [Next](#21-comparing-antennas-without-fooling-ourselves)
 
 This section treats NKO field reports as observations, not formal proof. The goal is to explain why large readability differences can be physically plausible even when simple gain comparisons do not predict them.
 
@@ -2000,90 +2000,141 @@ Stronger evidence would include:
 
 ---
 
-## 21. Antenna A/B testing under ionospheric fading
+## 21. Comparing antennas without fooling ourselves
 
 [Previous](#20-nko-audioreadability-reports-cautious-propagation-interpretation) | [Home / Index](#index) | [Next](#22-practical-indicators-to-watch)
 
-HF A/B testing is hard because QSB can easily fool the operator. If antenna A is tested on a fade peak and antenna B on a fade dip, the result is meaningless.
+HF antenna comparison is useful, but easy to fool ourselves with. QSB, selective fading, local noise, AGC action, and operator expectation can all make a casual A/B test look more certain than it really is.
 
-### Better test pattern
+The aim is not to prove a favourite antenna is always better. The aim is to collect observations that are hard to dismiss.
 
-Use rapid alternation:
+### First rule
+
+Do not test only:
+
+```text
+A → B
+```
+
+Use at least:
+
+```text
+A → B → A
+```
+
+Better:
 
 ```text
 A → B → A → B → A → B
 ```
 
-Do this quickly enough that both antennas sample the same fading cycle as much as possible.
+If A was good, then B was poor, then A was also poor when you went back, you probably measured QSB rather than antenna performance.
 
-### Record more than S-meter
+### What to compare
 
-Log at least:
+Do not ask only, “Which is stronger?”
 
-- S-meter or measured signal level,
-- noise level,
-- readability/Q report,
-- audio character: clean, phasey, hollow, watery, muffled, sharp,
-- QSB depth,
-- whether the signal is easy or hard to tune,
-- passband setting if it changes readability,
-- time and band,
-- path direction and distance,
-- known station antennas if available.
+Ask separately:
 
-### Record propagation context
+- Which is stronger?
+- Which has the better signal-to-noise ratio?
+- Which is easier to understand?
+- Which has less QSB?
+- Which sounds less phasey, hollow, watery, muffled, or harsh?
+- Which would you choose for a marginal contact?
 
-At test time, record:
+For SSB, the last question may be the most useful.
 
-- date/time UTC and local,
-- band/frequency,
-- foF2 map/ionogram if available,
-- D-RAP status,
-- Kp/geomagnetic condition,
-- solar flux and recent flares,
-- season and daylight path,
-- suspected mode: F2, E, Es, TEP, aTEP, eTEP, tropo.
+### Practical methods
 
-### Use audio recordings
+| Method | Good for | Main trap | Practical comment |
+|---|---|---|---|
+| **Manual A/B during a QSO** | Quick real-world reports | QSB and politeness bias | Always return to A. Ask for readability and audio quality, not just S-points. |
+| **Receive-only A/B at your station** | Hearing noise and audio differences yourself | Memory bias and AGC masking | Record the audio if possible. Listening later is often more honest. |
+| **Fast relay A/B switching** | Reducing QSB error | Relay wiring, isolation, AGC settling | 10–20 seconds per antenna is often enough for SSB speech without waiting too long. |
+| **Two receivers or two SDR channels** | Best receive comparison | Gain calibration and antenna coupling | This is the cleanest way to see whether one antenna fades while the other does not. |
+| **WSPR / RBN / skimmers** | Long-term signal statistics | Narrowband digital is not SSB readability | Excellent for reach and SNR trends; not enough by itself for voice quality claims. |
+| **Many field reports** | Real amateur use | Folklore and uncontrolled conditions | Valuable if reports are structured and repeated. Weak if they are only “it was better.” |
 
-Record both antenna outputs if possible. Human memory is poor under QSB. Audio files allow later comparison of:
+### Minimum useful log
 
-- speech clarity,
-- fade depth,
-- selective fading,
-- noise character,
-- passband damage,
-- and listener fatigue.
+For any serious comparison, write down:
 
-### Use multiple receiving stations
+```text
+Date/time UTC:
+Band/frequency:
+Mode:
+Power:
+Antenna A:
+Antenna B:
+Switching pattern: A/B, A/B/A, or A/B/A/B
+Remote station/location:
+Path direction and approximate distance:
+S-meter or measured level A:
+S-meter or measured level B:
+Noise level A/B:
+Readability A/B:
+QSB A/B:
+Audio comments:
+Was a recording made?
+Propagation notes: day/night path, solar flare/D-RAP, Kp, foF2/MUF if known
+```
 
-One receiver samples one point in the interference field. A second receiver 50–500 km away may experience a different mixture. If NKO improves readability at multiple receiving stations on the same path, that is stronger than a single report.
+### Watch these traps
 
-### Avoid over-claiming
+- **One switch is not a test.** A/B alone can be pure QSB.
+- **S-meter is not readability.** A weaker signal can be easier to copy.
+- **Noise matters.** The better receive antenna may be the quieter one, not the louder one.
+- **AGC hides differences.** The receiver may make two signals sound closer in level than they really are.
+- **Antennas interact.** Nearby wires, masts, fences, gutters, and unused antennas can become part of the test.
+- **Feedline current matters.** Decide whether feedline current is accidental or part of the design.
+- **One path is not all paths.** An antenna can win on 40 m local/interstate and lose on 20 m DX, or the reverse.
+- **Do not average away readability.** A station may be readable because the audio is cleaner, not because the total RF power is higher.
 
-A good report says:
+### For NKO comparisons
 
-> Under these conditions, this station, on this path, at this time, NKO was more readable than the comparison antenna.
+NKO reports should separate three things:
 
-A weak report says:
+1. **Strength:** S-meter or measured level.
+2. **Noise/SNR:** whether the wanted signal is clearer above the noise.
+3. **Readability:** whether speech is easier to copy.
 
-> NKO is 12 dB better everywhere.
+The most interesting NKO reports are not just “it was louder.” They are reports such as:
 
-The first can build evidence. The second invites trouble unless backed by controlled data.
+- “I could copy it now.”
+- “The signal was easier to tune.”
+- “The audio was cleaner.”
+- “The other antenna was stronger but harder to understand.”
+- “NKO heard stations the comparison antenna missed.”
+
+Those are worth collecting, but they need careful logging. A fair NKO comparison should say:
+
+> Under these conditions, on this path, at this time, NKO was more readable than the comparison antenna.
+
+That is stronger and more honest than claiming universal gain.
+
+### Best simple test
+
+For most amateurs, the best practical test is:
+
+```text
+A/B/A/B switching + audio recording + written notes
+```
+
+Repeat it on several bands, paths, and days. One test is an observation. A repeated pattern becomes evidence.
 
 ### References for this section
 
-- ITU-R Recommendation P.533, HF prediction requires antenna characteristics and includes signal-to-noise, time spread, frequency spread, and reliability — https://www.itu.int/rec/R-REC-P.533
+- ITU-R Recommendation P.533, HF prediction includes antenna characteristics, signal-to-noise, reliability, time spread, and frequency spread — https://www.itu.int/rec/R-REC-P.533
 - Australian Government / Space Weather Services, ASAPS documentation, fading and multiple modes — https://www.sws.bom.gov.au/Category/Products%20and%20Services/Software/ASAPS/ASAPSVer5.3.pdf
-- Australian Government / Space Weather Services, “Global HF — Ionospheric Map” — https://www.sws.bom.gov.au/HF_Systems/6/5
-- NOAA Space Weather Prediction Center, “D Region Absorption Predictions (D-RAP)” — https://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap
-- NOAA Space Weather Prediction Center, “HF Radio Communications” — https://www.swpc.noaa.gov/impacts/hf-radio-communications
+- Australian Government / Space Weather Services, “Introduction to HF Radio Propagation”, antenna pattern as one factor among path mechanisms — https://www.sws.bom.gov.au/Category/Educational/Other%20Topics/Radio%20Communication/Intro_HF_Radio.pdf
+- NOAA Space Weather Prediction Center, “HF Radio Communications”, space-weather impacts on HF circuits — https://www.swpc.noaa.gov/impacts/hf-radio-communications
 
 ---
 
 ## 22. Practical indicators to watch
 
-[Previous](#21-antenna-ab-testing-under-ionospheric-fading) | [Home / Index](#index) | [Next](#23-what-is-solid-what-is-plausible-and-what-still-needs-testing)
+[Previous](#21-comparing-antennas-without-fooling-ourselves) | [Home / Index](#index) | [Next](#23-what-is-solid-what-is-plausible-and-what-still-needs-testing)
 
 No single indicator explains HF. Use several.
 
