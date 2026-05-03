@@ -50,6 +50,7 @@ NEC-style antenna modelling remains valuable. It is excellent for checking wheth
 2. [What HF skywave propagation really is](#2-what-hf-skywave-propagation-really-is)
 3. [The ionosphere is not a stack of hard mirrors](#3-the-ionosphere-is-not-a-stack-of-hard-mirrors)
     - [Ready reference: D/E/F1/F2 regions](#ready-reference-def1f2-regions)
+    - [How ionised is the ionosphere?](#how-ionised-is-the-ionosphere)
 4. [Why the D, E, F1, and F2 regions exist](#4-why-the-d-e-f1-and-f2-regions-exist)
 5. [Absorption: how the ionosphere actually wastes RF energy](#5-absorption-how-the-ionosphere-actually-wastes-rf-energy)
 6. [Day/night behaviour and the 80 m, 40 m, 20 m puzzle](#6-daynight-behaviour-and-the-80-m-40-m-20-m-puzzle)
@@ -105,6 +106,7 @@ Receiver hears the sum of all surviving components
 
 The key practical consequences are:
 
+- The ionosphere is mostly neutral gas, not a fully ionised plasma sheet. A small fraction of free electrons is enough to refract HF, while the neutral gas density, especially in the D region, controls much of the absorption.
 - HF signals fade because the receiver often hears several versions of the same signal arriving with different phase, delay, polarization, and strength.
 - An SSB signal can be strong but unreadable if selective fading damages the speech passband.
 - A receiver can sometimes feel “impossible to tune” because the RF passband itself has been phase-smeared or selectively faded, not because the operator has tuned wrongly.
@@ -239,6 +241,37 @@ This table is deliberately **order-of-magnitude only**. The ionosphere is not a 
 - **Neutral density is a model estimate, not a fixed measured value.** The U.S. Standard Atmosphere table is useful for order-of-magnitude neutral number densities, but above about 100 km the real thermosphere responds strongly to solar and geomagnetic activity. NRLMSIS/IRI-style models use location, date/time, solar indices, and magnetic indices because the real atmosphere/ionosphere is not fixed.
 - **Latitude matters.** Equatorial, mid-latitude, auroral, and polar ionospheres behave differently. TEP, equatorial anomaly structure, polar absorption, and auroral disturbance can all make local values depart strongly from a simple global table.
 - **Do not use this table for prediction.** It is a memory aid for scale and mechanism. For actual path work, use ionosonde data, foF2/MUF maps, D-region absorption products, TEC maps, and current space-weather conditions.
+
+### How ionised is the ionosphere?
+
+The word **ionosphere** can give the wrong mental picture. It is not a highly ionised metal-like shell around the Earth. It is mostly neutral upper-atmosphere gas with a small fraction of ions and free electrons mixed through it.
+
+That small fraction matters enormously because HF radio interacts strongly with **free electrons**. The electric field of the radio wave pushes the electrons back and forth. Electrons are very light, so even a relatively small number of them can change the effective refractive index of the medium. If the electron density changes with height, the refractive index changes with height, and the radio wave bends. This is the heart of ordinary HF skywave refraction.
+
+The neutral particles matter for a different reason: **collisions**. In the lower ionosphere, especially the D region, there are many more neutral particles. The radio wave drives the free electrons, but those electrons frequently collide with neutral particles. Those collisions turn some organised RF energy into random heat. That is the heart of D-region absorption.
+
+This is why the D and F regions behave so differently:
+
+- The **D region** has relatively few free electrons, but very many neutral particles. It does not usually give useful HF refraction, but it can absorb strongly because electron-neutral collisions are frequent.
+- The **F region** has far more free electrons and far fewer neutral particles. It can bend HF signals with much less loss because the electrons can move more freely between collisions.
+
+Very roughly, the ionised fraction may be extraordinarily tiny in the D region, perhaps around one part in many billions or worse, and may rise to something like one part in thousands to one part in hundreds of thousands in parts of the F region. These are only scale numbers. They move strongly with altitude, sunlight, solar cycle, latitude, season, geomagnetic activity, and disturbance events.
+
+This also helps explain day and night behaviour. The dense lower atmosphere lets the D region recombine and decay quickly after sunset, so D-region absorption falls. The thinner F region recombines more slowly, so it can remain ionised into the night and continue to support HF propagation.
+
+One wording correction is useful: lower down we can casually say “molecules,” but higher in the thermosphere many neutral particles are atoms, especially atomic oxygen. For this reason, **neutral particles** is usually the safer term than **neutral molecules**.
+
+The practical summary is:
+
+> The ionosphere is weakly ionised. The free electrons refract and sometimes absorb HF; the neutral particles, especially lower down, make absorption possible through collisions.
+
+#### References for this weak-ionisation note
+
+- NOAA Space Weather Prediction Center, “Ionosphere” — explains ionospheric creation by solar EUV/X-ray radiation and the D/E/F layering: https://www.swpc.noaa.gov/phenomena/ionosphere
+- NOAA Space Weather Prediction Center, “Global D-Region Absorption Prediction Documentation” — explains D-region absorption as electron-neutral collision loss and its dependence on electron density: https://www.swpc.noaa.gov/content/global-d-region-absorption-prediction-documentation
+- Australian Government / Space Weather Services, “Introduction to HF Radio Propagation” — gives the practical radio behaviour of D, E, F1, and F2 regions: https://www.sws.bom.gov.au/Category/Educational/Other%20Topics/Radio%20Communication/Intro_HF_Radio.pdf
+- NOAA/NCEI VIPIR training slides, “Introduction to Ionospheric Sounding” — notes strong temporal variation and night-time dissipation of F1/E/D compared with F2: https://data.ngdc.noaa.gov/instruments/remote-sensing/active/profilers-sounders/ionosonde/documentation/VIPIR/Ionospheric_Sounding-ASEN-5245.pdf
+- Public Domain Aeronautical Software, “Tables of the U.S. Standard Atmosphere, 1976” — provides neutral number-density values versus altitude used here only for order-of-magnitude neutral-particle density: https://www.pdas.com/bigtables.html
 
 #### References for this ready reference
 
@@ -2498,7 +2531,7 @@ A radar-like sounder that transmits swept HF pulses vertically or obliquely to m
 
 ### Ionosphere
 
-Ionised part of the upper atmosphere that modifies radio waves. It is produced mainly by solar EUV and X-ray radiation and is structured by chemistry, density, winds, electric fields, and the geomagnetic field.
+Ionised part of the upper atmosphere that modifies radio waves. It is produced mainly by solar EUV and X-ray radiation and is structured by chemistry, density, winds, electric fields, and the geomagnetic field. The ionosphere is still mostly neutral gas; only a small fraction is ionised, but the free electrons are enough to strongly affect HF.
 
 ### LUF
 
@@ -2587,6 +2620,10 @@ Spread in arrival times of multipath components. In HF, time spread can damage d
 ### Tropospheric ducting
 
 VHF/UHF/microwave propagation beyond the normal radio horizon due to lower-atmosphere refractive-index structure, often associated with temperature inversions and humidity gradients.
+
+### Weakly ionised plasma
+
+A plasma in which only a small fraction of the gas particles are ionised. The ionosphere is weakly ionised: most particles are neutral, but the free electrons are numerous enough to refract, absorb, delay, split, and rotate HF radio waves.
 
 ### X-mode
 
