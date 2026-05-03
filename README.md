@@ -37,6 +37,7 @@ This is the first point to understand before comparing it with a conventional OC
 - [Propagation, Multipath, and Intelligibility](docs/NKO_Propagation_Diversity.md) — the longer path-and-audio discussion
 - [Discussion Topics](docs/NKO_thinking_points.md) — open questions worth testing
 - [NKO and AI](docs/NKO_and_AI.md) — how AI influenced the investigation
+- [An HF propogation primer that mentions NKO](docs/HF_Propagation_Primer.md)
 
 NEC models are also included in the `docs` folder. They are intentionally simple three-wire starting points for 4NEC2. Set the characteristic impedance to 200 Ω and sweep from there.
 
@@ -177,3 +178,5 @@ Richard Holmes VK3TXD
 - 19 April 2026 — larger 1:1 balun notes added
 - 21 April 2026 — NEC/propagation position paper added
 - 22 April 2026 - Rewrite, clarify, remove repetition
+- 03 May 2026 - Added HF Propogation primer with some NKO relevance
+
