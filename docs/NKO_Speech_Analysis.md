@@ -13,6 +13,8 @@ Example:
 
 The method compares the **speech-active parts** of each antenna section, not the silence between words.
 
+> This method was developed for SSB recordings. It can also be used on AM recordings, but AM results need extra caution because AM depends strongly on carrier strength, modulation depth, detector behaviour, and fading of the carrier and sidebands. For AM, produce both normalised and unnormalised plots.
+
 ---
 
 ## What this method tells you
