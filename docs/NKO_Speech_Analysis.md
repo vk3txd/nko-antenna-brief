@@ -37,7 +37,9 @@ It is a practical receive-audio comparison.
 
 Below is the result of the above algorithm on 2 audio recordings. One was an NKO, the other an EFHW.
 
-> Summary; After normalising 300–1500 Hz, NKO is broadly similar through the main speech body, but is stronger/smoother around about 2.4–2.7 kHz, which is useful for speech readability. EFHW has a strong narrow peak around 2.0 kHz, but NKO looks better through the upper intelligibility region.
+> AI Summary; After normalising 300–1500 Hz, NKO is broadly similar through the main speech body, but is stronger/smoother around about 2.4–2.7 kHz, which is useful for speech readability. EFHW has a strong narrow peak around 2.0 kHz, but NKO looks better through the upper intelligibility region.
+
+> Richards Summary; Listening to the recordings, the NKO with its 2 S points advantage certainly sounds better. The audio intelligibility improvement is there but masked by the 2 S point difference. This is just one test on a short path and the least effective band for NKO. Other signal reports indicate similar advantage and more on the higher bands.
 
 Both were the same person speaking - firstly a rhyme that accentuates fricative consonants with many "sh" and "th" and "t" sounds. Then the secind part of the file was a nonsense rhyme that was more like normal speech.
 
