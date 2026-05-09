@@ -6,9 +6,9 @@ Goal: Feedback from users of NKO
 
 # Feedback from NKO Test Stations
 
-As of **29 April 2026**, there are **three external test stations** documented in this repository in addition to the author’s own testing.
+As of **9 May 2026**, there are **four external test stations** documented in this repository in addition to the author’s own testing.
 
-A fourth station in U.S.A. is using WSPR to do comparisons - results have not been compiled as of end April 2026.
+The fourth station in U.S.A. is using WSPR to do comparisons, and now doing AM station comparisons, with WSPR data coming soon.
 
 These reports are subjective, path-dependent, and early. That said, they line up well enough to be worth recording.
 
@@ -51,7 +51,8 @@ These reports are subjective, path-dependent, and early. That said, they line up
 
 ## Test station 4 - USA - WSPR comparison
 
-To be advise.
+- **May 2026** comparing string AM stations on 80m indicated perhaps a slight advantage to NKO for audio quality
+  - WSPR data was said to be in the analysis phase, but not shared yet.
 
 ---
 
