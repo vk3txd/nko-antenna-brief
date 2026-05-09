@@ -35,10 +35,15 @@ It is a practical receive-audio comparison.
 
 ## An Example
 
+Below is the result of the above algorithm on 2 audio recordings. One was an NKO, the other an EFHW.
 
+> Summary; After normalising 300–1500 Hz, NKO is broadly similar through the main speech body, but is stronger/smoother around about 2.4–2.7 kHz, which is useful for speech readability. EFHW has a strong narrow peak around 2.0 kHz, but NKO looks better through the upper intelligibility region.
 
+Both were the same person speaking - firstly a rhyme that accentuates fricative consonants with many "sh" and "th" and "t" sounds. Then the secind part of the file was a nonsense rhyme that was more like normal speech.
 
-<img src="./80m_Audio_Analysis_1.png" alt="80m_Audio_Analysis_1.png" width="500">
+The path was 180klms and on 80m with 50W power, and recorded off an SDR. The NKO had a 2 S point advantage in signal which is why the 'normalize' section of the algorithm is important otherwise it biases to the stronger signal. We are wantoing to analyse at the audio spectrum not how loud it is.
+
+<img src="./80m_Audio_Analysis_1.png" alt="80m_Audio_Analysis_1.png" width="800">
 
 ---
 
