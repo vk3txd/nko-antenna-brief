@@ -41,9 +41,9 @@ Below is the result of the above algorithm on 2 audio recordings. One was an NKO
 
 > Richards Summary; Listening to the recordings, the NKO with its 2 S points advantage certainly sounds better. The audio intelligibility improvement is there but masked by the 2 S point difference. This is just one test on a short path and the least effective band for NKO. Other signal reports indicate similar advantage and more on the higher bands.
 
-Both were the same person speaking - firstly a rhyme that accentuates fricative consonants with many "sh" and "th" and "t" sounds. Then the secind part of the file was a nonsense rhyme that was more like normal speech.
+Both were the same person speaking - firstly a rhyme that accentuates fricative consonants with many "sh" and "th" and "t" sounds. Then the second part of the file was a nonsense rhyme that was more like normal speech.
 
-The path was 180klms and on 80m with 50W power, and recorded off an SDR. The NKO had a 2 S point advantage in signal which is why the 'normalize' section of the algorithm is important otherwise it biases to the stronger signal. We are wantoing to analyse at the audio spectrum not how loud it is.
+The path was 180klms and on 80m band with 50W power. the recording was done off an SDR. The NKO had a 2 S point advantage in signal which is why the 'normalize' section of the algorithm is important otherwise it biases to the stronger signal. We are wantoing to analyse at the audio spectrum not how loud it is.
 
 <img src="./80m_Audio_Analysis_1.png" alt="80m_Audio_Analysis_1.png" width="800">
 

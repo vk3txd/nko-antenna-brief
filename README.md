@@ -181,4 +181,5 @@ Richard Holmes VK3TXD
 - 22 April 2026 - Rewrite, clarify, remove repetition
 - 03 May 2026 - Added HF Propogation primer with some NKO relevance
 - 08 May 2026 - Added doc on how to analyse speech in an audio recording suggestion
+  - 09 May 2026 - Add example plot from 80m recordings and analysis
 
