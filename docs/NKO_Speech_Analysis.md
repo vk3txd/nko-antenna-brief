@@ -47,6 +47,11 @@ The path was 180klms and on 80m band with 50W power. the recording was done off 
 
 <img src="./80m_Audio_Analysis_1.png" alt="80m_Audio_Analysis_1.png" width="800">
 
+To get the above type of analysis;
+- Record the QSO and make sure you note which recording or part of a recording has what meaning.
+- Load the information on the algorithm to use, or this whole file, into AI
+- Tell it to analyse! Done.
+
 ---
 
 ## Good test conditions
