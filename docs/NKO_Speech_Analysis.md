@@ -33,7 +33,7 @@ It is a practical receive-audio comparison.
 
 ---
 
-## An Example
+## An Example Analysis - 80m band, 180klm path
 
 Below is the result of the above algorithm on 2 audio recordings. One was an NKO, the other an EFHW.
 
