@@ -33,6 +33,15 @@ It is a practical receive-audio comparison.
 
 ---
 
+## An Example
+
+
+
+
+<img src="./NKO_Schematic.png" alt="80m_Audio_Analysis_1.png" width="500">
+
+---
+
 ## Good test conditions
 
 Try to keep these things the same:
