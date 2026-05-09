@@ -35,7 +35,7 @@ It is a practical receive-audio comparison.
 
 ## An Example Analysis - 80m band, 180klm path
 
-Below is the result of the above algorithm on 2 audio recordings. One was an NKO, the other an EFHW.
+Below is the result of the above algorithm on 2 audio recordings. One was when using an NKO, the other an EFHW.
 
 > AI Summary; After normalising 300–1500 Hz, NKO is broadly similar through the main speech body, but is stronger/smoother around about 2.4–2.7 kHz, which is useful for speech readability. EFHW has a strong narrow peak around 2.0 kHz, but NKO looks better through the upper intelligibility region.
 
