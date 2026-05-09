@@ -38,7 +38,7 @@ It is a practical receive-audio comparison.
 
 
 
-<img src="./NKO_Schematic.png" alt="80m_Audio_Analysis_1.png" width="500">
+<img src="./80m_Audio_Analysis_1.png" alt="80m_Audio_Analysis_1.png" width="500">
 
 ---
 
