@@ -1,6 +1,6 @@
 # HF Propagation Primer — Ionosphere, Fading, Modes, TEP, TIDs, and Practical Antenna Readability
 
-**Purpose:** This primer builds a careful, source-checked explanation of the HF propagation topics raised in the conversation: D/E/F regions, daytime and night-time behaviour, absorption, gray-line/terminator propagation, solar cycles and space weather, launch angle, ducted and chordal modes, multipath, QSB, ordinary and extraordinary waves, Faraday rotation, practical reciprocity, non-reciprocal QSB, TIDs, sporadic E, TEP/aTEP/eTEP, tropospheric ducting, external radio noise, and how all of this can affect real SSB readability and antenna comparisons such as NKO field reports.
+**Purpose:** This primer builds a careful, source-checked explanation of the HF propagation topics raised in the conversation about: D/E/F regions, daytime and night-time behaviour, absorption, gray-line/terminator propagation, solar cycles and space weather, launch angle, ducted and chordal modes, multipath, QSB, ordinary and extraordinary waves, Faraday rotation, practical reciprocity, non-reciprocal QSB, TIDs, sporadic E, TEP/aTEP/eTEP, tropospheric ducting, external radio noise, and how all of this can affect real SSB readability and antenna comparisons such as NKO field reports.
 
 **Source policy:** Government, standards, university, and peer-reviewed sources are used as the backbone. Amateur-radio sources are intentionally not used as primary evidence. Field reports from NKO testers are treated as observations and hypotheses, not as formal proof.
 
@@ -15,7 +15,7 @@
 
 [Previous](#index) | [Home / Index](#index) | [Next](#1-executive-summary)
 
-This primer can be read as a reference, but it can also be used as the backbone of a club talk. A useful way to begin such a talk is not with equations or antenna claims, but with things HF operators already hear every week and often dismiss with one word: “propagation.”
+This primer can be read as a reference, but it can also be used as the backbone of a club talk. A useful way to begin such a talk is not with equations or antenna claims, but with things HF operators regularly hear and often dismiss with one word: “propagation.”
 
 A short opening quiz could be:
 
@@ -33,7 +33,7 @@ A useful talk caveat is:
 
 > The NKO is not claimed to beat every antenna, every time, on every path. The interesting reports are about practical copyability. The hypothesis is that the NKO may sometimes launch or receive a more useful mix of angles, current paths, and polarization components under real ionospheric conditions.
 
-NEC-style antenna modelling remains valuable. It is excellent for checking whether an antenna idea is electrically sane: current distribution, feed impedance, pattern shape, and likely problem areas. But a clean NEC model does not include the full ionosphere, local noise, TIDs, O/X mode behaviour, Faraday rotation, passband-selective fading, listener fatigue, or the exact clutter around a real station unless those things are explicitly represented or measured. That is why modelling, measurement, and repeated A/B field reports all have different jobs.
+NEC-style antenna modelling remains valuable and it must be kept in context. It is excellent for checking whether an antenna idea is electrically sane: current distribution, feed impedance, pattern shape, and likely problem areas. But a clean NEC model does not include the full ionosphere, local noise, TIDs, O/X mode behaviour, Faraday rotation, passband-selective fading, listener fatigue, or the exact clutter around a real station. That is why modelling, measurement, and repeated A/B field reports all have different jobs.
 
 ### References for this section
 
@@ -86,28 +86,33 @@ NEC-style antenna modelling remains valuable. It is excellent for checking wheth
 
 [Previous](#preface-and-introduction) | [Home / Index](#index) | [Next](#2-what-hf-skywave-propagation-really-is)
 
-HF propagation is not a simple reflection from a neat layer. It is the changing result of radio waves passing through a moving, magnetised, partly ionised atmosphere.
+HF radio waves can travel beyond the horizon because the ionosphere is made up of several partly ionised layers that can bend the wave’s path.
+
+At the right frequency and launch angle, the wave bends enough to return to Earth hundreds or thousands of kilometres away. This is often called “reflection”, but it is better understood as gradual bending through an ionised region rather than bouncing off a solid layer.
+
+Most HF contacts can be explained well enough by this refraction model, often with one or more hops between the ionosphere and the ground. But the ionosphere is not a smooth, fixed mirror. Under some conditions, signals can also follow more complex routes, including ducted, chordal, scattered or multi-hop paths, and some signals may split into different ionospheric modes.
+
+When these different paths or modes mix at the receiver, they can cause fading, distortion and changes in readability. The ionosphere can also change the signal’s polarisation, including by Faraday rotation, so a signal may change strength even when neither station has changed.
 
 A useful first picture is:
 
-```text
-Transmitter antenna launches many angles
+Transmitting antenna launches energy over a range of angles
 ↓
-D region absorbs some energy, especially lower HF during day
+D region absorbs some energy, especially lower HF during the day
 ↓
-E/F regions bend some energy back toward Earth if frequency and angle suit
+E and F regions bend some energy back toward Earth if frequency and angle suit
 ↓
-The Earth's magnetic field splits the allowed propagation into O and X modes
+The Earth's magnetic field and the ionised layers can change the wave's polarisation and split it into different modes
 ↓
-TIDs, tilts, sporadic E, equatorial effects, and changing electron density alter the path
+TIDs, tilts, sporadic E, equatorial effects, and changing electron density can alter the path
 ↓
-Receiver hears the sum of all surviving components
-```
+The receiver hears the sum of whatever survives
+
 
 The key practical consequences are:
 
 - The ionosphere is mostly neutral gas, not a fully ionised plasma sheet. A small fraction of free electrons is enough to refract HF, while the neutral gas density, especially in the D region, controls much of the absorption.
-- HF signals fade because the receiver often hears several versions of the same signal arriving with different phase, delay, polarization, and strength.
+- HF signals may fade because the receiver may hear several versions of the same signal arriving with different phase, delay, polarization, and strength.
 - An SSB signal can be strong but unreadable if selective fading damages the speech passband.
 - A receiver can sometimes feel “impossible to tune” because the RF passband itself has been phase-smeared or selectively faded, not because the operator has tuned wrongly.
 - The D region mainly causes loss; the F region is the main long-distance HF bending region; the E region can produce normal E paths and sporadic E.

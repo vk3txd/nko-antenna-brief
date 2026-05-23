@@ -11,9 +11,9 @@ Example:
 - Antenna A: 0 to 115 seconds
 - Antenna B: 120 to 309 seconds
 
-The method compares the **speech-active parts** of each antenna section, not the silence between words.
+The method compares the **speech-active parts** of each antenna section, not the silence between words, or the signal strength.
 
-> This method was developed for SSB recordings. It can also be used on AM recordings, but AM results need extra caution because AM depends strongly on carrier strength, modulation depth, detector behaviour, and fading of the carrier and sidebands. For AM, produce both normalised and unnormalised plots.
+> This method was developed for SSB recordings. It can also be used on AM recordings, but AM results need extra caution because AM depends strongly on carrier strength, modulation depth, detector behaviour, and fading of the carrier and sidebands. For AM, we should produce both normalised and unnormalised plots.
 
 ---
 
@@ -71,7 +71,7 @@ Try to keep these things the same:
 
 For the cleanest test, switch antennas during the same contact or during repeated transmissions from the same station.
 
-If using a WebSDR, accept that the receiver may have AGC and processing you cannot control. The method is still useful, but treat the result as **receive-audio evidence**, not laboratory proof.
+If using a WebSDR, accept that the receiver may have AGC and processing you cannot control. The method is still useful, but treat the result as **receive-audio evidence**, not lab quality proof.
 
 ---
 
@@ -386,7 +386,7 @@ Be careful with conclusions here, especially on narrow SSB filters.
 
 A whole-file FFT can be misleading.
 
-If one antenna section has more pauses, weaker speech, or more silence, the average spectrum can be dominated by non-speech.
+If one antenna audio section has more pauses, weaker speech, or more silence, the average spectrum can be dominated by non-speech.
 
 Selecting the top RMS frames focuses the analysis on the moments where speech is actually present.
 
@@ -460,7 +460,7 @@ Avoid over-claiming:
 Antenna A is always 6 dB better than Antenna B.
 ```
 
-The test is only as good as the recording and conditions.
+The test is only as good as the recording and conditions. Conditions and the path a signal is moving through can alter signals significantly.
 
 ---
 
@@ -474,7 +474,7 @@ This method is still useful for audio readability, but not ideal for absolute ga
 
 ## Watch out for changing propagation
 
-HF propagation can change quickly.
+HF propagation can change quickly. Sometimes changing in minutes if not seconds.
 
 For best results, compare antennas during the same contact, close together in time.
 
