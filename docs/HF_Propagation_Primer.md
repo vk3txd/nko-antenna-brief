@@ -94,23 +94,16 @@ Most HF contacts can be explained well enough by this refraction model, often wi
 
 When these different paths or modes mix at the receiver, they can cause fading, distortion and changes in readability. The ionosphere can also change the signal’s polarisation, including by Faraday rotation, so a signal may change strength even when neither station has changed.
 
-A useful first picture is:
+_A useful first picture is:_
 
-''''text
-Transmitting antenna launches energy over a range of angles
-↓
-D region absorbs some energy, especially lower HF during the day
-↓
-E and F regions bend some energy back toward Earth if frequency and angle suit
-↓
-The Earth's magnetic field and the ionised layers can change the wave's polarisation and split it into different modes
-↓
-TIDs, tilts, sporadic E, equatorial effects, and changing electron density can alter the path
-↓
-The receiver hears the sum of whatever survives
-''''text
+- Transmitting antenna launches energy over a range of angles
+- D region absorbs some energy, especially lower HF during the day
+- E and F regions bend some energy back toward Earth if frequency and angle suit
+- The Earth's magnetic field and the ionised layers can change the wave's polarisation and split it into different modes
+- TIDs, tilts, sporadic E, equatorial effects, and changing electron density can alter the path
+- The receiver hears the sum of whatever survives
 
-The key practical consequences are:
+_The key practical consequences are:_
 
 - The ionosphere is mostly neutral gas, not a fully ionised plasma sheet. A small fraction of free electrons is enough to refract HF, while the neutral gas density, especially in the D region, controls much of the absorption.
 - HF signals may fade because the receiver may hear several versions of the same signal arriving with different phase, delay, polarization, and strength.
@@ -146,13 +139,15 @@ The key practical consequences are:
 
 [Previous](#1-executive-summary) | [Home / Index](#index) | [Next](#3-the-ionosphere-is-not-a-stack-of-hard-mirrors)
 
-HF is usually taken as 3–30 MHz. In practical radio terms, HF skywave propagation is the use of the ionosphere to bend radio waves back toward Earth. The word “reflect” is commonly used, but for most ordinary HF paths the process is not a hard mirror reflection. The wave is gradually refracted as it travels through changing electron density.
+HF is usually taken as 3–30 MHz. In practical radio terms, HF skywave propagation is the use of the ionosphere to bend radio waves back toward Earth. The word “reflect” is commonly used, but for most ordinary HF paths the process is not a hard mirror reflection. The wave is gradually refracted as it travels through the changing electron density of the ionosphere.
 
 The refractive index of the ionised medium changes with height, frequency, electron density, collisions, and the Earth's magnetic field. When the frequency and launch angle are suitable, the ray gradually bends until its path turns back downward. If the frequency is too high for the path and ionosphere, the wave passes through into space. If the frequency is too low, it may be absorbed heavily before useful refraction occurs, especially in the daytime D region.
 
+Multipath HF signals do not all take the same journey through the ionosphere. Each arriving component may have a different delay, phase, strength and polarisation change, including different Faraday rotation. When they combine at the receiver, this can cause fading, distortion and changes in readability.
+
 This is why HF is both powerful and unstable. It can reach beyond the horizon, across oceans, and around the world; but the path is controlled by a medium that changes with sunlight, season, solar cycle, geomagnetic state, atmospheric waves, and local geography.
 
-A single HF circuit is not merely “transmitter to receiver.” It can contain:
+_A single HF circuit is not merely “transmitter to receiver.” It can contain:_
 
 - one-hop and multi-hop paths,
 - E-region and F-region modes,
