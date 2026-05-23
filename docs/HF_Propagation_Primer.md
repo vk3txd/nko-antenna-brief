@@ -2500,7 +2500,11 @@ Main HF long-distance refracting region. Often has the highest electron density 
 
 ### Faraday rotation
 
-Rotation of the polarization plane of a wave passing through a magnetised plasma. In the ionosphere it is caused by different phase advance of the natural magneto-ionic components.
+Faraday rotation is the turning of a radio wave’s polarisation as it travels through an ionised medium in the presence of a magnetic field. 
+
+For HF signals, this happens in the ionosphere, where free electrons and the Earth’s magnetic field affect the wave as it passes through. The result is that the signal can arrive with its polarisation turned from the way it was transmitted.
+
+In practice, HF polarisation often changes on the way through the ionosphere. A dipole may launch mostly horizontal polarisation and a vertical may launch mostly vertical polarisation, but the signal arriving at the receiver may be rotated, mixed, or split into different components. That is why a horizontally polarised HF signal can often be received well on a vertical antenna, and a vertically polarised signal can be received well on a dipole.
 
 ### Flutter
 
