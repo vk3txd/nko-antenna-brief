@@ -86,7 +86,7 @@ NEC-style antenna modelling remains valuable and it must be kept in context. It 
 
 [Previous](#preface-and-introduction) | [Home / Index](#index) | [Next](#2-what-hf-skywave-propagation-really-is)
 
-HF radio waves can travel beyond the horizon because the ionosphere is made up of several partly ionised layers that can bend the wave’s path.
+HF radio waves can travel beyond the horizon because they pass into the ionosphere, where several partly ionised layers can bend the wave’s path and send it back toward Earth.
 
 At the right frequency and launch angle, the wave bends enough to return to Earth hundreds or thousands of kilometres away. This is often called “reflection”, but it is better understood as gradual bending through an ionised region rather than bouncing off a solid layer.
 
