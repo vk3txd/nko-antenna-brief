@@ -25,7 +25,7 @@ This is the first point to understand before comparing it with a conventional OC
 
 ## Where to start
 
-- [NKO Build Brief](docs/NKO_build.md) — parts, winding details, and practical build notes
+- [NKO Build Brief](docs/NKO_build.md) — parts, winding details, and practical build notes (testing notes separately)
 - [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md) — the main mechanism and observation notes
 - [NKO compared to New Carolina Windom](docs/NKO_And_The_Carolina_Windom.md) — what is similar and what is not
 - [Component and Antenna Notes](docs/NKO_Component_Notes.md) — baluns, UnUns, OCF, NCW, and NKO in one place

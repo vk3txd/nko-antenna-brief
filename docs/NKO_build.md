@@ -1,9 +1,3 @@
-**Author:** VK3TXD (Richard Holmes)  
-**Status:** v0.5  
-**License:** CC BY 4.0
-Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
-Goal: build instructions for making an NKo antenna
-
 # Building an NKO – New Kallista OCF
 
 This document is the practical build note for the NKO.
@@ -13,7 +7,9 @@ There are two broad approaches:
 1. **Purchase suitable parts** and assemble the antenna quickly
 2. **Build the magnetic parts yourself** and package them as you prefer
 
-The examples here are the ones used in the early NKO testing. They are practical starting points, not the only possible builds.
+The build examples here are the ones used in the early NKO testing. They are practical starting points, not the only possible builds.
+
+Testing methods and results for some 4:1 builds are avainable [here](./NKO_UnUn_Testing.md)
 
 ---
 
@@ -35,16 +31,16 @@ LDG make low-cost parts that appear suitable for modest-power NKO builds.
 
 ## Build option — QRP
 
-This version is a reasonable starting point for low-power experimental builds. It is untested as a formal product design, so test carefully.
+This version is a reasonable starting point for low-power experimental builds. It has been tested with 50W of key down RF at 7mHz for 5 minutes (see separate test results) and performs very well. It has not been tested in the field yet.
 
 ### 4:1 UnUn
 
 - Jaycar **LO1234** or **FT110-43**
 - 7 turns bifilar
-- 0.6 mm enamel wire
+- 0.6 mm enamel wire, sleeved in teflon tube
 - enclosure and connectors to suit your build
 
-**Suggested limit:** around **50 W SSB absolute maximum**, and that is still a cautious experimental figure.
+**Suggested limit:** around **50 W SSB maximum**, and that is still a cautious experimental figure taking into account the antenna imbalance and real world impedances.
 
 ### 1:1 choke
 
@@ -78,7 +74,7 @@ These are the parts and winding details used by the early external test stations
 Use:
 
 - **1 × FT140-43** or **Jaycar LO1238**
-- **2 × 750 mm** lengths of **0.8 mm enamel wire**
+- **2 × 800 mm** lengths of **0.8 mm enamel wire**
 - sleeve both wires in PTFE and hold them together as a bifilar pair
 - wind **7 turns**
 
@@ -92,7 +88,7 @@ Connect as shown below:
 - later testing suggested **7 turns** is slightly better overall
 - for 160 m work, **8 turns** is a sensible starting point
 
-VNA checks indicate low loss and good behaviour around a 200 Ω load across HF.
+VNA checks indicate low loss and good behaviour around a 200 Ω load across HF. Subsequent tests with a 200R dummy load and monitoring heating indicate low loss.
 
 ### 1:1 boundary choke
 
@@ -121,7 +117,10 @@ Example scan:
 
 - use a **stacked pair of FT140-43** or **Jaycar LO1238**
 - use **1 mm enamel wire**
-- sleeve it in PTFE
+- sleeve it in PTFE (teflon tubing)
+- wind **7 turns**
+
+This has been tested on using a 200R dummy load and shows very low loss. See spearate test results.
 
 ### 1:1 boundary choke
 
@@ -132,7 +131,7 @@ Example scan:
 
 <img src="8T_4xLO1238_1-1_blun.png" alt="NKO 1:1 400 W choke" width="250">
 
-This gives higher choking impedance and more ferrite mass, which is what you want as common-mode current and heating rise.
+This gives higher choking impedance and more ferrite mass.
 
 ---
 
@@ -173,4 +172,3 @@ The magnetic parts are important, but the NKO only works as intended when the **
 - feedline routing
 - mechanical layout
 
-Build the magnetic parts properly, but think of the antenna as the whole three-conductor structure.

@@ -1,6 +1,6 @@
 # Efficiency Testing 4:1 UnUns (at HF)
 
-When you build an UnUn, testing SWR is easy enough using a resistor. But how much power can you safely feed into it. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know.
+When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power can you safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn may be stressed to failure.
 
@@ -10,9 +10,9 @@ You will never ever notice the difference in signal strength between an efficien
 
 That has been used as a justification for not being concerned about efficiency.
 
-However and importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used that with an inefficient core.
+However and very importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used than with an inefficient core.
 
-An example. A QRP build using a 25mm diameter core can handle a 50W constant carrier key down power for 5 minutes because it is highly efficient. 
+An example. From testing we know that a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
 
 ## Failure Mechanisms
 
@@ -74,22 +74,27 @@ A side note, the resistor rating of the dummy load is 600W, with a 50W signal fo
 
 | Build              | diam Weight | Power | Time | Temp Rise | Efficiency |
 |--------------------|-------------|-------|------|-----------|------------|
-| 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
 | 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
+| 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
 | 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
+| 1 x LO1238-7 turns | 35mm 38g    | 50w   | - -  | - -       |    -% |
 | 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.6% |
 
 **Interpreting The Results**
 
-These results are for a perfect load. A real antenna load will be different which may affect performance. Tests at other dummy load impedances may show this.
+These results are for a perfect load on the bench. A real antenna will be a different load which will affect performance. Tests at other dummy load impedances may show this.
 
-I would expect the NKO 4:1 to have different efficiency by band also. Each band will present a different load, and the vertical coax length will have a different impact on the currents and hence efficiency.
+NKO will not have a perfectly balanced load like a dummy load. Load imbalance will incur extra core loss and it is highly likely that real life antenna use will present significantly different efficiency figures.
 
-The LO1234 core is quite small (25mm diameter) yet it handled 50W key down for 5 minutes like a champion when used with a 7 turn primary. Changing back to 6 turns resulted in over double the heating and loss. Calling this a "QRP build" is doing it an injustice.
+I would expect the NKO 4:1 to have different efficiency by band also. Each band will present a different load, with the vertical coax length having have a different impact on the currents and hence efficiencies.
 
-The LO1238 core is still small at 35mm diameter. With 6 turns it performed very similarly in efficiency to the half sized LO1234 (25mm) core.
+The LO1234 core is quite small (25mm diameter) yet it handled 50W key down for 5 minutes like a champion when used with a 7 turn build. Trying a buld with 6 turns resulted in over double the heating and loss.
 
-Putting 7 turns on the LO1238 is an obvious future test - I didn't have one available. Looking at the results, my guess is that it will reduce loss.
+A side note. AI did an analysis of this core and recommended 6 turns. I tried 7 turns "just to see what happens" and clearly it has lower loss.
+
+The LO1238 core is still small at 35mm diameter. With 6 turns it performed very similarly in efficiency to the half sized LO1234 (25mm) core with 6 turns.
+
+Putting 7 turns on the LO1238 is an obvious future test - I didn't have one available. Looking at the results, it is reasonable to assume it will reduce loss.
 
 The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a result that indicates it should work well at 400W SSB and with ease.
 
