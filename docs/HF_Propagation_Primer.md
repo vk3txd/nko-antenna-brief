@@ -2466,6 +2466,12 @@ The highest frequency returned by an ionospheric layer at vertical incidence. Fo
 
 Low ionospheric region mainly important for absorption. It is strongest during daylight and can become highly absorbing during solar flares or particle events.
 
+Lowest daytime ionospheric region, about 60–90 km high. It has fewer free electrons than the higher regions, but the air is still dense, so collisions are frequent. As an HF wave passes through, its electric field makes the free electrons move back and forth.
+
+In the D region those electrons collide often with neutral molecules, and each collision converts some of the radio wave’s energy into heat. This is why the D region mainly absorbs HF energy rather than usefully bending it back to Earth, especially on lower HF bands during the day. After sunset, the D region largely fades as ionisation drops, so lower-band absorption is greatly reduced.
+
+This is why 160 m and 80 m are often poor daytime long-distance bands. Their signals suffer strong D-region absorption before they can reach the higher ionospheric regions that would bend them back toward Earth. During the day they are often best for local or shorter regional contacts. After sunset, the D region fades, absorption falls, and these lower bands can support much longer paths.
+
 ### D-RAP
 
 NOAA SWPC D Region Absorption Prediction product. It estimates HF absorption impact from solar X-rays and solar energetic particles.
@@ -2477,6 +2483,8 @@ Evening transequatorial propagation. Often associated with equatorial spread F a
 ### E region
 
 Ionospheric region above D and below F. It can refract lower HF and can host sporadic E patches.
+
+Middle ionospheric region, roughly 90–150 km above Earth. It has more free electrons than the D region and can bend some HF signals, especially lower HF and VHF in special cases. During the day it is usually present as a normal E layer. At night it weakens greatly, but patches of sporadic E can appear and support strong, unusual paths.
 
 ### Equatorial ionisation anomaly
 
@@ -2494,9 +2502,13 @@ The X-mode. One of the two natural propagation modes in the magnetised ionospher
 
 Daytime F-region shoulder or sub-layer below F2. Often merges into the broader F region at night.
 
+Daytime lower part of the F region, roughly 150–220 km above Earth. It is a daylight shoulder or sub-layer below F2, with moderate to high electron density. It helps shape some daytime HF paths, but it often merges into the broader F region after sunset and is not always distinct.
+
 ### F2 region
 
 Main HF long-distance refracting region. Often has the highest electron density and is central to foF2 and MUF behaviour.
+
+Main long-distance HF refracting region, usually roughly 220–600 km above Earth, with the strongest effect often around 250–400 km. It normally has the highest electron density and is central to foF2, MUF and long-distance HF behaviour. Unlike the D and E regions, the F2 region does not simply disappear at night. It weakens and changes height, but often remains capable of supporting HF propagation after dark.
 
 ### Faraday rotation
 
