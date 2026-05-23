@@ -1,8 +1,32 @@
 # Efficiency Testing 4:1 UnUns (at HF)
 
+When you build an UnUn, testing SWR is easy enough using a resistor. But how much power can you safely feed into it. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know.
 
+Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn may be stressed to failure.
 
+## Why Efficiency Matters
 
+You will never ever notice the difference in signal strength between an efficient and an inefficient UnUn or balun. 
+
+That has been used as a justification for not being concerned about efficiency.
+
+However and importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used that with an inefficient core.
+
+An example. A QRP build using a 25mm diameter core can handle a 50W constant carrier key down power for 5 minutes because it is highly efficient. 
+
+## Failure Mechanisms
+
+Why do UnUns (and baluns) fail? There are 2 main mechanisms;
+
+- Heat. Loss in the device translates into heat. If the core gets much past 120c (for the types of ferrite I've been using), the magnetic properties will change and loss will escalate. When this happens the core may shatter.
+  - Don't forget ambient temperature. In VK on a hot summer day, the UnUn may be at 60c in the noon day sun even before you put any power into it.
+  - Higher power means more heat. Longer transmit means more heat.
+  - Microphone setting and compression affects heat (SSB).
+  - The mode of operation matters. SSB has a low duty cycle, FT8 is higher and some digital modes are higher again. The higher the duty cycle the greater the heating.
+- Voltage flashover. If the wire used in manufacture does not have good enough insulation, and it is damaged in the build, it may short out and cause damage, possibly to the transceiver.
+  - The windings in the 4:1 UnUn have the full differential voltage across them.
+  - If the SWR is high it may also elevate the voltage. 
+  - I like teflon sleeving the winding wires for better insulation. Enamel covered with just might be ok - why risk it.
 
 ## Methods 
 
@@ -40,11 +64,11 @@ Cutting to the chase, this is a 'gunna do' thing. I have not got-round-to-it yet
 
 # Dummy Load Testing
 
-On 23 May 2026 I used a theoretical 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn.
+On 23 May 2026 I used a theoretical 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn (uses the LO1234 core).
 
 <img src="./dummy_load_4-1_UnUn.png" alt="Dummy load with UnUn connected" width="500">
 
-I used an IC7410 transceiver set to 50W output as measured by a power meter, at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load.
+I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned it at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load.
 
 A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to touch even though the heatsink is quite large. A fan was required.
 
