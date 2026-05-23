@@ -40,7 +40,7 @@ On 23 May 2026 I used a theoretical 600W 200 ohm dummy load to test a number of 
 I used an IC7410 transceiver set to 50W output as measured by a power meter, then fed that into the 4:1 UnUn connected to the dummy load. A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to toucheven thought the heatsink is quite large. A fan was required.
 
 | Build              | diam Weight | Power | Time | Temp Rise | Efficiency |
-|---------------|---:|-------------|-------|-----:|----------:|-----------:|
+|--------------------|-------------|-------|------|-----------|------------|
 | 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
 | 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
 | 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
