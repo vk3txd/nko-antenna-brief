@@ -96,6 +96,7 @@ When these different paths or modes mix at the receiver, they can cause fading, 
 
 A useful first picture is:
 
+''''text
 Transmitting antenna launches energy over a range of angles
 ↓
 D region absorbs some energy, especially lower HF during the day
@@ -107,7 +108,7 @@ The Earth's magnetic field and the ionised layers can change the wave's polarisa
 TIDs, tilts, sporadic E, equatorial effects, and changing electron density can alter the path
 ↓
 The receiver hears the sum of whatever survives
-
+''''text
 
 The key practical consequences are:
 
