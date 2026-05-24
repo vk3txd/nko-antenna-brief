@@ -1,6 +1,6 @@
 # NKO and the use of AI
 
-This repository exists partly because AI became part of the investigation.
+This repository exists partly because AI became part of the investigation and development.
 
 That does not mean AI invented the NKO or that AI should be trusted blindly. It means AI was used as a very fast research and sanity-check tool during the process.
 
@@ -46,6 +46,7 @@ AI has real shortcomings, especially in amateur radio topics.
 - it can use the wrong formula or the right formula in the wrong way
 - it can sound authoritative while being badly wrong
 - it tends to smooth over uncertainty unless you force it not to
+- its initial 4:1 UnUn design, based on first principles, worked well but not as well as possible.
 
 That means every useful AI output still needs human checking.
 
