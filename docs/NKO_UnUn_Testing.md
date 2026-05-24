@@ -2,7 +2,7 @@
 
 When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power can you safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
 
-Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn may be stressed to failure.
+Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
 ## Why Efficiency Matters
 
@@ -53,18 +53,18 @@ Cutting to the chase, I did this on a number of builds (below) and got the kinds
 
 **In-Situ testing with an antenna**
 
-Probably the "gold standard" for testing. You are testing the 4:1 UnUn as you will be using it and getting a _real life_ result.
+Probably the "gold standard" for testing. You are testing the 4:1 UnUn as you will be using it and getting a _real life_ result. The only variable is if you move the antenna and does that affect its performance.
 
-The method would be to measure the temperature of the core(s) before the test, the apply power for a time then measure the temperature loss and calculate efficiency.
+The method would be to measure the temperature of the core(s) before the test, then apply power for a time then measure the temperature after the test, then using the temperature rise calculate efficiency.
 
-Of course the antenna must be lofted, thn pulled down after the test.
+Of course the antenna must be lofted, then pulled down after the test.
 
 Cutting to the chase, this is a 'gunna do' thing. I have not got-round-to-it yet.
 
 
 # Dummy Load Testing
 
-On 23 May 2026 I used a theoretical 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn (uses the LO1234 core).
+On 23 May 2026 I used a 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn (uses the LO1234 core).
 
 <img src="./dummy_load_4-1_UnUn.png" alt="Dummy load with UnUn connected" width="500">
 
@@ -77,12 +77,19 @@ A side note, the resistor rating of the dummy load is 600W, with a 50W signal fo
 | 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
 | 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
 | 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
-| 1 x LO1238-7 turns | 35mm 38g    | 50w   | - -  | - -       |    -% |
-| 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.6% |
+| 1 x LO1238-7 turns | 35mm 38g    | 50w   | 305w | 4.4c      | 99.2% |
+| 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.2% |
 
 **Interpreting The Results**
 
+It is not a perfect test, but it is indicative of what to expect, and excellent to compare builds.
+
 These results are for a perfect load on the bench. A real antenna will be a different load which will affect performance. Tests at other dummy load impedances may show this.
+
+Error will creep in from heat loss;
+- Core cooling to free air during the test
+- Heating the wire and supporting mount
+- Heat in the wires leaked to the metal SO239
 
 NKO will not have a perfectly balanced load like a dummy load. Load imbalance will incur extra core loss and it is highly likely that real life antenna use will present significantly different efficiency figures.
 
@@ -94,7 +101,19 @@ A side note. AI did an analysis of this core and recommended 6 turns. I tried 7 
 
 The LO1238 core is still small at 35mm diameter. With 6 turns it performed very similarly in efficiency to the half sized LO1234 (25mm) core with 6 turns.
 
-Putting 7 turns on the LO1238 is an obvious future test - I didn't have one available. Looking at the results, it is reasonable to assume it will reduce loss.
+Putting 7 turns on the LO1238 showed the same efficiency as a 2 core version and double the temperature rise - so they line up rather well.
 
 The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a result that indicates it should work well at 400W SSB and with ease.
 
+## Derating Advice
+
+I have not tested these with a real antenna which will most likely increase the loss significantly.
+
+I suggest the following;
+- LO1234 core 7 turns, derate to 25w SSB max
+  - the core is small with a low thermal mass. Operating it into non-ideal loads will be guaranteed to heat far more.
+- 1 x LO1238 core 7 turns, derate to 100w SSB max
+- 2 x LO1238 cores 7 turns, derate to 400w SSB max
+  - built with 1mm wire
+
+All builds _should_ handle those kinds of powers very well. into a well matched antenna, close to 1:1 it is likely they will handle far more power. if you do put more power in, monitor SWR closely.
