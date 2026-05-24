@@ -105,6 +105,8 @@ Putting 7 turns on the LO1238 showed the same efficiency as a 2 core version and
 
 The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a result that indicates it should work well at 400W SSB and with ease.
 
+Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
+
 ## Derating Advice
 
 I have not tested these with a real antenna which will most likely increase the loss significantly.
