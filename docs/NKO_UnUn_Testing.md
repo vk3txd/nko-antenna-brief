@@ -26,7 +26,7 @@ Why do UnUns (and baluns) fail? There are 2 main mechanisms;
 - Voltage flashover. If the wire used in manufacture does not have good enough insulation, and it is damaged in the build, it may short out and cause damage, possibly to the transceiver.
   - The windings in the 4:1 UnUn have the full differential voltage across them.
   - If the SWR is high it may also elevate the voltage. 
-  - I like teflon sleeving the winding wires for better insulation. Enamel covered with just might be ok - why risk it.
+  - I like teflon sleeving the winding wires for better insulation. Enamel covered wire just might be ok without sleeving - why risk it.
 
 ## Methods 
 
@@ -34,7 +34,7 @@ There are a few ways to test your 4:1 UnUn's efficiency. SWR is easy - just put 
 
 Efficiency is a little more difficult.
 
-**VNA Testing** can be done in 2 ways; 
+**1. VNA Testing** can be done in 2 ways; 
 
 - by making 2 UnUn's, connecting them back to back and measuring through loss and dividing by 2.
 - using just one 4:1 UnUn, connect the VNA Port-2 to the 200R side via a 150R resistor and adjust for loss in the resistor.
@@ -43,21 +43,21 @@ In my experience this does work, however the loss in a well made 4:1 UnUn is qui
 
 Cutting to the chase, I did this and found the results inconclusive. I was sure efficiency was excellent, but I was also sure there was significant error in my method.
 
-**Dummy Load Testing**
+**2. Dummy Load Testing**
 
 Build a 200R dummy load, connect the 4:1 UnUn to it and feed in power to the 50R side of the UnUn for a set time, set power, and then measure the temperature rise over time.
 
 This is mildly painful as you need a temperature sensor bonded to the core, be able to read it, and of course have a dummy load capable of handling enough power over time.
 
-Cutting to the chase, I did this on a number of builds (below) and got the kinds of numbers that agreed with VNA testing.
+Cutting to the chase, I did this on a number of builds (below) and got the kinds of numbers that agreed with VNA testing and resistor termination method.
 
-**In-Situ testing with an antenna**
+**3. In-Situ testing with an antenna**
 
 Probably the "gold standard" for testing. You are testing the 4:1 UnUn as you will be using it and getting a _real life_ result. The only variable is if you move the antenna and does that affect its performance.
 
 The method would be to measure the temperature of the core(s) before the test, then apply power for a time then measure the temperature after the test, then using the temperature rise calculate efficiency.
 
-Of course the antenna must be lofted, then pulled down after the test.
+Of course the antenna must be lofted after measuring the core temperature, the test power used, then pull the antenna down after the test and measure temperature to get the temperature rise.
 
 Cutting to the chase, this is a 'gunna do' thing. I have not got-round-to-it yet.
 
@@ -70,7 +70,7 @@ On 23 May 2026 I used a 600W 200 ohm dummy load to test a number of 4:1 UnUn bui
 
 I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned it at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load.
 
-A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to touch even though the heatsink is quite large. A fan was required.
+A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to touch even though the heatsink is quite large. A fan was used after the first test.
 
 | Build              | diam Weight | Power | Time | Temp Rise | Efficiency |
 |--------------------|-------------|-------|------|-----------|------------|
@@ -82,7 +82,7 @@ A side note, the resistor rating of the dummy load is 600W, with a 50W signal fo
 
 **Interpreting The Results**
 
-It is not a perfect test, but it is indicative of what to expect, and excellent to compare builds.
+It is not a perfect test as it isn't connected to an antenna, but it is indicative of what to expect, and excellent to compare builds.
 
 These results are for a perfect load on the bench. A real antenna will be a different load which will affect performance. Tests at other dummy load impedances may show this.
 
