@@ -112,15 +112,17 @@ Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4
 
 ## Tests At Other SWRs
 
+How a device performs when operated into a non-optimum load is important. An antenna is almost guaranteed to not result in a perfect 1:1 SWR - so the simple question is "how efficient is it with a poor SWRs?" The last thing we want is for the UnUn to be destroyed on a poor antenna and/or damage a transceiver.
 
+To test this I changed my dummy load to have a different resistance, hence SWR, and reduced the power I fed in - just in case efficiency suffered badly. Temp rise is the key as this converts to efficiency.
 
 | Build              | diam Weight | Power | Res  |  SWR  | Time | Temp Rise | Efficiency |
 |--------------------|-------------|-------|------|-------|------|-----------|------------|
-| 2 x Lo1234-7 turns | 25mm 30g    | 20w   | 100R |  2:1  | 300s | 2.3c      | 99.1% |
+| 2 x LO1234-7 turns | 25mm 30g    | 20w   | 100R |  2:1  | 300s |   2.3c    | 99.1% |
 
 **Interpreting the results**
 
-Again, the only thing that can be said; "On the bench into a 100R dummy load the UnUn showed te given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed.
+Again, the only thing that can be said; "On the bench into a 100R dummy load the UnUn showed the given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed.
 
 However, the UnUn performed very well.
 
