@@ -68,7 +68,7 @@ On 23 May 2026 I used a 600W 200 ohm dummy load to test a number of 4:1 UnUn bui
 
 <img src="./dummy_load_4-1_UnUn.png" alt="Dummy load with UnUn connected" width="500">
 
-I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned it at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load.
+I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned it at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load. The SWR was 1:1 at 7mHz.
 
 A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to touch even though the heatsink is quite large. A fan was used after the first test.
 
@@ -76,6 +76,7 @@ A side note, the resistor rating of the dummy load is 600W, with a 50W signal fo
 |--------------------|-------------|-------|------|-----------|------------|
 | 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
 | 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
+| 2 x Lo1234-7 turns | 25mm 30g    | 50w   | 300s | 3.8c      | 99.4% |
 | 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
 | 1 x LO1238-7 turns | 35mm 38g    | 50w   | 305w | 4.4c      | 99.2% |
 | 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.2% |
@@ -107,13 +108,44 @@ The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a resu
 
 Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
 
+
+
+## Tests At Other SWRs
+
+
+
+| Build              | diam Weight | Power | Res  |  SWR  | Time | Temp Rise | Efficiency |
+|--------------------|-------------|-------|------|-------|------|-----------|------------|
+| 2 x Lo1234-7 turns | 25mm 30g    | 20w   | 100R |  2:1  | 300s | 2.3c      | 99.1% |
+
+**Interpreting the results**
+
+Again, the only thing that can be said; "On the bench into a 100R dummy load the UnUn showed te given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed.
+
+However, the UnUn performed very well.
+
+
+## Thermal Headroom
+
+I used AI to crunch the numbers for efficiency. I asked it what the performance indicated. It used a term "Thermal Headroom".
+
+It defined Thermal Headroom as "Thermal headroom means how much extra heat a part or system can tolerate before it reaches an unsafe, unreliable, or performance-changing temperature."
+
+Example: If a core starts at 25°C and reaches 35°C in a 50 W test, it has far more thermal headroom than a core that reaches 80°C in the same test.
+
+From the tests, the more efficient an UnUn is, the less heating, and the heavier the core is the more heat it can absorb before heating badly. So if you have high efficiency and heavier cores, the thermal headroom is the greatest.
+
+On a practical note, if the core is small and light and operated into a very poor load, the efficiency will suffer and being lighter will heat more than a heavier core might do.
+
+
 ## Derating Advice
 
-I have not tested these with a real antenna which will most likely increase the loss significantly.
+I have not tested these for efficiency with a real antenna which will most likely increase the loss. The following are conservative suggestions.
 
 I suggest the following;
 - LO1234 core 7 turns, derate to 25w SSB max
-  - the core is small with a low thermal mass. Operating it into non-ideal loads will be guaranteed to heat far more.
+  - the core is small with a low thermal mass. Operating it into non-ideal loads may heat more.
+- LO1234 x 2 cores, 7 turns, derate to 50w SSB max
 - 1 x LO1238 core 7 turns, derate to 100w SSB max
 - 2 x LO1238 cores 7 turns, derate to 400w SSB max
   - built with 1mm wire
