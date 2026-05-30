@@ -8,6 +8,9 @@ Testing efficiency is therefore called for. That will give us a guideline as to 
 
 As you may realise from reading the below, this became an obsession (testing) that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. Building a 200R dummy load opened up test options I never had previously.
 
+if you intend to build your own UnUn and baluns, then the information below should be helpful.
+
+I've also included some 4:1 Balun tests so as to compare to an UnUn.
 
 ## Why Efficiency Matters
 
@@ -128,6 +131,8 @@ Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4
 
 ## Testing A 2 core 4:1 Current (Guanella) Balun
 
+I wanted to see how a current balun would compare to an UnUn. 
+
 The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw sleeved in teflon tube.
 
 <table style="border-collapse: collapse; border: none;"> <tr>
@@ -152,7 +157,11 @@ I used 16 watts key down power this time, for 5 minutes, and then measured the t
 
 These kinds of efficiencies tell me I should trial increasing the number of turns on the UnUn. Note: chasing a few 10ths of a percent seems OCD.
 
+The tests tell us nothing about how the balun handles an unbalanced and reactive load.
+
 The _small_ loss of efficiency by using an off 200R load surprised me (very much). I had expected it to perform much worse. Indeed, in about 2015 I had performed a similar test which showed 85% efficiency with a 135R load. The above test debunks that. Yes it uses a different build (cores) and dummy load - but the difference is such that it calls into question my original measurements. What was I thinking?
+
+The little LO1234 cores really do perform well - way better than expected and for both a 4:1 UnUn and a 4:1 current balun.
 
 Further work; I will re-test with the same 4:1 current balun build as used all those years ago - and at 50W key down.
 
@@ -168,10 +177,11 @@ So, move on, saturation of these builds is not going to happen.
 
 ## Does VNA testing come close to testing under power?
 
-Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn it is quite a small figure, so that error in testing and calibration reduces confidence in my VNA testing.
+Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn and a bood balun the loss is quite a small figure, so that errors in testing and calibration reduces confidence in my VNA testing.
 
 Some people have suggested the small signal performance of a device can be very different to operation under power (with reference to an UnUn or Balun). I'm not seeing it. Sure, you can use enough power to cause insulation breakdown, or over heat a core - but absent those extreme conditions, I found a 50W key down test to produce numbers similar to a VNA.
 
+One thing about testing, you get an actual number you can compare. It is important to detail _how_ tests are done.
 
 ## Tests At Other SWRs
 
