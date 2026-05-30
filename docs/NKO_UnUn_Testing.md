@@ -8,9 +8,10 @@ Testing efficiency is therefore called for. That will give us a guideline as to 
 
 As you may realise from reading the below, this became an obsession (testing) that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. Building a 200R dummy load opened up test options I never had previously.
 
-if you intend to build your own UnUn and baluns, then the information below should be helpful.
+If you intend to build your own UnUn and baluns, then the information below should be helpful.
 
 I've also included some 4:1 Balun tests so as to compare to an UnUn.
+
 
 ## Why Efficiency Matters
 
@@ -37,9 +38,12 @@ Why do UnUns (and baluns) fail? There are 2 main mechanisms;
   - If the SWR is high it may also elevate the voltage. 
   - I like teflon sleeving the winding wires for better insulation. Enamel covered wire just might be ok without sleeving - why risk it.
 
+
 ## Methods 
 
-There are a few ways to test your 4:1 UnUn's efficiency. SWR is easy - just put a 200R resistor across the output and measure it with a VNA or SWR meter of some kind.
+There are a few ways to test a 4:1 UnUn's efficiency. SWR is easy - just put a 200R resistor across the output and measure it with a VNA or SWR meter of some kind.
+
+**Most important and remember** - how you are testing may not equate to how the device under test performs in real life with a different load which will probably be unbalanced and reactive.
 
 Efficiency is a little more difficult.
 
@@ -183,6 +187,7 @@ Some people have suggested the small signal performance of a device can be very 
 
 One thing about testing, you get an actual number you can compare. It is important to detail _how_ tests are done.
 
+
 ## Tests At Other SWRs
 
 How a device performs when operated into a non-optimum load is important. An antenna is almost guaranteed to not result in a perfect 1:1 SWR - so the simple question is "how efficient is it with a poor SWR?" The last thing we want is for the UnUn to be destroyed on a poor antenna and/or damage a transceiver.
@@ -230,4 +235,4 @@ I suggest the following;
 - 2 x LO1238 cores 7 turns, derate to 400w SSB max
   - built with 1mm wire
 
-All builds _should_ handle those kinds of powers very well. into a well matched antenna, close to 1:1 it is likely they will handle far more power. if you do put more power in, monitor SWR closely.
+All builds _should_ handle those kinds of powers very well. Into a well matched antenna, close to 1:1 it is likely they will handle far more power. If you do put more power in, monitor SWR closely (and let me know how it goes!).
