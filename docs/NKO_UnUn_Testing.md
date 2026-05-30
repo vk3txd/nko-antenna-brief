@@ -1,8 +1,13 @@
 # Efficiency Testing 4:1 UnUns (at HF)
 
-When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power can you safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
+When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power you can safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
+
+> Findings; Bench testing 4:1 UnUns using temperature rise under power over time suggests they have very high efficiency, usually better than 98%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna will be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns do offer very good alternatives to commercial units with due consideration of maximum power limits.
+
+As you may realise from reading the below, this became an obsession (testing) that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. Building a 200R dummy load opened up test options I never had previously.
+
 
 ## Why Efficiency Matters
 
@@ -118,6 +123,15 @@ The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a resu
 Looking at the efficiency results, it is clear that the number of turns is the efficiency driving factor.
 
 Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
+
+
+## Saturation
+
+This is raised by amateurs with wise nodding of their heads and fearful looks and is seen as an easy way to shoot down a design. Some manufacturers also use it as the bogey man for home built devices, and to suggest their products will not saturate. Bless them!
+
+So I asked AI to calculate the watts required for saturation when using 7 turns on a 25mm toroid similar to type #43. The _least_ power required was 37,000W which is both extraordinary and silly. The core would be glowing red hot at any power near this let alone the wire winding the core would vaporise. Even if it is wrong by a factor of 10, it is still silly-high.
+
+So, move on, saturation of these builds is not going to happen.
 
 
 ## Tests At Other SWRs
