@@ -17,7 +17,8 @@ That has been used as a justification for not being concerned about efficiency.
 
 However and very importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used than with an inefficient core.
 
-An example. From testing we know that a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
+An example. From testing we know that a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
+
 
 ## Failure Mechanisms
 
@@ -125,6 +126,26 @@ Looking at the efficiency results, it is clear that the number of turns is the e
 Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
 
 
+## Testing A 2 core 4:1 Current (Guanella) Balun
+
+The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw sleeved in teflon tube.
+
+<img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="500">
+
+I used 16 watts key down power this time, for 5 minutes, and then measured the temperature rise of the cores. One test was with a 100R load, the second with a 200R load.
+
+| Build              | diam Weight  | Power | Load | Time | Temp Rise | Efficiency |
+|--------------------|--------------|-------|------|------|-----------|------------|
+| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 200R | 300s | 0.8c      | 99.6% |
+| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 100R | 300s | 1.2c      | 99.4% |
+
+These kinds of efficiencies tell me I should trial increasing the number of turns on the UnUn. Note: chasing a few 10ths of a percent seems OCD.
+
+The _small_ loss of efficiency by using an off 200R load surprised me (very much). I had expected it to perform much worse. Indeed, in about 2015 I had performed a similar test which showed 85% efficiency with a 135R load. The above test debunks that. Yes it uses a different build (cores) and dummy load - but the difference is such that it calls into question my original measurements. What was I thinking?
+
+Further work; I will re-test with the same 4:1 current balun build as used all those years ago - and at 50W key down.
+
+
 ## Saturation
 
 This is raised by amateurs with wise nodding of their heads and fearful looks and is seen as an easy way to shoot down a design. Some manufacturers also use it as the bogey man for home built devices, and to suggest their products will not saturate. Bless them!
@@ -132,6 +153,13 @@ This is raised by amateurs with wise nodding of their heads and fearful looks an
 So I asked AI to calculate the watts required for saturation when using 7 turns on a 25mm toroid similar to type #43. The _least_ power required was 37,000W which is both extraordinary and silly. The core would be glowing red hot at any power near this let alone the wire winding the core would vaporise. Even if it is wrong by a factor of 10, it is still silly-high.
 
 So, move on, saturation of these builds is not going to happen.
+
+
+## Does VNA testing come close to testing under power?
+
+Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn it is quite a small figure, so that error in testing and calibration reduces confidence in my VNA testing.
+
+Some people have suggested the small signal performance of a device can be very different to operation under power (with reference to an UnUn or Balun). I'm not seeing it. Sure, you can use enough power to cause insulation breakdown, or over heat a core - but absent those extreme conditions, I found a 50W key down test to produce numbers similar to a VNA.
 
 
 ## Tests At Other SWRs
