@@ -134,10 +134,11 @@ The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw 
 <td> <img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250"> </td>
 <td> &nbsp </td>
 <td> Build Notes.</br> <ul>
+<li>A 3D printed sled makes the build easy. It can be used in the field. It tells me it is a prototype.</li>
 <li>I use 1mm OD and 0.8mm ID teflon tube. I sleeve it with short PVC segments to keep it neat.</li>
-<li>If the wire spacing is not 'right' then SWR will devaiate at higher HF frequencies.</li>
+<li>If the wire spacing is not 'right' then SWR will deviate at higher HF frequencies.</li>
 <li>Teflon tubing protects the wires from damage by the core as it is fed through.</li>
-<li>Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF.</li>
+<li>Keeping the 50R side wires short to the SO239 results in excellent SWR up to lower VHF.</li>
 </ul>
 </td>
 </tr> </table>
