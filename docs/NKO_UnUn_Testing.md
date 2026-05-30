@@ -1,4 +1,4 @@
-# Efficiency Testing 4:1 UnUns (at HF)
+# Bench Testing Efficiency of 4:1 UnUns (at HF)
 
 When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power you can safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
 
@@ -30,6 +30,7 @@ Why do UnUns (and baluns) fail? There are 2 main mechanisms;
 
 - Heat. Loss in the device translates into heat. If the core gets much past 120c (for the types of ferrite I've been using), the magnetic properties will change and loss will escalate. When this happens the core may shatter.
   - Don't forget ambient temperature. In VK on a hot summer day, the UnUn may be at 60c in the noon day sun even before you put any power into it.
+  - The way a device handles unbalanced loads, and reactance, can strongly affect heating.
   - Higher power means more heat. Longer transmit means more heat.
   - Microphone setting and compression affects heat (SSB).
   - The mode of operation matters. SSB has a low duty cycle, FT8 is higher and some digital modes are higher again. The higher the duty cycle the greater the heating.
@@ -236,3 +237,15 @@ I suggest the following;
   - built with 1mm wire
 
 All builds _should_ handle those kinds of powers very well. Into a well matched antenna, close to 1:1 it is likely they will handle far more power. If you do put more power in, monitor SWR closely (and let me know how it goes!).
+
+
+## The Way Forward
+
+All this work relates to static tests in the lab on a balanced load with minimal to no reactance. As such it is very good to compare baluns and UnUns so long as the way the test is done is understood.
+
+We can't extrapolate these results from the lab onto performance with a real antenna.
+
+The way forward is either;
+
+- putting up then pulling down an antenna system and measuring temperature rise under real world use -or- 
+- using a data logger to measure actual performance in-situ. Since it would be best to test on all bands from 80m to 10m, this option feels 'best'. Measuring current in the legs of the antenna and the coax shield at the same time suggests this would be an optimum solution.
