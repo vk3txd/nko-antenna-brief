@@ -133,11 +133,14 @@ The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw 
 <table style="border-collapse: collapse; border: none;"> <tr>
 <td> <img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250"> </td>
 <td> &nbsp </td>
-<td> I use 1mm OD and 0.8mm ID teflon tube. I sleeve it with short PVC segments to keep it neat.</br>
-The real test of the build is in the upper HF area around 10m. If the spacing between the wires is not _right_ then
-the SWR deviates. I tried a 1.3mm OF tubing, SWR degraded quite badly</br>
-Also, the teflon tubing protects the wires from damage by the core as it is fed through.</br>
-Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF. </td?>
+<td> Build Notes.</br> <ul>
+<li>I use 1mm OD and 0.8mm ID teflon tube. I sleeve it with short PVC segments to keep it neat.</li>
+<li>The test is in the upper HF area around 10m. If the spacing between the wires is not _right_ then
+SWR deviates. I tried a 1.3mm OF tubing, SWR degraded quite badly</li>
+<li>Also, the teflon tubing protects the wires from damage by the core as it is fed through.</li>
+Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF.</li>
+</ul>
+</td>
 </tr> </table>
 
 I used 16 watts key down power this time, for 5 minutes, and then measured the temperature rise of the cores. One test was with a 100R load, the second with a 200R load.
