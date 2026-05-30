@@ -4,9 +4,11 @@ When you build an UnUn, testing SWR is easy enough using a resistor. But SWR doe
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
-> Findings; Bench testing 4:1 UnUns using temperature rise under power over time suggests they have very high efficiency, usually better than 98%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna will be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns do offer very good alternatives to commercial units with due consideration of maximum power limits.
+This 'doc focuses on lab testiing UnUns (and Baluns). A separate doc ideals with field testing (a work in progress).
 
-As you may realise from reading the below, this became an obsession (testing) that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. Building a 200R dummy load opened up test options I never had previously.
+> Findings; Bench testing 4:1 UnUns (an 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns do offer very good alternatives to commercial units with due consideration of maximum power limits.
+
+As you may realise from reading the below, testing became an obsession that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
 
 If you intend to build your own UnUn and baluns, then the information below should be helpful.
 
