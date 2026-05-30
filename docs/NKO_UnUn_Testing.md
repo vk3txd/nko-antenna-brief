@@ -64,26 +64,35 @@ Cutting to the chase, this is a 'gunna do' thing. I have not got-round-to-it yet
 
 # Dummy Load Testing
 
-On 23 May 2026 I used a 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn (uses the LO1234 core).
+On 23 May 2026 I used a 600W 200 ohm dummy load to test a number of 4:1 UnUn builds. Below is the picure of the dummy load connected to the QRP UnUn (uses the LO1234 core). You can see it uses 4 x 50R resistors in series to make the 200R load. These must be insulated from the heatsink of course, and thermally bonded.
 
 <img src="./dummy_load_4-1_UnUn.png" alt="Dummy load with UnUn connected" width="500">
 
-I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned it at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load. The SWR was 1:1 at 7mHz.
+I used an IC7410 transceiver set to 50W output as measured by a power meter, tuned at 7.1mHz, then fed that into the 4:1 UnUn connected to the 200 ohm dummy load. The SWR was 1:1 at 7mHz.
 
-A side note, the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, it got nearly too hot to touch even though the heatsink is quite large. A fan was used after the first test.
+Side notes, 
+
+- efficiency is calculated by finding the temperature rise of the ferrite core(s) after applying power. We know the weight of the core(s), the duration and amount of power. From that we know amount of power lost because of heating, and hence can calculate efficiency.
+- I used an LM335 temp sensor. This is in a TO92 plastic package and taped to the core under test.
+- the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, the heatsink got nearly too hot to touch even though the heatsink is quite large. A fan was used after the first test, blowing down on the resistor packages.
+- 50W key down constant carrier roughly relates to perhaps 250W of SSB - assuming an average power of 20% of peak.
+- I used a comparatively high power because I wanted to _clearly_ see the temperature response. Measuring small temperature rises under lower powers is fraught with error. Even so, a 2c temp rise is still quite small.
+- some of the wire used to make the UnUns is quite thin at 0.6mm, pushing that past 100W is not advised (and 100W may be ill advised).
+- shown in the pic below is what I considered and termed a "QRP" UnUn prior to testing. This has a single 25mm core. With a 50W carrier fed into it for 5 minutes, it performed better than I thought it would, I expected it to get far hotter. My fear for this build is the small ferrite mass and hence heating under adverse conditions. Yes it is highly efficient, but that must be balanced by heating under loss.
+
 
 | Build              | diam Weight | Power | Time | Temp Rise | Efficiency |
 |--------------------|-------------|-------|------|-----------|------------|
 | 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
 | 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
-| 2 x Lo1234-7 turns | 25mm 30g    | 50w   | 300s | 3.8c      | 99.4% |
+| 2 x LO1234-7 turns | 25mm 30g    | 50w   | 300s | 3.8c      | 99.4% |
 | 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
 | 1 x LO1238-7 turns | 35mm 38g    | 50w   | 305w | 4.4c      | 99.2% |
 | 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.2% |
 
 **Interpreting The Results**
 
-It is not a perfect test as it isn't connected to an antenna, but it is indicative of what to expect, and excellent to compare builds.
+It is not a perfect test as it isn't connected to an antenna, but it is possibly indicative of what to expect, and excellent to compare builds.
 
 These results are for a perfect load on the bench. A real antenna will be a different load which will affect performance. Tests at other dummy load impedances may show this.
 
@@ -92,13 +101,13 @@ Error will creep in from heat loss;
 - Heating the wire and supporting mount
 - Heat in the wires leaked to the metal SO239
 
-NKO will not have a perfectly balanced load like a dummy load. Load imbalance will incur extra core loss and it is highly likely that real life antenna use will present significantly different efficiency figures.
+NKO will not have a perfectly balanced load like a dummy load, and it will have a reactive component. Load imbalance will incur extra core loss and it is highly likely that real life antenna use will present significantly different efficiency figures.
 
-I would expect the NKO 4:1 to have different efficiency by band also. Each band will present a different load, with the vertical coax length having have a different impact on the currents and hence efficiencies.
+I would expect the NKO 4:1 to have different efficiency by band also. Each band will present a different load, with the vertical coax length having a different impact on the currents and hence efficiencies.
 
-The LO1234 core is quite small (25mm diameter) yet it handled 50W key down for 5 minutes like a champion when used with a 7 turn build. Trying a buld with 6 turns resulted in over double the heating and loss.
+The LO1234 core is quite small (25mm diameter) yet it handled 50W key down for 5 minutes like a champion when used with a 7 turn build. Trying a build with 6 turns resulted in over double the heating and loss.
 
-A side note. AI did an analysis of this core and recommended 6 turns. I tried 7 turns "just to see what happens" and clearly it has lower loss.
+A side note. AI did an analysis of this core and recommended 6 turns. I tried 7 turns "just to see what happens" and clearly it has lower loss. Trying 8 turns sounds sensible, the fact is with teflon sleeved wire, there is not enough space on the inside of the core to actually fit more turns without stacking them.
 
 The LO1238 core is still small at 35mm diameter. With 6 turns it performed very similarly in efficiency to the half sized LO1234 (25mm) core with 6 turns.
 
@@ -106,25 +115,29 @@ Putting 7 turns on the LO1238 showed the same efficiency as a 2 core version and
 
 The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a result that indicates it should work well at 400W SSB and with ease.
 
-Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
+Looking at the efficiency results, it is clear that the number of turns is the efficiency driving factor.
 
+Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
 
 
 ## Tests At Other SWRs
 
-How a device performs when operated into a non-optimum load is important. An antenna is almost guaranteed to not result in a perfect 1:1 SWR - so the simple question is "how efficient is it with a poor SWRs?" The last thing we want is for the UnUn to be destroyed on a poor antenna and/or damage a transceiver.
+How a device performs when operated into a non-optimum load is important. An antenna is almost guaranteed to not result in a perfect 1:1 SWR - so the simple question is "how efficient is it with a poor SWR?" The last thing we want is for the UnUn to be destroyed on a poor antenna and/or damage a transceiver.
 
-To test this I changed my dummy load to have a different resistance, hence SWR, and reduced the power I fed in - just in case efficiency suffered badly. Temp rise is the key as this converts to efficiency.
+For test this I changed my dummy load to have a different resistance, hence SWR, and reduced the power I fed in - just in case efficiency suffered badly. Temp rise of the core indicates efficiency.
 
 | Build              | diam Weight | Power | Res  |  SWR  | Time | Temp Rise | Efficiency |
 |--------------------|-------------|-------|------|-------|------|-----------|------------|
 | 2 x LO1234-7 turns | 25mm 30g    | 20w   | 100R |  2:1  | 300s |   2.3c    | 99.1% |
 
+
 **Interpreting the results**
 
-Again, the only thing that can be said; "On the bench into a 100R dummy load the UnUn showed the given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed.
+Again, the only thing that can be said; "On the bench into a balanced and non reactive 100R dummy load the UnUn showed the given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed. 
 
-However, the UnUn performed very well.
+A 2:1 SWR and 100R resistance will increase the current in the windings. This did not seem to be a concern. For the LO1234 build, I used 0.63mm wire sleeved in teflon tube.
+
+However, the UnUn still performed very well.
 
 
 ## Thermal Headroom
@@ -133,11 +146,13 @@ I used AI to crunch the numbers for efficiency. I asked it what the performance 
 
 It defined Thermal Headroom as "Thermal headroom means how much extra heat a part or system can tolerate before it reaches an unsafe, unreliable, or performance-changing temperature."
 
-Example: If a core starts at 25°C and reaches 35°C in a 50 W test, it has far more thermal headroom than a core that reaches 80°C in the same test.
+Example: If a core starts at 25°C and reaches 35°C in a 50 W test, it has far more thermal headroom than a core that reaches 80°C in the same test. Of great importance, remember, ambient temperature matters. If the UnUn/Balun is in the sun and _already_ hot, adding a lot more heat can push it past safe levels.
 
 From the tests, the more efficient an UnUn is, the less heating, and the heavier the core is the more heat it can absorb before heating badly. So if you have high efficiency and heavier cores, the thermal headroom is the greatest.
 
 On a practical note, if the core is small and light and operated into a very poor load, the efficiency will suffer and being lighter will heat more than a heavier core might do.
+
+Finally, the cores dissipate heat into its environment. Inside a box with poor air flow. Generally my expectation is that a core may rise in temperature faster than it cools. At the same time, 2 cores stacked will have a larger surface area which may cool faster.
 
 
 ## Derating Advice
