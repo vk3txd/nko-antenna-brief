@@ -130,7 +130,11 @@ Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4
 
 The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw sleeved in teflon tube.
 
-<img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250">
+<table> <tr>
+<td> <img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250"> </td>
+<td> &nbsp </td>
+<td> Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF. </td?>
+</tr> </table>
 
 I used 16 watts key down power this time, for 5 minutes, and then measured the temperature rise of the cores. One test was with a 100R load, the second with a 200R load.
 
