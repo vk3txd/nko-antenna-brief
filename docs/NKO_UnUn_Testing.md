@@ -135,10 +135,9 @@ The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw 
 <td> &nbsp </td>
 <td> Build Notes.</br> <ul>
 <li>I use 1mm OD and 0.8mm ID teflon tube. I sleeve it with short PVC segments to keep it neat.</li>
-<li>The test is in the upper HF area around 10m. If the spacing between the wires is not _right_ then
-SWR deviates. I tried a 1.3mm OF tubing, SWR degraded quite badly</li>
-<li>Also, the teflon tubing protects the wires from damage by the core as it is fed through.</li>
-Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF.</li>
+<li>If the wire spacing is not 'right' then SWR will devaiate at higher HF frequencies.</li>
+<li>Teflon tubing protects the wires from damage by the core as it is fed through.</li>
+<li>Keeping the 50R side wires short to the SO239 result in excellent SWR up to lower VHF.</li>
 </ul>
 </td>
 </tr> </table>
