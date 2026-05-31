@@ -15,25 +15,29 @@ This doc will detail field tests that are intended to test and measure how UnUns
 
 The end goal is to determine;
 
-- how much loss, and hence stress, a device in the field experiences with actual use.
+- how much loss, and hence stress, a device in the field experiences with actual use with an antenna.
   - NKO 4:1 UnUn
   - NKO 1:1 balunn
-  - OCF 4:1 current balun
+  - OCF 4:1 current balun in a conventional OCF
 - the current distribution the system.
   - NKO is a "3 conductor" system - the two OCF arms and the intentional coax shield. How much current does each carry?
   - Repeat for a conventional OCF that uses a 4:1 current balun
   - The goal being to compare an OCF to the NKO.
 
-Why?  
+I've seen and done tests on common mode current back at the transceiver. It is actually very worthwhile and I recommend it so that you know what you are dealing with and if you have al atent problem. Never have I seen those kinds of tests done at the apex of an antenna. 
 
-It interests me. Pure and simple. I've not seen this done elsewhere. Sure, there is plenty of supposition but no actual measurement so far as I know.
+
+## Why am I pursuing this so much?  
+
+It interests me. Pure and simple. I've not seen this done at anywhere near this depth elsewhere. Sure, there is plenty of supposition but no actual measurement so far as I know.
 
 I have many questions;
 
 - How does the UnUn change its efficiency when used with an antenna, with a reactive and off-perfect impedance load?
 - How does it change by band?
 - Does the NKO vertical coax truly carry significant current, by band, and how well balanced is the load presented to the UnUn?
-- A wise person said in his no longer available blog, paraphrasing, "_until you measure, you don't really know._"
+
+A wise person said in his no longer available blog, and paraphrasing, "_until you measure, you don't really know._"
 
 
 ## Methods
@@ -51,4 +55,4 @@ There are 2 methods in mind;
 
 
 History
-30 May 2026 - initial write
+31 May 2026 - initial write
