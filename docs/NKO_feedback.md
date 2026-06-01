@@ -2,7 +2,7 @@
 
 As of **31 May 2026**, there remain  **three external test stations** documented in this repository in addition to the author’s own testing. A fourth dropped out around 22 May 2026.
 
-These reports are subjective, path-dependent, testing against different antennas, and early. That said, they line up well enough to be worth recording.
+These reports are subjective, path-dependent, testing against different antennas, and early in the evaluation. That said, they line up well enough to be worth recording.
 
 ---
 

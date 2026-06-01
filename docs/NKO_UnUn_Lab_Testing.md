@@ -4,11 +4,11 @@ When you build an UnUn, testing SWR is easy enough using a resistor. But SWR doe
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
-This 'doc focuses on lab testiing UnUns (and Baluns). A separate doc ideals with field testing (a work in progress).
+This 'doc focuses on lab testiing UnUns (and Baluns). A separate doc deals with field testing (a work in progress).
 
 > Findings; Bench testing 4:1 UnUns (an 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns do offer very good alternatives to commercial units with due consideration of maximum power limits.
 
-As you may realise from reading the below, testing became an obsession that I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
+As you may realise from reading the below, testing became an obsession I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. The claimed "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
 
 If you intend to build your own UnUn and baluns, then the information below should be helpful.
 
@@ -23,7 +23,7 @@ That has been used as a justification for not being concerned about efficiency.
 
 However and very importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used than with an inefficient core.
 
-An example. From testing we know that a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
+An example. From testing we know that what I had considered a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
 
 
 ## Failure Mechanisms
@@ -184,7 +184,7 @@ So, move on, saturation of these builds is not going to happen.
 
 ## Does VNA testing come close to testing under power?
 
-Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn and a bood balun the loss is quite a small figure, so that errors in testing and calibration reduces confidence in my VNA testing.
+Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn and a good balun the loss is quite a small figure, so that errors in testing and calibration reduces confidence in my VNA testing.
 
 Some people have suggested the small signal performance of a device can be very different to operation under power (with reference to an UnUn or Balun). I'm not seeing it. Sure, you can use enough power to cause insulation breakdown, or over heat a core - but absent those extreme conditions, I found a 50W key down test to produce numbers similar to a VNA.
 
