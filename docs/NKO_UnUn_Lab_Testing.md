@@ -4,9 +4,9 @@ When you build an UnUn, testing SWR is easy enough using a resistor. But SWR doe
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
-This 'doc focuses on lab testiing UnUns (and Baluns). A separate doc deals with field testing (a work in progress).
+This 'doc focuses on lab testiing UnUns (and sme 4:1 Guanella Baluns). A separate doc deals with field testing (a work in progress).
 
-> Findings; Bench testing 4:1 UnUns (an 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns do offer very good alternatives to commercial units with due consideration of maximum power limits.
+> Findings; Bench testing 4:1 UnUns (and 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns and baluns indeed do offer good alternatives to commercial units with due consideration of maximum power limits.
 
 As you may realise from reading the below, testing became an obsession I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. The claimed "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
 
@@ -15,7 +15,7 @@ If you intend to build your own UnUn and baluns, then the information below shou
 I've also included some 4:1 Balun tests so as to compare to an UnUn.
 
 
-## Why Efficiency Matters
+## Testing & Why Efficiency Matters
 
 You will never ever notice the difference in signal strength between an efficient and an inefficient UnUn or balun. 
 
@@ -24,6 +24,12 @@ That has been used as a justification for not being concerned about efficiency.
 However and very importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used than with an inefficient core.
 
 An example. From testing we know that what I had considered a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
+
+Some important aspects about testing
+
+- there is no conjecture or assumption involved. You can say "At these powers with this kind of load, expect these efficiencies."
+- you get an actual number you can compare from build to build
+- it is important to detail _how_ tests are done - the method
 
 
 ## Failure Mechanisms
@@ -97,14 +103,21 @@ Side notes,
 - shown in the pic below is what I considered and termed a "QRP" UnUn prior to testing. This has a single 25mm core. With a 50W carrier fed into it for 5 minutes, it performed better than I thought it would, I expected it to get far hotter. My fear for this build is the small ferrite mass and hence heating under adverse conditions. Yes it is highly efficient, but that must be balanced by heating under loss.
 
 
-| Build              | diam Weight | Power | Time | Temp Rise | Efficiency |
-|--------------------|-------------|-------|------|-----------|------------|
-| 1 x LO1234-6 turns | 25mm 15g    | 50w   | 300s | 18.4c     | 98.5% |
-| 1 x LO1234-7 turns | 25mm 15g    | 50w   | 300s | 8.1c      | 99.4% |
-| 2 x LO1234-7 turns | 25mm 30g    | 50w   | 300s | 3.8c      | 99.4% |
-| 1 x LO1238-6 turns | 35mm 38g    | 50w   | 307s | 7.0c      | 98.6% |
-| 1 x LO1238-7 turns | 35mm 38g    | 50w   | 305w | 4.4c      | 99.2% |
-| 2 x LO1238-7-turns | 35mm 76g    | 50w   | 306s | 2.2c      | 99.2% |
+| UnUn Build         | diam Weight | Power | Load  swr  | Time | Temp Rise | Efficiency |
+|--------------------|-------------|-------|------------|------|-----------|-------|
+| 1 x LO1234-6 turns | 25mm 15g    | 50w   | 200R  1:1  | 300s | 18.4c     | 98.5% |
+| 1 x LO1234-7 turns | 25mm 15g    | 50w   | 200R  1:1  | 300s | 8.1c      | 99.4% |
+| 2 x LO1234-7 turns | 25mm 30g    | 50w   | 200R  1:1  | 300s | 3.8c      | 99.4% |
+| 1 x LO1238-6 turns | 35mm 38g    | 50w   | 200R  1:1  | 307s | 7.0c      | 98.6% |
+| 1 x LO1238-7 turns | 35mm 38g    | 50w   | 200R  1:1  | 305w | 4.4c      | 99.2% |
+| 2 x LO1238-7-turns | 35mm 76g    | 50w   | 200R  1:1  | 306s | 2.2c      | 99.2% |
+
+I did at test at other SWR's
+
+| UnUn Build         | diam Weight | Power | Load  swr  | Time | Temp Rise | Efficiency |
+|--------------------|-------------|-------|------------|------|-----------|-------|
+| 2 x LO1234-7 turns | 25mm 30g    | 20w   | 100R  2:1  | 300s |   2.3c    | 99.1% |
+
 
 **Interpreting The Results**
 
@@ -136,11 +149,9 @@ Looking at the efficiency results, it is clear that the number of turns is the e
 Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4:1 is not so critical, but keeping it neat also helps. You'll see the effect when you run an SWR test using a 200R resistor. Long leads will make the SWR climb particularly at the top end of HF.
 
 
-## Testing A 2 core 4:1 Current (Guanella) Balun
+## Testing Some 2 core 4:1 Current (Guanella) Baluns
 
-I wanted to see how a current balun would compare to an UnUn. 
-
-The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw sleeved in teflon tube.
+I wanted to see how current baluns would compare to the UnUns Ive been testing. These are dual core builds comprising a pair of 100R 1:1 baluns connected in parallel on the 50R side and in series on the 200R side. These are the balun of choice for OCF antennas and I've been using them for over 20 years now. In about 2010 I tested them very "loosely" as having about 98.5% efficiency using a dummy load and heat rise method (same as I did below).
 
 <table style="border-collapse: collapse; border: none;"> <tr>
 <td> <img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250"> </td>
@@ -152,26 +163,40 @@ The balun uses 2 x LO1234 cores (25mm OD), each wound with 9 turns of 0.8mm ecw 
 <li>Teflon tubing protects the wires from damage by the core as it is fed through.</li>
 <li>Keeping the 50R side wires short to the SO239 results in excellent SWR up to lower VHF.</li>
 </ul>
-</td>
-</tr> </table>
+</td> </tr>
 
-I used 16 watts key down power this time, for 5 minutes, and then measured the temperature rise of the cores. One test was with a 100R load, the second with a 200R load.
+<td> <img src="./4-1_Current_Balun_LO1238.png" alt="An Enternal 4:1 Current Balun - LO1238 cores" width="250"> </td>
+<td> &nbsp </td>
+<td> Build Notes.</br> <ul>
+<li>I make some 4:1 current baluns for sale in a flanged box that has a weather seal.</li>
+<li>I use 1mm OD and 0.8mm ID teflon tube. I sleeve the pairs with short PVC segments to keep it neat.</li>
+<li>If the wire spacing is not 'right' then SWR will deviate at higher HF frequencies.</li>
+<li>Teflon tubing protects the wires from damage by the core as it is fed through.</li>
+<li>Keeping the 50R side wires short to the SO239 results in excellent SWR up to lower VHF.</li>
+</ul>
+</td> </tr>
 
-| Build              | diam Weight  | Power | Load | Time | Temp Rise | Efficiency |
-|--------------------|--------------|-------|------|------|-----------|------------|
-| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 200R | 300s | 0.8c      | 99.6% |
-| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 100R | 300s | 1.2c      | 99.4% |
+ </table>
+
+I tested these 2 baluns at different powers, expecting the smaller core to not handle higher power well.
+
+For the smaller version, I used 16 watts key down power, and for the larger LO1238 cores I used 50W - both for 5 minutes, and then measured the temperature rise of the cores. I tested the smaller balun with a 100R load as well as with a 200R load - I wanted to test 'off spec' efficiencies.
+
+| Balun Build        | diam Weight  | Power | Load  swr  | Time | Temp Rise | Efficiency |
+|--------------------|--------------|-------|------------|------|-----------|------------|
+| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 200R  1:1  | 300s | 0.8c      | 99.6% |
+| 2 x LO1234-9 turns | 25mm 15g x 2 | 16w   | 100R  2:1  | 300s | 1.2c      | 99.4% |
+| 2 x LO1238-9 turns | 35mm 38g x 2 | 50w   | 200R  1:1  | 300s | 3.0c      | 98.8% |
 
 These kinds of efficiencies tell me I should trial increasing the number of turns on the UnUn. Note: chasing a few 10ths of a percent seems OCD.
 
 The tests tell us nothing about how the balun handles an unbalanced and reactive load.
 
-The _small_ loss of efficiency by using an off 200R load surprised me (very much). I had expected it to perform much worse. Indeed, in about 2015 I had performed a similar test which showed 85% efficiency with a 135R load. The above test debunks that. Yes it uses a different build (cores) and dummy load - but the difference is such that it calls into question my original measurements. What was I thinking?
+The _small_ loss of efficiency by using an off 200R load surprised me (very much). I had expected it to perform much worse. Indeed, in about 2010 I had performed a similar test which showed 85% efficiency with a 135R load. The above test debunks that. Yes it uses a different build (cores) and dummy load - but the difference is such that it calls into question my original measurements. What was I thinking?
 
 The little LO1234 cores really do perform well - way better than expected and for both a 4:1 UnUn and a 4:1 current balun.
 
-Further work; I will re-test with the same 4:1 current balun build as used all those years ago - and at 50W key down.
-
+The larger LO1238 cores being less efficient than the smaller cores can perhaps be explained by it having longer windings and being a box with less air flow so less heat loss and from that perhaps being more accurate in loss measurements. 
 
 ## Saturation
 
@@ -187,28 +212,6 @@ So, move on, saturation of these builds is not going to happen.
 Yes it does. I find VNA testing far easier to do, but the ability to resolve actual loss is difficult. For an UnUn and a good balun the loss is quite a small figure, so that errors in testing and calibration reduces confidence in my VNA testing.
 
 Some people have suggested the small signal performance of a device can be very different to operation under power (with reference to an UnUn or Balun). I'm not seeing it. Sure, you can use enough power to cause insulation breakdown, or over heat a core - but absent those extreme conditions, I found a 50W key down test to produce numbers similar to a VNA.
-
-One thing about testing, you get an actual number you can compare. It is important to detail _how_ tests are done.
-
-
-## Tests At Other SWRs
-
-How a device performs when operated into a non-optimum load is important. An antenna is almost guaranteed to not result in a perfect 1:1 SWR - so the simple question is "how efficient is it with a poor SWR?" The last thing we want is for the UnUn to be destroyed on a poor antenna and/or damage a transceiver.
-
-For test this I changed my dummy load to have a different resistance, hence SWR, and reduced the power I fed in - just in case efficiency suffered badly. Temp rise of the core indicates efficiency.
-
-| Build              | diam Weight | Power | Res  |  SWR  | Time | Temp Rise | Efficiency |
-|--------------------|-------------|-------|------|-------|------|-----------|------------|
-| 2 x LO1234-7 turns | 25mm 30g    | 20w   | 100R |  2:1  | 300s |   2.3c    | 99.1% |
-
-
-**Interpreting the results**
-
-Again, the only thing that can be said; "On the bench into a balanced and non reactive 100R dummy load the UnUn showed the given efficiencies" - extrapolating this to performance with a real antenna cannot be assumed. 
-
-A 2:1 SWR and 100R resistance will increase the current in the windings. This did not seem to be a concern. For the LO1234 build, I used 0.63mm wire sleeved in teflon tube.
-
-However, the UnUn still performed very well.
 
 
 ## Thermal Headroom
