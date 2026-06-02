@@ -15,7 +15,7 @@ If you intend to build your own UnUn and baluns, then the information below shou
 
 ## Testing & Why Efficiency Matters
 
-You will never ever notice the difference in signal strength between an efficient and an inefficient UnUn or balun. 
+You won't notice the difference in signal strength between an efficient and an inefficient UnUn or balun when used with an antenna. 
 
 That has been used as a justification for not being concerned about efficiency.
 
