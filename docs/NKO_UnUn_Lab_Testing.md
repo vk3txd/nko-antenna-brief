@@ -4,9 +4,11 @@ When you build an UnUn, testing SWR is easy enough using a resistor. But SWR doe
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
-This 'doc focuses on lab testing UnUns and s0me 4:1 Guanella Baluns. A separate doc deals with field testing (a work in progress).
+This 'doc focuses on lab testing UnUns and some 4:1 Guanella Baluns under power into a dummy load to determine efficiency. A separate doc deals with field testing (a work in progress).
 
 > Findings; Bench testing 4:1 UnUns (and 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns and baluns indeed do offer good alternatives to commercial units with due consideration of maximum power limits.
+
+There are other tests that can be performed on baluns to determine if they are actually a balun and others have documented them. See the end of this doc for more information. As mentioned, this doc focuses on efficiency testing.
 
 As you may realise from reading the below, testing became an obsession I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. The claimed "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
 
@@ -242,6 +244,27 @@ I suggest the following;
 
 All builds _should_ handle those kinds of powers very well. Into a well matched antenna, close to 1:1 it is likely they will handle far more power. If you do put more power in, monitor SWR closely (and let me know how it goes!).
 
+## Properly Teting Baluns ##
+
+My testing of baluns has been focused on loss and hence heating of the core and from that efficiency. It interested me the most.
+
+However that is not the full test of a balun. 
+
+**Owen Duffy VK2OMD**  in his since disabled blog at owenduffy.net suggested tests to determine if a balun is actually suitable to use as a balun. Some designs on the internet do not actually perfom the function of connecting a balanced to an unbalanaced load well.
+
+Here are his tests and expected results:
+
+- Measure the 200 Ω test load directly — should be very close to 200 + j0 Ω, about 4:1 VSWR on a 50 Ω analyser.
+- Measure balun input with output open — should show high impedance, |Z| > 1000 Ω.
+- Measure balun input with 200 + j0 Ω on output — should be very close to 50 + j0 Ω, VSWR < 1.2.
+- Repeat with coax shield bonded to one output terminal — should still be very close to 50 + j0 Ω, VSWR < 1.2.
+- Repeat with coax shield bonded to the other output terminal — should still be very close to 50 + j0 Ω, VSWR < 1.2.
+
+That last pair of tests is the important “good balun” discriminator. A balun that only works into a perfectly floating, symmetric load is not necessarily a useful antenna balun. Duffy points out that most HF wire antennas are better thought of as three-terminal systems, because ground/common-mode path matters, not just the two antenna terminals.
+
+Note that these tests are for baluns, _not_ UnUns.
+
+**W8JI** Has a wealth of balun information and test advice. See https://w8ji.com/balun_test.htm
 
 ## The Way Forward
 
@@ -253,3 +276,5 @@ The way forward is either;
 
 - putting up then pulling down an antenna system and measuring temperature rise under real world use -or- 
 - using a data logger to measure actual performance in-situ. Since it would be best to test on all bands from 80m to 10m, this option feels 'best'. Measuring current in the legs of the antenna and the coax shield at the same time suggests this would be an optimum solution.
+
+
