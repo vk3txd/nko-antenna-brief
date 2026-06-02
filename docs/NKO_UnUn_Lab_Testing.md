@@ -1,18 +1,16 @@
-# Bench Testing Efficiency of 4:1 UnUns (at HF)
+# Bench Testing Efficiency of 4:1 UnUns and 4:1 Current Baluns (at HF)
 
 When you build an UnUn, testing SWR is easy enough using a resistor. But SWR does not tell you how much power you can safely feed into it before it gets too hot from loss. We know the wire size, we know the core size, we can estimate power handling - but we really don't actually know what its power handling is.
 
 Testing efficiency is therefore called for. That will give us a guideline as to how much power can be used before the UnUn or balun may be stressed to failure.
 
-This 'doc focuses on lab testiing UnUns (and sme 4:1 Guanella Baluns). A separate doc deals with field testing (a work in progress).
+This 'doc focuses on lab testing UnUns and s0me 4:1 Guanella Baluns. A separate doc deals with field testing (a work in progress).
 
 > Findings; Bench testing 4:1 UnUns (and 4:1 baluns) using temperature rise under power over time suggests they have very high efficiency, usually better than 98%, often above 99%. While this is using a balanced and non reactive load, the results do suggest real world performance with an antenna may be very good. Testing at other than their characteristic impedance indicates loss increases, but not massively so. This leads to a reasonable conclusion that home built 4:1 UnUns and baluns indeed do offer good alternatives to commercial units with due consideration of maximum power limits.
 
 As you may realise from reading the below, testing became an obsession I struggled to resist. In fairness I have seen builds of baluns and UnUns on YouTube and blogs for years, and not seen anyone do these kinds of tests. The claimed "Works great" is not a metric of value. Building a 200R dummy load opened up test options I never had previously.
 
 If you intend to build your own UnUn and baluns, then the information below should be helpful.
-
-I've also included some 4:1 Balun tests so as to compare to an UnUn.
 
 
 ## Testing & Why Efficiency Matters
@@ -23,12 +21,13 @@ That has been used as a justification for not being concerned about efficiency.
 
 However and very importantly, if your UnUn or Balun is highly efficient, there will be less loss and hence less heating of the core and that means a smaller core can be used at higher power. It also means digital modes that have a higher duty cycle meaning more average power and heating, can be more safely used than with an inefficient core.
 
-An example. From testing we know that what I had considered a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions).
+An example. From testing I now know that what I considered a QRP build using a 25mm diameter core can easily handle a 50W constant carrier key down power for 5 minutes into a 200R dummy load because it is highly efficient. Testing shows the optimum build also (I tried 2 versions). I had thought it was good, but not how good.
 
-Some important aspects about testing
+Some important aspects about testing;
 
-- there is no conjecture or assumption involved. You can say "At these powers with this kind of load, expect these efficiencies."
-- you get an actual number you can compare from build to build
+- there is no conjecture or assumption involved. You can say "At these powers with this kind of load, expect these efficiencies.",
+- you get an actual number you can compare from build to build,
+- you can much more accurately estimate the maximum safe power a device can handle,
 - it is important to detail _how_ tests are done - the method
 
 
@@ -151,7 +150,7 @@ Lead dress matters. Keep the 50R side leads short and neat. The 200R side of a 4
 
 ## Testing Some 2 core 4:1 Current (Guanella) Baluns
 
-I wanted to see how current baluns would compare to the UnUns Ive been testing. These are dual core builds comprising a pair of 100R 1:1 baluns connected in parallel on the 50R side and in series on the 200R side. These are the balun of choice for OCF antennas and I've been using them for over 20 years now. In about 2010 I tested them very "loosely" as having about 98.5% efficiency using a dummy load and heat rise method (same as I did below).
+I wanted to see how current baluns would compare to the UnUns I've been testing. These are dual core builds comprising a pair of 100R 1:1 baluns connected in parallel on the 50R side and in series on the 200R side. These are the balun of choice for OCF antennas and I've been using them for over 20 years now. In about 2010 I tested them very "loosely" as having about 98.5% efficiency using a dummy load and heat rise method (same as I did below).
 
 <table style="border-collapse: collapse; border: none;"> <tr>
 <td> <img src="./4-1_Current_Balun_LO1234.png" alt="My test 4:1 Current Balun - LO1234 cores" width="250"> </td>
