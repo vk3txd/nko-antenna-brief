@@ -53,7 +53,7 @@ There are a few ways to test a 4:1 UnUn's efficiency. SWR is easy - just put a 2
 
 **Most important and remember** - how you are testing may not equate to how the device under test performs in real life with a different load which will probably be unbalanced and reactive.
 
-Efficiency is a little more difficult.
+Efficiency measurement and testing is a little more difficult.
 
 **1. VNA Testing** can be done in 2 ways; 
 
