@@ -104,14 +104,17 @@ Side notes,
 - shown in the pic below is what I considered and termed a "QRP" UnUn prior to testing. This has a single 25mm core. With a 50W carrier fed into it for 5 minutes, it performed better than I thought it would, I expected it to get far hotter. My fear for this build is the small ferrite mass and hence heating under adverse conditions. Yes it is highly efficient, but that must be balanced by heating under loss.
 
 
-| UnUn Build         | diam Weight | Power | Load  swr  | Time | Temp Rise | Efficiency |
-|--------------------|-------------|-------|------------|------|-----------|-------|
-| 1 x LO1234-6 turns | 25mm 15g    | 50w   | 200R  1:1  | 300s | 18.4c     | 98.5% |
-| 1 x LO1234-7 turns | 25mm 15g    | 50w   | 200R  1:1  | 300s | 8.1c      | 99.4% |
-| 2 x LO1234-7 turns | 25mm 30g    | 50w   | 200R  1:1  | 300s | 3.8c      | 99.4% |
-| 1 x LO1238-6 turns | 35mm 38g    | 50w   | 200R  1:1  | 307s | 7.0c      | 98.6% |
-| 1 x LO1238-7 turns | 35mm 38g    | 50w   | 200R  1:1  | 305w | 4.4c      | 99.2% |
-| 2 x LO1238-7-turns | 35mm 76g    | 50w   | 200R  1:1  | 306s | 2.2c      | 99.2% |
+| UnUn Build           | diam Weight | Power | Load  swr  | Time | Temp Rise | Efficiency |
+|----------------------|-------------|-------|------------|------|-----------|-------|
+| 1 x LO1234-6 turns   | 25mm 15g    | 50w   | 200R  1:1  | 300s | 18.4c     | 98.5% |
+| 1 x LO1234-7 turns   | 25mm 15g    | 50w   | 200R  1:1  | 300s | 8.1c      | 99.4% |
+| 2 x LO1234-7 turns   | 25mm 30g    | 50w   | 200R  1:1  | 300s | 3.8c      | 99.4% |
+|                      |             |       |            |      |           |       |
+| 2 x FT114-43-7-turns | 29mm 26g    | 50w   | 200R  1:1  | 150s | 3.4c      | 99.1% |
+|                      |             |       |            |      |           |       |
+| 1 x LO1238-6 turns   | 35mm 38g    | 50w   | 200R  1:1  | 307s | 7.0c      | 98.6% |
+| 1 x LO1238-7 turns   | 35mm 38g    | 50w   | 200R  1:1  | 305w | 4.4c      | 99.2% |
+| 2 x LO1238-7-turns   | 35mm 76g    | 50w   | 200R  1:1  | 306s | 2.2c      | 99.2% |
 
 I did at test at other SWR's
 
@@ -179,7 +182,7 @@ I wanted to see how current baluns would compare to the UnUns I've been testing.
 
  </table>
 
-I tested these 2 baluns at different powers, expecting the smaller core to not handle higher power well.
+I tested these 2 current baluns at different powers, expecting the smaller core to not handle higher power well.
 
 For the smaller version, I used 16 watts key down power, and for the larger LO1238 cores I used 50W - both for 5 minutes, and then measured the temperature rise of the cores. I tested the smaller balun with a 100R load as well as with a 200R load - I wanted to test 'off spec' efficiencies.
 
@@ -244,13 +247,14 @@ I suggest the following;
 
 All builds _should_ handle those kinds of powers very well. Into a well matched antenna, close to 1:1 it is likely they will handle far more power. If you do put more power in, monitor SWR closely (and let me know how it goes!).
 
-## Properly Teting Baluns ##
+
+## Testing Baluns - More information ##
 
 My testing of baluns has been focused on loss and hence heating of the core and from that efficiency. It interested me the most.
 
 However that is not the full test of a balun. 
 
-**Owen Duffy VK2OMD**  in his since disabled blog at owenduffy.net suggested tests to determine if a balun is actually suitable to use as a balun. Some designs on the internet do not actually perfom the function of connecting a balanced to an unbalanaced load well.
+**Owen Duffy VK2OMD**  in his since disabled blog at owenduffy.net suggested tests to determine if a balun is actually suitable to use as a balun - which is to convert a balanced to an unbalanced load. Some designs on the internet do not actually perfom the function of connecting a balanced to an unbalanaced load at all well.
 
 Here are his tests and expected results:
 
