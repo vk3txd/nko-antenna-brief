@@ -96,6 +96,7 @@ I used an IC7410 transceiver set to 50W output as measured by a power meter, tun
 Side notes, 
 
 - efficiency is calculated by finding the temperature rise of the ferrite core(s) after applying power. We know the weight of the core(s), the duration and amount of power. From that we know amount of power lost because of heating, and hence can calculate efficiency.
+- the below tests were done at 7.1MHz approx.
 - I used an LM335 temp sensor. This is in a TO92 plastic package and taped to the core under test.
 - the resistor rating of the dummy load is 600W, with a 50W signal for 5 minutes, the heatsink got nearly too hot to touch even though the heatsink is quite large. A fan was used after the first test, blowing down on the resistor packages.
 - 50W key down constant carrier roughly relates to perhaps 250W of SSB - assuming an average power of 20% of peak.
@@ -147,6 +148,8 @@ The LO1238 core is still small at 35mm diameter. With 6 turns it performed very 
 Putting 7 turns on the LO1238 showed the same efficiency as a 2 core version and double the temperature rise - so they line up rather well.
 
 The dual LO1238 and 7 turns, using 1mm ECW teflon sleeved wire, turned in a result that indicates it should work well at 400W SSB and with ease.
+
+The FT110-43 core is a premium brand core, Fair-rite and top quality. Its performance was pretty much the same as the hobbyist shop LO1234 cores with the cheaper cores being marginally better but within limits of error to make the difference almost nil. My preference after many hours of testing would be for the LO1234 cores mainly because they are slight smaller (diameter).
 
 Looking at the efficiency results, it is clear that the number of turns is the efficiency driving factor.
 
