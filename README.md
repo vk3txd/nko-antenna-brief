@@ -186,4 +186,5 @@ Richard Holmes VK3TXD
 - 08 May 2026 - Added doc on how to analyse speech in an audio recording suggestion
 - 09 May 2026 - Add example plot from 80m recordings and analysis
 - 23 May 2026 - Add 4:1 UnUn Lab testing and test results. 200R dummy load and temp sensor method.
+- 19 June 2026 - Add Jaycar cores data. Add Flux stress (saturation) doc. Small typo fixes.
 

@@ -54,7 +54,7 @@ Practical power handling still depends on:
 
 Ferrite cores do have a magnetic saturation region, but at HF the core will generally become lossy and heat long before a simple transformer formula predicts classic magnetic saturation.
 
-Saturation happens at very high power, many kilowatts, but before then "flus stress" is a consideration.
+Saturation happens at very high power, many kilowatts, but before then "flux stress" is a consideration.
 
 So a calculation that says "this core would not saturate until many kilowatts" should **not** be read as:
 
