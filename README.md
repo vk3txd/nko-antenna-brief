@@ -40,6 +40,8 @@ This is the first point to understand before comparing it with a conventional OC
 - [How To Analyse Speech in Audio Recordings Suggestion](docs/NKO_Speech_Analysis.md)
 - [An HF propogation primer that mentions NKO](docs/HF_Propagation_Primer.md)
 - [Efficiency testing various 4:1 UnUn builds In The Lab](docs/NKO_UnUn_Lab_Testing.md)
+- [4:1 UnUn and general core saturation notes](docs/NKO_Transformer_Flux_Stress_Notes.md)
+- [Jaycar LO123x Ferrite Core notes, tech data reference](docs/Jaycar_LO123x_ferrite_reference_V1.md)
 
 NEC models are also included in the `docs` folder. They are intentionally simple three-wire starting points for 4NEC2. Set the characteristic impedance to 200 Ω and sweep from there.
 

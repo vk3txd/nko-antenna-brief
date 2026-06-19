@@ -1,8 +1,64 @@
 # NKO and the use of AI
 
-This repository exists partly because AI became part of the investigation and development.
+This repository exists partly because AI became such a strong part of the investigation and development of NKO and a learning tool for me.
 
-That does not mean AI invented the NKO or that AI should be trusted blindly. It means AI was used as a very fast research and sanity-check tool during the process.
+If you use AI to analyse NKO, and I suggest that is a good idea, tell it to ingest this whole GitHub repo.
+
+That does not mean AI invented the NKO or that AI should be trusted blindly. It means AI was used as a very fast research and sanity-check tool during the process. But it is highly fallible.
+
+Indeed in May 2026 I was emailed an AI analysis of NKO that was quite dismissive and done without the full NKO context. The end result was driven from a lack of information producing an almost amusing collection of amateur radio myths and assumptions;
+
+Silly things an AI usually gets wrong without full NKO context;
+
+- It calls the NKO “just an OCF dipole.”
+- It calls the NKO “just a Carolina Windom clone.”
+- It calls the vertical coax-shield section “random feedline radiation.”
+- It treats intentional upper-shield current as a fault.
+- It forgets the lower 1:1 choke defines the end of the intended vertical radiator.
+- It says “feedline radiation is always bad.”
+- It says the antenna is “too busy.”
+- It says the antenna is “confused.”
+- It says the NKO is “trying to be two antennas at once.”
+- It talks about the antenna as if it has intentions instead of currents.
+- It says mixed horizontal and vertical response must make receive audio muddy.
+- It says the NKO picks up “trash from both polarizations.”
+- It assumes horizontal antennas are always quiet.
+- It assumes vertical antennas are always noise magnets.
+- It assumes a centre-fed resonant dipole is automatically the “pure” receive reference.
+- It assumes the quietest antenna is automatically the best receive antenna.
+- It treats higher S-meter noise as proof of worse reception.
+- It ignores wanted signal-to-noise ratio.
+- It ignores speech readability and intelligibility.
+- It assumes a Carolina Windom-style antenna must have the worst SNR.
+- It claims “phase smearing” without defining a real mechanism.
+- It says a vertical receives one clean polarization.
+- It ignores ionospheric polarization rotation, multipath, and selective fading.
+- It treats mixed polarization as contamination rather than a possible advantage.
+- It says noise gets “inside the shielded system.”
+- It treats the outside of the coax shield as if it is the inside of the coax.
+- It says an imperfect choke lets noise “bleed directly” into the receiver.
+- It treats chokes as 100% good or 100% failed.
+- It ignores that choke impedance is a boundary condition, not a magic wall.
+- It assumes OCF antennas are inherently dirty.
+- It assumes transformer or balun loss without measuring or estimating it.
+- It treats lobes and nulls as an OCF-only problem.
+- It ranks antennas as “best for DX” or “best for local” without band, height, path, or site context.
+- It ignores the actual NKO geometry: long arm, short arm, controlled vertical section, and lower choke.
+- It ignores the B configuration.
+- It ignores current amplitude and phase relationships.
+- It ignores installation sensitivity.
+- It ignores local noise coupling paths.
+- It ignores receiver AGC, bandwidth, DSP, and audio settings.
+- It confuses raw signal strength with recovered audio quality.
+- It confuses antenna gain with SSB readability.
+- It gives universal conclusions from no measurements.
+- It uses ham folklore phrases instead of measurable RF mechanisms.
+- It answers from antenna labels instead of the actual antenna structure.
+- It sounds confident while not having the necessary context.
+
+My favourite worst paragraph of the analysis was _"Most operators find that while the Carolina Windom is a better transmitting antenna (because it puts energy out at multiple angles), it is often a poorer receiving antenna because it is simply "too busy"—it is trying to be a horizontal dipole and a vertical antenna at the same time, and in doing so, it picks up the "trash" from both polarizations."_
+
+This tells me the AI has no clue about the NKO, no context, as it is _not_ a Carolina Windom. It is also not in a deep thinking mode.The use of an UnUn, the vertical coax length, the demand for a quality 1:1 current balun and connection method make it a _very_ different antenna. Also it was regurgitating "ham lore" as if it were sensible fact. It is not.
 
 ---
 

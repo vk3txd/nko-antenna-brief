@@ -23,13 +23,13 @@ CM
 CE
 SY Freq = 14.1
 SY Apex = 8
-SY LongArm = 13.6
-SY ShortArm = 6.8
-SY EndLongToGnd = 3	'Far end of arm to gnd.
-SY EndShortToGnd = 3	'Far end of arm to gnd
+SY LongArm = 13.4
+SY ShortArm = 6.7
+SY EndLongToGnd = 6	'Far end of arm to gnd.
+SY EndShortToGnd = 6	'Far end of arm to gnd
 SY LongDrop = Apex - EndLongToGnd
 SY ShortDrop = Apex - EndShortToGnd
-SY VertCoax = 3.5	'Vertical radiating coax length
+SY VertCoax = 3.0	'Vertical radiating coax length
 GW	1	29	0	0	Apex	sqr((LongArm*LongArm) - (LongDrop*LongDrop))	0	EndLongToGnd	#12
 GW	2	14	0	0	Apex	-sqr((ShortArm*ShortArm) - (ShortDrop*ShortDrop))	0	EndShortToGnd	#12
 GW	3	VertCoax * 3	0	0	Apex	0	0	Apex-VertCoax	#12
