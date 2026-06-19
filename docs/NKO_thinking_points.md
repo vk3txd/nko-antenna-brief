@@ -1,9 +1,3 @@
-**Author:** VK3TXD (Richard Holmes)  
-**Status:** v0.5  
-**License:** CC BY 4.0<br>
-**Attribution:** NKO New Kallista OCF, Richard Holmes (VK3TXD)<br>
-**Goal:** NKO Thinking Points
-
 # NKO Thinking Points
 
 These are open questions and working ideas. They are included because they are worth testing, not because they are already settled.
@@ -12,7 +6,9 @@ These are open questions and working ideas. They are included because they are w
 
 ## Saturation and component failure
 
-Amateur-radio discussion often reaches for ferrite “saturation” too quickly.
+Amateur-radio discussion often reaches for ferrite “saturation” too quickly. Analysis using the data on saturation is highly unlikely.
+
+Rather, "flux stress" where the core is driven hard enough to cause possible stress is more worthwhile investigating. That has been done.
 
 For the kinds of magnetic parts used here, **heating and voltage stress** are far more credible failure mechanisms than saturation at normal amateur power levels.
 
@@ -36,7 +32,7 @@ For most of this repo, “hybrid” is the cleaner and more practical word.
 
 ## Current balance
 
-One prevailing working theiry, as of December 2025, is that the combination of short-arm current plus vertical-coax current may make the current picture at the 4:1 UnUn less unfavourable than in some ordinary OCF arrangements.
+One prevailing working theory, as of December 2025, is that the combination of short-arm current plus vertical-coax current may make the current picture at the 4:1 UnUn less unfavourable than in some ordinary OCF arrangements.
 
 Why this matters: The 4:1 UnUn will have increased loss and more heat stress as the currents become less balanced.
 
@@ -57,6 +53,8 @@ Possible reasons include:
 
 Again, that is a sensible line of inquiry, not yet a settled conclusion.
 
+As of May 2026 and using a resistive dummy load heat testing has been performed on a few cores. Also, by changing the dummy load away from 200R to other impedances, loss at other SWR ratios has been measured.
+
 ---
 
 ## Current on the coax shield
@@ -68,6 +66,7 @@ Useful future work:
 - clamp-on current measurements at several points
 - band-by-band current comparison
 - correlation against on-air behaviour and model predictions
+- Ideally a temperature sensor to measure core heating under power and hence calculate loss
 
 ---
 
@@ -115,6 +114,8 @@ For practical builders, the real-world questions are mundane but important:
 - strain relief
 
 The NKO only stays interesting if it also stays practical.
+
+June 2026 - tests using a 200R dummy load and 50W key down power at 7MHz indicate core loss through heating in well built 4:1 UnUns is very low, around 1% for well matched loads. Test and measurement is required to determe loss under imbalance and complex impedance mismatch.
 
 ---
 

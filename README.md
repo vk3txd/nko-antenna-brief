@@ -36,7 +36,7 @@ This is the first point to understand before comparing it with a conventional OC
 - [Common Misconceptions](docs/NKO_Misconceptions.md) — clarifications on recurring objections
 - [Propagation, Multipath, and Intelligibility](docs/NKO_Propagation_Diversity.md) — the longer path-and-audio discussion
 - [Discussion Topics](docs/NKO_thinking_points.md) — open questions worth testing
-- [NKO and AI](docs/NKO_and_AI.md) — how AI influenced the investigation
+- [NKO and AI](docs/NKO_and_AI.md) — some practical notes on how AI influenced the investigation
 - [How To Analyse Speech in Audio Recordings Suggestion](docs/NKO_Speech_Analysis.md)
 - [An HF propogation primer that mentions NKO](docs/HF_Propagation_Primer.md)
 - [Efficiency testing various 4:1 UnUn builds In The Lab](docs/NKO_UnUn_Lab_Testing.md)
@@ -185,6 +185,6 @@ Richard Holmes VK3TXD
 - 03 May 2026 - Added HF Propogation primer with some NKO relevance
 - 08 May 2026 - Added doc on how to analyse speech in an audio recording suggestion
 - 09 May 2026 - Add example plot from 80m recordings and analysis
-- 23 May 2026 - Add 4:1 UnUn Lab testing and test results. 200R dummy load and temp sensor method.
+- 23 May 2026 - Add 4:1 UnUn Lab testing & results. 200R dummy load and temp sensor method.
 - 19 June 2026 - Add Jaycar cores data. Add Flux stress (saturation) doc. Small typo fixes.
 
