@@ -187,4 +187,5 @@ Richard Holmes VK3TXD
 - 09 May 2026 - Add example plot from 80m recordings and analysis
 - 23 May 2026 - Add 4:1 UnUn Lab testing & results. 200R dummy load and temp sensor method.
 - 19 June 2026 - Add Jaycar cores data. Add Flux stress (saturation) doc. Small typo fixes.
+- 12 July 2026 = Use updated ChatGPT Sol 5.6 on some docs to re analyse and critique
 
