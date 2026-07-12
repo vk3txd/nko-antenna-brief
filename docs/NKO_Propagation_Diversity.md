@@ -1,9 +1,3 @@
-**Author:** VK3TXD (Richard Holmes)  
-**Status:** v0.5  
-**License:** CC BY 4.0
-Attribution: NKO – New Kallista OCF, Richard Holmes (VK3TXD)
-Goal: Explain the propagation-side working explanation for NKO observations in clear amateur-radio language.
-
 # NKO Antenna: Propagation, Multipath, and Intelligibility
 
 ## Overview
@@ -18,7 +12,7 @@ The question behind it is simple:
 
 The answer proposed here is not “magic” and not “it adds treble.” The working explanation is that the NKO’s hybrid structure may interact differently with a real HF channel — particularly one affected by multipath, polarisation change, and selective fading.
 
-Independant observations from users of NKO are that;
+Independent observations from users of NKO are that:
 - It has a signal strength advantage
 - Some contacts sound a lot better, with much more intelligible speech
 
@@ -56,7 +50,7 @@ Those versions arrive with:
 - different delay
 - different phase
 - different amplitude
-- sometimes different polarisation (if a signal remains in the ionosphere longer, it may rotate more)
+- sometimes different polarisation, because different ionospheric modes and paths can evolve differently
 
 When they combine, some frequencies reinforce and some cancel. On SSB that can make speech sound rough, hollow, nasal, or simply harder to understand.
 
@@ -72,15 +66,15 @@ Real HF does not behave like that. The ionosphere changes the wave as it travels
 
 That is why horizontal-to-vertical and vertical-to-horizontal contacts are everyday events on HF. Launched polarisation is not preserved. We accept that without thinking about the why or how of it.
 
-It is also why NKO can have a signal advantage over a single polarity antenna.
+It is also why NKO can sometimes have a signal advantage over a strongly single-polarisation antenna.
 
-NKO has both horizontal and vertical sensitivity so it is not limited to just one polarisation. Because these two parts of NKO are connected together, the end result is an addition of both components, so it is receiving both horizontal and vertically polarised waves at the same time and combining them at the UnUn.
+NKO has both horizontal and vertical sensitivity, so it is not limited to just one preferred polarisation. The receiver sees one combined result from the whole antenna structure. This is not the same as two independent diversity channels, and the contributions do not always add in a favourable way: their phase can produce reinforcement, partial cancellation, or simply a different balance. The useful point is that NKO responds differently from a mainly horizontal reference when the arriving polarisation is changing.
 
 Because of the ionosphere rotating a wave, a strongly single-polarisation antenna can work well one minute and lose signal strength the next, even though neither operator has touched a thing. This changing mismatch can be one cause of QSB (fading), because the received signal fades as the arriving polarisation moves away from what the receiving antenna favours.
 
 Travelling Ionospheric Disturbances, or TIDs, can add to this by changing the phase, amplitude, polarisation and angle of arrival of the wave as they pass through the refracting region of the ionosphere. In practice, that means QSB can wax and wane over anything from fractions of a second or a few seconds to much slower changes lasting many seconds or minutes, depending on what the ionosphere is doing.
 
-**Fading is happening for a few reasons.** A single polarity antenna may lose sensitivity because the incoming wave has rotated out of its plane of best performance. Also multiple copies of the wave may arrive simultaneously with small time delays causing cancellation or reinforcements that change over time.
+**Fading is happening for a few reasons.** A single polarity antenna may lose sensitivity because the incoming wave has rotated out of its plane of best performance. Also multiple copies of the wave may arrive simultaneously with small time delays causing cancellation or reinforcement that changes over time.
 
 *References*
 - Australian Bureau of Meteorology, *Introduction to HF Radio Propagation*.
@@ -143,11 +137,13 @@ So this document does **not** claim classical two-branch diversity gain in the s
 
 The NKO is a hybrid radiating system. Its horizontal OCF arms contribute primarily horizontal behaviour, while its radiating feedline section contributes vertical behaviour. Both are present at the same time and arrive at the receiver through the same feedpoint.
 
-That means the NKO does not behave like a conventional single-polarisation wire antenna. It does not switch between horizontal and vertical behaviour, and it does not actively choose the stronger one. Instead, the receiver sees the passive sum of both.
+That means the NKO does not behave like a conventional single-polarisation wire antenna. It does not switch between horizontal and vertical behaviour, and it does not actively choose the stronger one. Instead, the receiver sees the passive result produced by the whole connected antenna structure.
 
-On a real HF path, where polarisation, delay, and angle of arrival all change with time, that can be useful. A strongly single-polarisation antenna can be very good when the path suits it and poor when it does not. The NKO’s mixed horizontal and vertical behaviour can make it less vulnerable to that problem.
+That passive result should not be pictured as two clean signals being added with a guaranteed improvement. Depending on the arriving direction, polarisation and phase, the contributions can reinforce, partly cancel, or change the balance between the several copies of the signal arriving through the ionosphere.
 
-Basically and simplistically; NKO gives the combined signal from both orientations antennas.
+On a real HF path, where polarisation, delay, and angle of arrival all change with time, that broader response can still be useful. A strongly single-polarisation antenna can be very good when the path suits it and poor when it does not. The NKO’s mixed horizontal and vertical behaviour may make it less vulnerable to some of those changes.
+
+Put simply, the NKO gives the receiver one combined signal formed from a wider mixture of directions and polarisations than a strongly single-polarisation wire. That creates an opportunity for better copy, not an automatic win.
 
 That is the practical claim.
 
@@ -161,11 +157,13 @@ There are two linked reasons this may matter.
 
 If the arriving field does not stay neatly aligned with one antenna orientation, a hybrid antenna may spend less time being badly mismatched.
 
-The antenna system merges the signal from both the horizontal and vertical sections.
+The antenna system responds through both its horizontal and vertical parts, producing one combined signal for the receiver.
 
 ### Second
 
-If the path is creating different weighting, phase, and notching behaviour across the passband, then an antenna that couples to the path differently may present a **different audio result** because of different phasing, even when average signal strength is not dramatically different.
+Multipath means that several copies of the transmission may arrive with different delays, directions and polarisations. Every antenna gives those copies a different emphasis. The NKO may sometimes favour the main copy more than a delayed copy, making the speech-band notches shallower and the voice easier to understand. On another path it could do the opposite, so the effect is not guaranteed.
+
+The important idea is not that the NKO somehow repairs damaged audio. It changes the mixture of arriving signal copies before they reach the receiver. On favourable paths, that different mixture may preserve more of the speech detail even when average signal strength is not dramatically different.
 
 That is a modest claim, but it is enough to explain why an antenna might sound easier to copy without needing to invoke mystery gain.
 
@@ -213,67 +211,33 @@ A reference antenna may sound excellent when the path happens to suit it and NKO
 
 The NKO may earn its keep by sounding **less bad** during the fades that make the reference antenna struggle. That can produce a real practical advantage without a giant average signal increase.
 
-This is a very different from “always sounds louder.”
+This is very different from “always sounds louder.”
 
 ---
 
-## 12. Why does NKO always produce better audio? Why not sometimes worse?
+## 12. Why does NKO so often produce better audio? Why not sometimes worse?
 
 This is the sharpest question anyone can ask about the NKO.
 
-It goes something like this (and it defeated me for a long time) 
+> If multipath delays, polarisation and arrival angles all vary, why do the reports seem mainly positive? Should not a passive antenna sometimes make the combination worse as well as better?
 
-> If multipath introduces random time delays, and Faraday rotation rotates a signal in unpredictable ways, and a random number of signal copies may arrive at the antenna from different angles — why does the NKO consistently produce better audio rather than sometimes better and sometimes worse? Surely that much randomness in the inputs should produce randomness in the output too.
+Yes. In principle, it can.
 
-The answer is genuinely satisfying once you see it.
+The NKO has one feedpoint and no active diversity combiner. Its horizontal and vertical contributions can reinforce, partly cancel, or give greater weight to a delayed signal copy. It can therefore be worse on a particular signal, at a particular moment. Local noise received by the vertical section is another possible disadvantage.
 
----
+The more useful explanation for the mainly positive reports is that the noticeable advantage may occur mostly during the otherwise **bad moments**.
 
-### The randomness argument assumes a symmetric situation. It is not.
+When both antennas give easy copy, the difference may be too small to attract attention. When propagation is so poor that neither gives useful copy, there may be no comparison to report. The striking cases occur near the intelligibility threshold: the reference becomes hollow, muffled or difficult, while the NKO preserves enough consonants and speech detail to remain readable.
 
-When Faraday rotation, multipath, and random arrival angles all combine at a single-polarisation antenna like an EFHW, the randomness operates entirely in the negative direction. It can only get worse.
+This does not require the NKO to win every instant. It only requires it to produce fewer, shallower, or shorter bad periods often enough to be noticed. A modest change in how the antenna weights the main and delayed signal copies can sound much larger than it looks on an S-meter when it moves speech from just below to just above the threshold of understanding.
 
-**The EFHW has one axis of sensitivity.** Everything the ionosphere does — rotate the polarisation, add delayed copies, change the arrival angle — can only make things worse than the idealised case where the signal arrives perfectly horizontally polarised with no multipath. The EFHW is already at its theoretical best in that idealised case. Random variation from ideal can only subtract from that.
-
-The NKO starts from a different position.
-
-It is not at its theoretical best when the signal arrives perfectly horizontally polarised. In that case the vertical section is contributing less and the horizontal OCF arms are doing most of the work — meaning the NKO in that moment is performing roughly comparably to a good horizontal antenna. **The NKO's advantage is not in the good moments. It is in the bad ones.**
-
-Now apply the randomness.
-
-- Faraday rotation swings the arriving polarisation away from horizontal
-  — the EFHW loses signal, the NKO's vertical section picks up what the EFHW misses.
-- A multipath copy arrives with a different polarisation and a time delay
-  — the NKO captures both components, the EFHW captures only the horizontal fraction of whatever composite arrives.
-- The arrival angle shifts — the NKO's hybrid pattern is more forgiving across a range of elevation angles than a purely horizontal antenna.
-
-**In every random variation, the NKO has more ways to capture useful signal than the EFHW.**
-
-The EFHW has one chance — the arriving signal must suit its single axis. The NKO has two chances simultaneously — the arriving signal is decomposed into horizontal and vertical components and both are captured.
-
-This is not symmetrical randomness producing random outcomes. It is asymmetric randomness applied to an antenna that has a structural advantage in most of the conditions that randomness creates.
-
----
-
-### The one honest caveat
-
-There is a specific condition where the NKO could theoretically underperform a horizontal-only antenna.
-
-If a very strong horizontally polarised signal arrives perfectly suited to the EFHW, and the NKO's vertical section is simultaneously picking up significant local noise in the vertical plane — strong man-made noise from power lines, switching supplies, or other vertical-plane noise sources — the additional noise from the vertical section could degrade the NKO's signal-to-noise ratio below the EFHW's.
-
-This is a real possibility in heavily urban environments with strong vertically-polarised local noise.
-
-That none of the current testers has reported this outcome is probably partly because the test sites are not heavily urban, and partly because the vertical section tends to add constructively to the wanted signal rather than destructively. But it is the honest answer to the question "could the NKO ever be worse?" — yes, in a high vertical-plane noise environment it is theoretically possible.
-
----
+There is also an important caution about the common EFHW inverted-L reference. It is not a perfect horizontal-only laboratory antenna. Its vertical wire section, sloping section, radials and possible feedline current can all contribute to its response. The field comparison therefore tests the complete behaviour of two real antennas. It does not prove that the NKO alone receives vertical polarisation while the EFHW does not.
 
 ### The short answer
 
-The randomness is not symmetric.
+The NKO can sometimes be worse. The present field reports suggest that its practical value may be statistical rather than absolute: it may reduce the frequency or severity of the moments that damage intelligibility on some paths.
 
-It operates almost entirely in the space where the NKO has the advantage, because the comparison antenna has already surrendered that space by having only one axis of sensitivity.
-
-A single-polarisation antenna is most vulnerable exactly where the ionosphere is most unpredictable. The NKO is most useful in exactly the same place. That is not a coincidence. It is the geometry.
+That is a less dramatic claim than saying the randomness always favours the NKO, but it is more physically defensible and remains consistent with the observations so far.
 
 ---
 
@@ -287,6 +251,8 @@ Several things remain open:
 - whether local noise sometimes offsets the receive benefit
 - which path lengths and conditions show the effect most strongly
 - how much of the benefit is receive-side, transmit-side, or both
+- simultaneous recordings from two closely matched SDR receive channels, so the same fading event can be compared on both antennas
+- long-term WSPR comparisons for signal level, decode rate and fade statistics, while recognising that narrowband WSPR cannot directly show notches across a 3 kHz SSB speech channel
 
 These are not afterthoughts. They are the next useful measurement questions.
 
@@ -365,3 +331,28 @@ That is the working explanation. It is strong enough to be meaningful and restra
 ## Author
 
 Richard Holmes VK3TXD
+
+---
+
+## Updated Analysis Notes
+
+Much of this document is AI generated. I spend a lot of time reviewing, questionning and second guessing AI. I also play off different AIs against each other, checking; Grok, Claude and ChatGPT to arrive at what is presented. It is not just a simple re-package of AI prose.
+
+But time moves on and AI models change and improve, plus the learning available on the internet which AI bases its answers on changes and hopefully improves.
+
+So of course it is sensible to re-process this repository and use the best possble (paid) AI analysis to regularly fact check and update the content.
+
+Here is a list of what has been done as part of that process.
+
+### 12 July 2026 — OpenAI ChatGPT, GPT-5.6 High Thinking
+
+This update retained the document’s structure, practical tone and overall working conclusion while changing as little as possible.
+
+The main changes were:
+
+- clarified that the NKO produces one passive combined response, not two independently selected diversity signals
+- replaced the claim that propagation randomness can only favour the NKO with a more defensible statistical explanation centred on fewer or shallower bad moments
+- explained in plain language that the antenna may change the relative weighting of the main and delayed signal copies, which can alter selective fading and intelligibility
+- noted that a practical EFHW inverted-L is not purely horizontally polarised, so comparisons are between two complete real antenna systems
+- added simultaneous dual-receiver audio recording as the strongest direct test, with WSPR retained for longer-term signal and fading statistics
+

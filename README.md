@@ -26,7 +26,7 @@ This is the first point to understand before comparing it with a conventional OC
 ## Where to start
 
 - [NKO Build Brief](docs/NKO_build.md) — parts, winding details, and practical build notes (testing notes separately)
-- [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md) — the main mechanism and observation notes
+- [NKO Behaviour Analysis](docs/NKO_behaviour_analysis.md) — the main mechanism and observation notes - updated July 2026
 - [NKO compared to New Carolina Windom](docs/NKO_And_The_Carolina_Windom.md) — what is similar and what is not
 - [Component and Antenna Notes](docs/NKO_Component_Notes.md) — baluns, UnUns, OCF, NCW, and NKO in one place
 - [Discussing NEC and NKO and Propagation](docs/NKO_And_NEC_Position.md) — why on-air behaviour may not match a simple static model
@@ -34,7 +34,7 @@ This is the first point to understand before comparing it with a conventional OC
 - [NKO Feedback](docs/NKO_feedback.md) — reports from external test stations
 - [NKO Glossary of Terms](docs/NKO_Glossary.md) — definitions used across the repo
 - [Common Misconceptions](docs/NKO_Misconceptions.md) — clarifications on recurring objections
-- [Propagation, Multipath, and Intelligibility](docs/NKO_Propagation_Diversity.md) — the longer path-and-audio discussion
+- [Propagation, Multipath, and Intelligibility](docs/NKO_Propagation_Diversity.md) — a longer path-and-audio discussion - updated July 2026
 - [Discussion Topics](docs/NKO_thinking_points.md) — open questions worth testing
 - [NKO and AI](docs/NKO_and_AI.md) — some practical notes on how AI influenced the investigation
 - [How To Analyse Speech in Audio Recordings Suggestion](docs/NKO_Speech_Analysis.md)
