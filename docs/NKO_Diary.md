@@ -1,5 +1,10 @@
 # Dear Diary
 
+2026/10/31 - minor updates
+- It's now 13 months since I started NKO development.
+- A signal report last week reinforced its advantage over a well installed EFHW. 'Great signal reports on 80m'
+- Ad-hoc tests over the last few months on a single LO1234 based 4:1 UnUn at 50W key down into a dummy load have shown consistent high efficiency and better power handling even at 100R (so 2:1 SWR) than its size suggests.
+
 2026/06/19 - produce a Jaycar reference file with much detail scraped from the web, along with use and analysis notes.
 - Add a new doc on saturation and evolving that to core flux stress which is more realistic
 - Add a secion on amateur radio myths. I get AI raising them often and "hand waving" prouting poorly thought out myths. 

@@ -66,9 +66,9 @@ A **4:1 UnUn** is an unbalanced-to-unbalanced autotransformer. In the NKO it is 
 
 This direct bonding is one of the clearest differences between the NKO and more common OCF or Windom-family arrangements.
 
-Having a strong current contribution into the vertical coax shield result in the coax shield strongly participating in the antenna.
+Having a strong current contribution into the vertical coax shield results in the coax shield strongly participating in the antenna.
 
-Improved current balance will reduce system loss and stress on the Unun core.
+It is a possibility (unproven) that improved current balance may reduce system loss and stress on the Unun core.
 
 ---
 

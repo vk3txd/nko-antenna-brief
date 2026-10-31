@@ -3,12 +3,13 @@
 This file addresses the objections that come up most often when people first see the NKO.
 
 2026/06/19 - The Myths section at the end has been added.
+2026/10/31 - Minor updates
 
 ---
 
 ## 1. “Using an UnUn with OCF arms is incorrect.”
 
-We use a Balun because that is the accepted best practice. Coax is unbalanced, and the OCF is unbalanced. So using a balun that expects balance at the load is straight away wrong!
+We (traditionally) use a Balun because that is the accepted best practice. Coax is unbalanced, and the OCF is unbalanced. So using a balun that expects balance at the load is straight away wrong!
 
 So back to basics; a balun is ideally used to connect a balanced antenna to an unbalanced feedline (coax). Unbalanced loads present unbalanced currents and voltages to a balun which may not be well handled causing loss and heating.
 
@@ -22,7 +23,7 @@ My experience is that an AI will say that _only_ a 4:1 current balun may be used
 
 In ordinary antenna work, feedline radiation is usually unwanted. Worst case it can cause a transceiver to rest or have other issues.
 
-In the NKO, a defined section of feedline radiation is intentional.
+In the NKO, a _defined and controlled_ section of feedline radiation is intentional.
 
 The important distinction is control. The NKO uses a lower 1:1 choke to define the end of the radiating coax section and to keep the rest of the feedline out of the antenna.
 
@@ -46,9 +47,9 @@ The NKO differs in the use of a 4:1 UnUn, in the direct bonding of shield to sho
 
 ## 5. “Common-mode current is loss.”
 
-Common-mode current can be associated with loss and trouble. It is not automatically loss.
+Unintentional and uncontrolled common-mode current can be associated with loss and trouble. It is not automatically loss.
 
-In the NKO, common-mode current on the defined vertical coax section is part of the intended antenna behaviour. Loss depends on where the current flows and what it is doing, not on the phrase alone.
+In the NKO, common-mode current on the defined vertical coax section is part of the intended antenna behaviour. Loss depends on where the current flows and what it is doing, not on the phrase "common mode current" alone.
 
 ---
 
@@ -149,7 +150,7 @@ Uncontrolled common-mode current is a problem. Controlled current on a defined c
 
 The real questions are:
 
-- what currents flow on the long arm, short arm, and controlled vertical section
+- what currents flow on the long arm, short arm, and controlled vertical section and their phase relationships
 - how well the lower choke defines the end of the radiator
 - what pattern and polarization mix result
 - whether local noise increases more or less than the wanted signal

@@ -16,8 +16,8 @@ Silly things an AI usually gets wrong without full NKO context;
 - It treats intentional upper-shield current as a fault.
 - It forgets the lower 1:1 choke defines the end of the intended vertical radiator.
 - It says “feedline radiation is always bad.”
-- It says the antenna is “too busy.”
-- It says the antenna is “confused.”
+- It says the antenna is “too busy.” (an amusing suggestion telling me the AI has nothing in context)
+- It says the antenna is “confused.” (even more amusing)
 - It says the NKO is “trying to be two antennas at once.”
 - It talks about the antenna as if it has intentions instead of currents.
 - It says mixed horizontal and vertical response must make receive audio muddy.
@@ -39,7 +39,7 @@ Silly things an AI usually gets wrong without full NKO context;
 - It says an imperfect choke lets noise “bleed directly” into the receiver.
 - It treats chokes as 100% good or 100% failed.
 - It ignores that choke impedance is a boundary condition, not a magic wall.
-- It assumes OCF antennas are inherently dirty.
+- It assumes OCF antennas are inherently dirty, or poor, or common mode current generators.
 - It assumes transformer or balun loss without measuring or estimating it.
 - It treats lobes and nulls as an OCF-only problem.
 - It ranks antennas as “best for DX” or “best for local” without band, height, path, or site context.
@@ -58,6 +58,8 @@ Silly things an AI usually gets wrong without full NKO context;
 
 My favourite worst paragraph of the analysis was _"Most operators find that while the Carolina Windom is a better transmitting antenna (because it puts energy out at multiple angles), it is often a poorer receiving antenna because it is simply "too busy"—it is trying to be a horizontal dipole and a vertical antenna at the same time, and in doing so, it picks up the "trash" from both polarizations."_
 
+What evidence? It sounds like absolute rubbish. 
+
 This tells me the AI has no clue about the NKO, no context, as it is _not_ a Carolina Windom. It is also not in a deep thinking mode.The use of an UnUn, the vertical coax length, the demand for a quality 1:1 current balun and connection method make it a _very_ different antenna. Also it was regurgitating "ham lore" as if it were sensible fact. It is not.
 
 ---
@@ -66,7 +68,7 @@ This tells me the AI has no clue about the NKO, no context, as it is _not_ a Car
 
 In September 2025 I started using AI seriously for the first time.
 
-The first antenna topic I pushed it on was the New Carolina Windom. At first AI did what AI often does well: it summarised the broad idea quickly and confidently. It also did what AI often does badly: when pressed on current, mechanism, and first principles, it became vague.
+The first antenna topic I pushed it on was the New Carolina Windom. At first AI did what AI often does well: it summarised the broad idea quickly and confidently. It also did what AI often does badly: when pressed on current, mechanism, and first principles, it became confidently vague.
 
 That was useful in its own way. It forced the real question:
 
@@ -104,6 +106,8 @@ AI has real shortcomings, especially in amateur radio topics.
 - it tends to smooth over uncertainty unless you force it not to
 - its initial 4:1 UnUn design, based on first principles, worked well but not as well as possible.
 
+I found, quickly, that its results must be challenged and have correct and testable fundamentals.
+
 That means every useful AI output still needs human checking.
 
 ---
@@ -123,8 +127,17 @@ AI is poor at:
 - genuine invention
 - knowing when it is out of its depth
 - distinguishing settled fact from well-worded nonsense
+- knowing when an area of investigation is not suitable. It tries to make tenuous data more important than they are.
 
 So the real benefit was not that AI “figured out” the NKO. The benefit was that it helped me investigate the idea faster, write it up more clearly, and challenge my own assumptions harder.
+
+---
+
+## As of December 2026
+
+I started in September 2025. Since then AI has progressed and I now have a ChatGPT subscription. Using ChtGPT 6 and high reasoning the results from re-analysing this Repo still hold up. I had a major argument about current baluns and the AI admitted it was wrong (a win to the human).
+
+Again my trust in AI has been shaken. It took some lazy options and did poor reasoning and did not use the repo properly. My challenges pulled that out.
 
 ---
 
